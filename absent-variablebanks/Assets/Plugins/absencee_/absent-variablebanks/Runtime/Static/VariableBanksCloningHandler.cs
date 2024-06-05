@@ -5,10 +5,21 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.internals
 {
+    /// <summary>
+    /// The static class responsible for cloning the banks at startup.
+    /// </summary>
     public static class VariableBanksCloningHandler
     {
         private static Dictionary<string, VariableBank> m_bankTable = new();
+
+        /// <summary>
+        /// Action which will get invoked when cloning process gets completed successfully. It gets cleared automatically after invoking.
+        /// </summary>
         public static event Action OnCloningCompleted;
+
+        /// <summary>
+        /// Use to check if the cloning process got completed successfully.
+        /// </summary>
         public static bool CloningCompleted { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
@@ -35,7 +46,7 @@ namespace com.absence.variablebanks.internals
 
                         VariableBank clonedBank = bank.Clone();
 
-                        m_bankTable.Add(bank.GUID, clonedBank);
+                        m_bankTable.Add(bank.Guid, clonedBank);
 
                         Debug.Log(clonedBank.name);
                     });
@@ -50,6 +61,12 @@ namespace com.absence.variablebanks.internals
             };
         }
 
+        /// <summary>
+        /// Adds the action passed to <see cref="OnCloningCompleted"/> if the cloning process is not ended yet. If it is ended already,
+        /// the action passed gets invoked instantly.
+        /// </summary>
+        /// <param name="callbackContext"></param>
+        /// <returns></returns>
         public static bool AddCloningCompleteCallbackOrInvoke(Action callbackContext)
         {
             if (CloningCompleted)
@@ -62,8 +79,16 @@ namespace com.absence.variablebanks.internals
             return false;
         }
 
+        /// <summary>
+        /// Use to get a clone bank with a specific Guid. <b>Runtime only.</b>
+        /// </summary>
+        /// <param name="guidOfOriginalBank">Target Guid.</param>
+        /// <returns>The clone bank or null.</returns>
         internal static VariableBank GetCloneWithGuid(string guidOfOriginalBank)
         {
+            if (!Application.isPlaying) throw new Exception("You cannot call GetCloneWithGuid in editor!");
+            if (!CloningCompleted) throw new Exception("Make sure the cloning process has ended successfully before calling GetCloneWithGuid() function.");
+
             if (!m_bankTable.ContainsKey(guidOfOriginalBank)) throw new Exception("Specified variablebank is not cloned by the internal system. " +
                 "Check if it's included in the Addressables menu. And also check it's AvoidCloning property.");
 

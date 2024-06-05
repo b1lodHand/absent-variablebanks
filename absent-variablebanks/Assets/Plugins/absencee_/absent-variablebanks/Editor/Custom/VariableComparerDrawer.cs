@@ -8,9 +8,15 @@ using com.absence.variablebanks.internals;
 
 namespace com.absence.variablebanks.editor
 {
+    /// <summary>
+    /// A custom property drawer for <see cref="BaseVariableComparer"/>.
+    /// </summary>
     [CustomPropertyDrawer(typeof(BaseVariableComparer), true)]
     public class VariableComparerDrawer : PropertyDrawer
     {
+        /// <summary>
+        /// Path of the uss file.
+        /// </summary>
         protected static readonly string StyleSheetPath = "Packages/com.absence.variablesystem/Editor/uss/VariableComparer.uss";
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -118,7 +124,7 @@ namespace com.absence.variablebanks.editor
 
                 string targetGuid = VariableBankDatabase.NameToGuid(evt.newValue);
                 targetBank = VariableBankDatabase.GetBankIfExists(targetGuid);
-                bankGuidProp.stringValue = targetBank.GUID;
+                bankGuidProp.stringValue = targetBank.Guid;
                 RefreshVarSelector();
 
                 serializedObject.ApplyModifiedProperties();
@@ -316,7 +322,7 @@ namespace com.absence.variablebanks.editor
             {
                 var selectedBankIndex = EditorGUI.Popup(bankSelectorRect, VariableBankDatabase.Exists(currentBankGuid) ? VariableBankDatabase.GetIndexOf(currentBankGuid) : 0, VariableBankDatabase.GetBankNameList().ToArray());
                 targetBank = VariableBankDatabase.BanksInAssets[selectedBankIndex];
-                bankGuidProp.stringValue = targetBank.GUID;
+                bankGuidProp.stringValue = targetBank.Guid;
             }
 
             else

@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.editor
 {
+    /// <summary>
+    /// A custom editor script for <see cref="VariableBankAcquirer"/>.
+    /// </summary>
     [CustomEditor(typeof(VariableBankAcquirer), true)]
     public class VariableBankAcquirerCustomEditor : Editor
     {
@@ -35,7 +38,7 @@ namespace com.absence.variablebanks.editor
 
             EditorGUILayout.LabelField("Bank: " + bankName);
 
-            guidProp.stringValue = VariableBankDatabase.BanksInAssets[selectedIndex].GUID;
+            guidProp.stringValue = VariableBankDatabase.BanksInAssets[selectedIndex].Guid;
 
             serializedObject.ApplyModifiedProperties();
         }

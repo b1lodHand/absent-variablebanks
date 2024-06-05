@@ -4,20 +4,42 @@ using com.absence.variablesystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace com.absence.variablebanks
 {
+    /// <summary>
+    /// The scriptable object represents a bank of variables.
+    /// </summary>
     public class VariableBank : ScriptableObject
     {
-        public static readonly string Null = "null: null";
-        [SerializeField, Readonly] private string m_guid = Guid.NewGuid().ToString();
-        public string GUID => m_guid;
+        /// <summary>
+        /// A constant string that represents a null variable name (with the prefix).
+        /// </summary>
+        public const string Null = "null: null";
 
+        [SerializeField, Readonly, Tooltip("Guid of this bank.")] 
+        private string m_guid = System.Guid.NewGuid().ToString();
+
+        /// <summary>
+        /// Guid of this bank.
+        /// </summary>
+        public string Guid => m_guid;
+
+        /// <summary>
+        /// Use to get a cloned bank with a specific Guid. <b>Runtime Only.</b>
+        /// </summary>
+        /// <param name="targetGuid">Target Guid.</param>
+        /// <returns>Throws an error if a clone with the target Guid does not exist. Returns the bank otherwise.</returns>
         public static VariableBank GetInstance(string targetGuid) => VariableBanksCloningHandler.GetCloneWithGuid(targetGuid);
 
-        [SerializeField, Readonly] private bool m_forExternalUse = false;
+        [SerializeField, Readonly, Tooltip("If true, this bank won't get cloned in the startup and also will not get shown on the variable bank name lists.")] 
+        private bool m_forExternalUse = false;
+
+        /// <summary>
+        /// If true, this bank won't get cloned in the startup and also will not get shown on the variable bank name lists. Set to
+        /// true if you'll use direct references of such. For more information, read the docs.
+        /// </summary>
         public bool ForExternalUse
         {
             get
@@ -38,18 +60,47 @@ namespace com.absence.variablebanks
         [SerializeField] protected List<Variable_String> m_strings = new();
         [SerializeField] protected List<Variable_Boolean> m_booleans = new();
 
-        public List<Variable_Integer> Ints { get { return m_ints; } internal set { m_ints = value; } }
-        public List<Variable_Float> Floats { get { return m_floats; } internal set { m_floats = value; } }
-        public List<Variable_String> Strings { get { return m_strings; } internal set { m_strings = value; } }
-        public List<Variable_Boolean> Booleans { get { return m_booleans; } internal set { m_booleans = value; } }
+        /// <summary>
+        /// All of the integer variables within this bank.
+        /// </summary>
+        public List<Variable_Integer> Ints { get { return m_ints; } private set { m_ints = value; } }
 
+        /// <summary>
+        /// All of the floating point variables within this bank.
+        /// </summary>
+        public List<Variable_Float> Floats { get { return m_floats; } private set { m_floats = value; } }
+
+        /// <summary>
+        /// All of the string variables within this bank.
+        /// </summary>
+        public List<Variable_String> Strings { get { return m_strings; } private set { m_strings = value; } }
+
+        /// <summary>
+        /// All of the boolean variables within this bank.
+        /// </summary>
+        public List<Variable_Boolean> Booleans { get { return m_booleans; } private set { m_booleans = value; } }
+
+        /// <summary>
+        /// The action gets invoked when this bank gets destroyed.
+        /// </summary>
         public event Action OnDestroyAction;
 
         private VariableBank m_clonedFrom = null;
+
+        /// <summary>
+        /// Returns null if this is not a clone. Returns the original bank if this is a clone.
+        /// </summary>
         public VariableBank ClonedFrom => m_clonedFrom;
 
+        /// <summary>
+        /// Use to check if this bank is a clone.
+        /// </summary>
         public bool IsClone => m_clonedFrom != null;
 
+        /// <summary>
+        /// Use to get a list of all variables' names of this bank.
+        /// </summary>
+        /// <returns>A list of variable names. Example: "example_int"</returns>
         public List<string> GetAllVariableNames()
         {
             var totalCount = m_ints.Count + m_floats.Count + m_strings.Count + m_booleans.Count;
@@ -63,6 +114,12 @@ namespace com.absence.variablebanks
 
             return result;
         }
+
+        /// <summary>
+        /// Use to get a list of all variables' names of this bank, each one of the names will contain a type prefix. <b>Those
+        /// prefixes get trimmed when you pass them to any function of a variable bank.</b>
+        /// </summary>
+        /// <returns>A list of all variable names with the prefixes. Example: "int: example_int"</returns>
         public List<string> GetAllVariableNamesWithTypes()
         {
             var totalCount = m_ints.Count + m_floats.Count + m_strings.Count + m_booleans.Count;
@@ -77,6 +134,13 @@ namespace com.absence.variablebanks
             return result;
         }
 
+
+        /// <summary>
+        /// Use to get value of an integer variable within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="value">Value of the variable.</param>
+        /// <returns>True if a variable with the target name exists within the bank.</returns>
         public bool TryGetInt(string variableName, out int value)
         {
             variableName = TrimVariableNameType(variableName);
@@ -88,6 +152,13 @@ namespace com.absence.variablebanks
             value = check.FirstOrDefault().Value;
             return true;
         }
+
+        /// <summary>
+        /// Use to get value of a floating point variable within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="value">Value of the variable.</param>
+        /// <returns>True if a variable with the target name exists within the bank.</returns>
         public bool TryGetFloat(string variableName, out float value)
         {
             variableName = TrimVariableNameType(variableName);
@@ -99,6 +170,13 @@ namespace com.absence.variablebanks
             value = check.FirstOrDefault().Value;
             return true;
         }
+
+        /// <summary>
+        /// Use to get value of a string variable within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="value">Value of the variable.</param>
+        /// <returns>True if a variable with the target name exists within the bank.</returns>
         public bool TryGetString(string variableName, out string value)
         {
             variableName = TrimVariableNameType(variableName);
@@ -110,6 +188,13 @@ namespace com.absence.variablebanks
             value = check.FirstOrDefault().Value;
             return true;
         }
+
+        /// <summary>
+        /// Use to get value of a boolean variable within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="value">Value of the variable.</param>
+        /// <returns>True if a variable with the target name exists within the bank.</returns>
         public bool TryGetBoolean(string variableName, out bool value)
         {
             variableName = TrimVariableNameType(variableName);
@@ -122,6 +207,11 @@ namespace com.absence.variablebanks
             return true;
         }
 
+        /// <summary>
+        /// Use to add a value change callback to an integer variable with a specific name.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="callbackAction">What to do when value of the variable changes.</param>
         public void AddValueChangeListenerToInt(string variableName, Action<VariableValueChangedCallbackContext<int>> callbackAction)
         {
             variableName = TrimVariableNameType(variableName);
@@ -131,6 +221,12 @@ namespace com.absence.variablebanks
 
             check.FirstOrDefault().AddValueChangeListener(callbackAction);
         }
+
+        /// <summary>
+        /// Use to add a value change callback to a floating point variable with a specific name.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="callbackAction">What to do when value of the variable changes.</param>
         public void AddValueChangeListenerToFloat(string variableName, Action<VariableValueChangedCallbackContext<float>> callbackAction)
         {
             variableName = TrimVariableNameType(variableName);
@@ -140,6 +236,12 @@ namespace com.absence.variablebanks
 
             check.FirstOrDefault().AddValueChangeListener(callbackAction);
         }
+
+        /// <summary>
+        /// Use to add a value change callback to a string variable with a specific name.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="callbackAction">What to do when value of the variable changes.</param>
         public void AddValueChangeListenerToString(string variableName, Action<VariableValueChangedCallbackContext<string>> callbackAction)
         {
             variableName = TrimVariableNameType(variableName);
@@ -149,6 +251,12 @@ namespace com.absence.variablebanks
 
             check.FirstOrDefault().AddValueChangeListener(callbackAction);
         }
+
+        /// <summary>
+        /// Use to add a value change callback to a boolean variable with a specific name.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="callbackAction">What to do when value of the variable changes.</param>
         public void AddValueChangeListenerToBoolean(string variableName, Action<VariableValueChangedCallbackContext<bool>> callbackAction)
         {
             variableName = TrimVariableNameType(variableName);
@@ -159,6 +267,12 @@ namespace com.absence.variablebanks
             check.FirstOrDefault().AddValueChangeListener(callbackAction);
         }
 
+        /// <summary>
+        /// Use to change an integer variable's value.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="newValue">New value for the variable.</param>
+        /// <returns>True if value changing process ended successfully. False otherwise.</returns>
         public bool SetInt(string variableName, int newValue)
         {
             variableName = TrimVariableNameType(variableName);
@@ -169,6 +283,13 @@ namespace com.absence.variablebanks
             found.Value = newValue;
             return true;
         }
+
+        /// <summary>
+        /// Use to change a floating point variable's value.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="newValue">New value for the variable.</param>
+        /// <returns>True if value changing process ended successfully. False otherwise.</returns>
         public bool SetFloat(string variableName, float newValue)
         {
             variableName = TrimVariableNameType(variableName);
@@ -179,6 +300,13 @@ namespace com.absence.variablebanks
             found.Value = newValue;
             return true;
         }
+
+        /// <summary>
+        /// Use to change a string variable's value.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="newValue">New value for the variable.</param>
+        /// <returns>True if value changing process ended successfully. False otherwise.</returns>
         public bool SetString(string variableName, string newValue)
         {
             variableName = TrimVariableNameType(variableName);
@@ -189,6 +317,13 @@ namespace com.absence.variablebanks
             found.Value = newValue;
             return true;
         }
+
+        /// <summary>
+        /// Use to change a boolean variable's value.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <param name="newValue">New value for the variable.</param>
+        /// <returns>True if value changing process ended successfully. False otherwise.</returns>
         public bool SetBoolean(string variableName, bool newValue)
         {
             variableName = TrimVariableNameType(variableName);
@@ -200,10 +335,39 @@ namespace com.absence.variablebanks
             return true;
         }
 
+        /// <summary>
+        /// Use to check if an integer variable with the target name exists within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <returns>True if exists, false otherwise.</returns>
         public bool HasInt(string variableName) => m_ints.Any(v => v.Name == TrimVariableNameType(variableName));
+
+        /// <summary>
+        /// Use to check if a floating point variable with the target name exists within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <returns>True if exists, false otherwise.</returns>
         public bool HasFloat(string variableName) => m_floats.Any(v => v.Name == TrimVariableNameType(variableName));
+
+        /// <summary>
+        /// Use to check if a string variable with the target name exists within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <returns>True if exists, false otherwise.</returns>
         public bool HasString(string variableName) => m_strings.Any(v => v.Name == TrimVariableNameType(variableName));
+
+        /// <summary>
+        /// Use to check if a boolean variable with the target name exists within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <returns>True if exists, false otherwise.</returns>
         public bool HasBoolean(string variableName) => m_booleans.Any(v => v.Name == TrimVariableNameType(variableName));
+
+        /// <summary>
+        /// Use to check if a variable with the target name exists within this bank.
+        /// </summary>
+        /// <param name="variableName">Target name.</param>
+        /// <returns>True if exists, false otherwise.</returns>
         public bool HasAny(string variableName)
         {
             return (this.HasInt(variableName) ||
@@ -217,20 +381,11 @@ namespace com.absence.variablebanks
             if (!nameToTrim.Contains(':')) return nameToTrim;
             return nameToTrim.Split(':')[1].Trim();
         }
-        string AddVariableNameType(string nameToAddType)
-        {
-            StringBuilder builder = new StringBuilder();
-            if (this.HasInt(nameToAddType)) builder.Append("int: ");
-            else if (this.HasFloat(nameToAddType)) builder.Append("float: ");
-            else if (this.HasString(nameToAddType)) builder.Append("string: ");
-            else if (this.HasBoolean(nameToAddType)) builder.Append("bool: ");
 
-            builder.Append(" ");
-            builder.Append(nameToAddType);
-
-            return builder.ToString();
-        }
-
+        /// <summary>
+        /// Use to clone this bank.
+        /// </summary>
+        /// <returns>Returns the clone created.</returns>
         public VariableBank Clone()
         {
             VariableBank clone = Instantiate(this);

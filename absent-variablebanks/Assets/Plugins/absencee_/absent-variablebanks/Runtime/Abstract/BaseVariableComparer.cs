@@ -3,9 +3,15 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.internals
 {
+    /// <summary>
+    /// The base class for comparers.
+    /// </summary>
     [System.Serializable]
     public abstract class BaseVariableComparer
     {
+        /// <summary>
+        /// An enum for deciding how the comparison will get performed.
+        /// </summary>
         public enum ComparisonType
         {
             [InspectorName("<")] LessThan = 0,
@@ -25,10 +31,21 @@ namespace com.absence.variablebanks.internals
         [SerializeField] protected string m_stringValue;
         [SerializeField] protected bool m_boolValue;
 
+        /// <summary>
+        /// Will the bank selector be hidden in the editor?
+        /// </summary>
         public abstract bool HasFixedBank { get; }
 
-        public virtual VariableBank GetRuntimeBank() => VariableBank.GetInstance(m_targetBankGuid);
+        /// <summary>
+        /// Override to define how this comparer will find it's runtime bank.
+        /// </summary>
+        /// <returns>The runtime bank or null</returns>
+        protected virtual VariableBank GetRuntimeBank() => VariableBank.GetInstance(m_targetBankGuid);
 
+        /// <summary>
+        /// Use to get the result of the comparer. <b>Runtime only.</b>
+        /// </summary>
+        /// <returns>Result of the comparer. Returns true directly if anything goes wrong.</returns>
         public virtual bool GetResult()
         {
             if (!Application.isPlaying) throw new Exception("You cannot call GetResult() on comparers outside play mode!");

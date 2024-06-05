@@ -5,7 +5,10 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.editor
 {
-    public class VariableBankCreationHandler
+    /// <summary>
+    /// The static class responsible for handling variable bank creation via editor menu.
+    /// </summary>
+    public static class VariableBankCreationHandler
     {
         [MenuItem("Assets/absencee_/absent-variabes/Create Variable Bank", priority = 0)]
         static void CreateVariableBank()

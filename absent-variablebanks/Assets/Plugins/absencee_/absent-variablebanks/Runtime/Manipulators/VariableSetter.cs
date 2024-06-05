@@ -2,16 +2,28 @@ using com.absence.variablebanks.internals;
 
 namespace com.absence.variablebanks
 {
+    /// <summary>
+    /// Setter with a dynamic bank you select in the editor.
+    /// </summary>
     [System.Serializable]
     public sealed class VariableSetter : BaseVariableSetter
     {
         public override bool HasFixedBank => false;
 
+        /// <summary>
+        /// Set this setter's target bank Guid.
+        /// </summary>
+        /// <param name="newBankGuid">New Guid.</param>
         public void SetBankGuid(string newBankGuid)
         {
             m_targetBankGuid = newBankGuid;
         }
 
+        /// <summary>
+        /// Use to clone this setter.
+        /// </summary>
+        /// <param name="overrideBankGuid">Guid for a new bank.</param>
+        /// <returns>The clone.</returns>
         public VariableSetter Clone(string overrideBankGuid)
         {
             VariableSetter clone = new();
@@ -28,6 +40,11 @@ namespace com.absence.variablebanks
 
             return clone;
         }
+
+        /// <summary>
+        /// Use to clone this setter.
+        /// </summary>
+        /// <returns>The clone.</returns>
         public VariableSetter Clone()
         {
             VariableSetter clone = new();

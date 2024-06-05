@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.editor
 {
+    /// <summary>
+    /// A custom property drawer script for <see cref="VariableBankReferencePropertyDrawer"/>.
+    /// </summary>
     [CustomPropertyDrawer(typeof(VariableBankReference), true)]
     public class VariableBankReferencePropertyDrawer : PropertyDrawer
     {
@@ -36,7 +39,7 @@ namespace com.absence.variablebanks.editor
             actualLabel.tooltip = $"Guid: {currentGuid}";
             VariableBank editorBank = ((VariableBank)EditorGUI.ObjectField(dynamicRect, actualLabel, VariableBankDatabase.GetBankIfExists(currentGuid), typeof(VariableBank), allowSceneObjects: false));
 
-            if (editorBank != null) currentGuid = editorBank.GUID;
+            if (editorBank != null) currentGuid = editorBank.Guid;
             else currentGuid = string.Empty;
 
             targetGuidProp.stringValue = currentGuid;

@@ -3,9 +3,15 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.internals
 {
+    /// <summary>
+    /// The base class for setters.
+    /// </summary>
     [System.Serializable]
     public abstract class BaseVariableSetter
     {
+        /// <summary>
+        /// An enum for deciding which way the setting will work.
+        /// </summary>
         public enum SetType
         {
             [InspectorName("=")] SetTo = 0,
@@ -24,9 +30,16 @@ namespace com.absence.variablebanks.internals
         [SerializeField] protected string m_stringValue;
         [SerializeField] protected bool m_boolValue;
 
+        /// <summary>
+        /// Will the bank selector be hidden in the editor?
+        /// </summary>
         public abstract bool HasFixedBank { get; }
 
-        public virtual VariableBank GetRuntimeBank() => VariableBank.GetInstance(m_targetBankGuid);
+        /// <summary>
+        /// Override to define how this setter will find it's runtime bank.
+        /// </summary>
+        /// <returns>The runtime bank or null</returns>
+        protected virtual VariableBank GetRuntimeBank() => VariableBank.GetInstance(m_targetBankGuid);
 
         /// <summary>
         /// Sets the target variable in target <see cref="VariableBank"/> to intended value.
@@ -51,14 +64,28 @@ namespace com.absence.variablebanks.internals
         }
 
         #region Performs
+        /// <summary>
+        /// Override to define the logic for booleans.
+        /// </summary>
+        /// <param name="bank">Runtime bank.</param>
         protected virtual void Perform_Boolean(VariableBank bank)
         {
             bank.SetBoolean(m_targetVariableName, m_boolValue);
         }
+
+        /// <summary>
+        /// Override to define the logic for strings.
+        /// </summary>
+        /// <param name="bank">Runtime bank.</param>
         protected virtual void Perform_String(VariableBank bank)
         {
             bank.SetString(m_targetVariableName, m_stringValue);
         }
+
+        /// <summary>
+        /// Override to define the logic for floating points.
+        /// </summary>
+        /// <param name="bank">Runtime bank.</param>
         protected virtual void Perform_Float(VariableBank bank)
         {
             if (!bank.TryGetFloat(m_targetVariableName, out float value)) return;
@@ -86,6 +113,11 @@ namespace com.absence.variablebanks.internals
 
             bank.SetFloat(m_targetVariableName, value);
         }
+
+        /// <summary>
+        /// Override to define the logic for integers.
+        /// </summary>
+        /// <param name="bank">Runtime bank.</param>
         protected virtual void Perform_Int(VariableBank bank)
         {
             if (!bank.TryGetInt(m_targetVariableName, out int value)) return;

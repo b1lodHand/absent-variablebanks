@@ -4,12 +4,23 @@ using UnityEngine;
 
 namespace com.absence.variablebanks
 {
+    /// <summary>
+    /// A component to reference banks both in editor and runtime.
+    /// </summary>
     public class VariableBankAcquirer : MonoBehaviour
     {
         [SerializeField] private string m_targetGuid;
+
+        /// <summary>
+        /// Use to get the Guid of the referenced bank.
+        /// </summary>
         public string TargetGuid => m_targetGuid;
 
         [SerializeField] private VariableBank m_bank;
+
+        /// <summary>
+        /// Use to get clone of the referenced bank. <b>Runtime only.</b>
+        /// </summary>
         public VariableBank Bank
         {
             get
