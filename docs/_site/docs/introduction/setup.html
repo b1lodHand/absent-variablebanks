@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Setup | absent-variablebanks </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Setup | absent-variablebanks ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+  
+  <meta property="docfx:rel" content="../../">
+  
+    </head>
+    <body>
+        <!-- Header required for docfx anchor scroll to work -->
+        <header id="head"></header>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../index.html">
+              <img src="../../images/logo5.svg" alt="absent-variablebanks" class="logomark">
+              <span class="brand-title">absent-variablebanks</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../index.html">
+                          <img src="../../images/logo5.svg" alt="absent-variablebanks" class="logomark">
+                          <span class="brand-title">absent-variablebanks</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                </div>
+                <div class="footer">
+  © 2024 absencee_ All rights reserved.
+  
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                               <a href="https://github.com/b1lodHand/absent-variablebanks/blob/main/docs/docs/introduction/setup.md/#L1" class="contribution-link">Edit this page</a>
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="setup">Setup</h1>
+
+<p>In this section of the documentation, you will learn how to setup this package properly. Let's begin.</p>
+<h2 id="setup-for-addressables">Setup for Addressables</h2>
+<p>First of all, <strong>I assume</strong> that you have the Addressables package all set up before starting.</p>
+<p><strong>First</strong>, you have to find the <strong>Addressables Groups Window</strong>. You can open it up by: <strong>'Window/Asset Management/Addressables/Groups'</strong> at the toolbar above.</p>
+<p>After opening up that window, you will see a single button on the screen (or a window like the image below if you already have it set-up). Press that button.</p>
+<p><strong>Second</strong>, right click to an empty area in that window and select <strong>'Create New roup/Packed Assets'</strong>. You can name it anything you want.</p>
+<p><strong>Third</strong>, drag and drop any of your folders with your <strong>VariableBanks</strong> inside (any bank created after in this folder after that will automatically get added, so don't worry) to the packed asset group you've just created.</p>
+<p><strong>Last and the most important</strong>, add the label <strong>&quot;variable-banks&quot;</strong> to the folders you've just dragged.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>I recommend reading more about <a href="https://docs.unity3d.com/Manual/com.unity.addressables.html">Addressables</a> in order to understand the asset management better.</p>
+</div>
+<p>Now your window should look like this:</p>
+<p><img src="https://imgur.com/1P9GQv6.png" alt="Imgur Image"></p>
+<p>As I said earlier, the folder names of the group names does not matter. <strong>BUT</strong> the label <strong>MUST</strong> be &quot;absent-variables&quot;.</p>
+<blockquote>
+<p>[!INFORMATION]
+That's because the <strong>VariableBanksCloningManager</strong> finds the banks in asset bundles with that label, and not the folder or group names <strong>by default</strong>.</p>
+<p>This tag is holded as a constant in the <strong>Constants</strong> class. You can find it at: <strong>'Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs'</strong>.</p>
+<p>You can change the tag via changing the <strong>K_ADDRESSABLES_TAG</strong> property inside that file.</p>
+</blockquote>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Banks with <strong>ForExternalUse</strong> property true won't get cloned whether they're packed correctly with the target asset management API.</p>
+</div>
+<h2 id="setup-for-resources">Setup for Resources</h2>
+<p>For the Resources API, you only have one thing to do: Place your VariableBanks (the ones needs to get cloned by the internal system automatically) inside the folder: <strong>&quot;Resources/VariableBanks&quot;</strong>. The internal system will handle the rest.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Banks with <strong>ForExternalUse</strong> property true won't get cloned whether they're packed correctly with the target asset management API.</p>
+</div>
+<h2 id="setup-for-third-party-asset-management-packages">Setup for Third-Party Asset Management Packages</h2>
+<p>You don't have to anythin special, actually. You can just find <strong>'Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningManager.cs'</strong> and modify it to fit your needs.</p>
+<h2 id="whats-next">What's Next?</h2>
+<p>This section is ended. Go to <a href="https://b1lodhand.github.io/absent-variablebanks/docs/getting-started/mechanism.html">Mechanism</a> to continue.</p>
+
+</article>
+                </div>
+
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>    </body>
+</html>

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mechanism | absent-variablebanks </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mechanism | absent-variablebanks ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+  
+  <meta property="docfx:rel" content="../../">
+  
+    </head>
+    <body>
+        <!-- Header required for docfx anchor scroll to work -->
+        <header id="head"></header>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../index.html">
+              <img src="../../images/logo5.svg" alt="absent-variablebanks" class="logomark">
+              <span class="brand-title">absent-variablebanks</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../index.html">
+                          <img src="../../images/logo5.svg" alt="absent-variablebanks" class="logomark">
+                          <span class="brand-title">absent-variablebanks</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                </div>
+                <div class="footer">
+  © 2024 absencee_ All rights reserved.
+  
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                               <a href="https://github.com/b1lodHand/absent-variablebanks/blob/main/docs/docs/getting-started/mechanism.md/#L1" class="contribution-link">Edit this page</a>
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="mechanism">Mechanism</h1>
+
+<p>In this section of the documentation, you will learn how this tool works in general. Let's give it a go!</p>
+<h2 id="what-are-variablebanks">What are VariableBanks?</h2>
+<p><strong>VariableBanks</strong> are simple <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">scriptable objects</a>. There are only two properties important. <strong>'Guid'</strong>, and <strong>'ForExternalUse'</strong> properties. I will be covering them in detail in a second.</p>
+<h2 id="how-to-use-variablebanks">How to use VariableBanks?</h2>
+<h3 id="cloning">Cloning</h3>
+<hr>
+<p>So, because of the intended way of using scriptable objects, the system itself clones some of the banks created (we will be covering which ones are included in that <em>some</em>) when the <strong>splash screen</strong> appears. This cloning process is handled by <strong>VariableBanksCloningHandler</strong> class.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This cloning process is <strong>async</strong> when using <strong>Addressables</strong>.</p>
+</div>
+<blockquote>
+<p>[!INFORMATION]
+VariableBanks with <strong>ForExternalUse</strong> property set to true <strong>won't get cloned and won't get shown on the list: 'VariableBankDatabase.GetBankNameList()'</strong>.</p>
+</blockquote>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can use <strong>'VariableBanksCloningHandler.AddOnCloningCompleteCallbackOrInvoke(...)'</strong> to get notified when the cloning process is ended, or just get notified instantly if the banks are already cloned.</p>
+</div>
+<h3 id="referencing-runtime">Referencing (Runtime)</h3>
+<hr>
+<p>Here, I must get into Unity's asset management procedure for clarity. When you build a game, these happen:</p>
+<ol>
+<li><p>All of the files that has a <strong>direct reference</strong> on a game object contained in a scene gets packed with the game itself.</p>
+</li>
+<li><p>All of the files inside the <strong>'Resouces'</strong> folder gets packed in a single, big bundle.</p>
+</li>
+<li><p>If you're using <strong>Addressables</strong>, any of the assets referenced in the addressables window gets packed with its asset group (you can see asset group in Addressables window).</p>
+</li>
+</ol>
+<p>So, to avoid <strong>asset duplication</strong> you must use only of these way of referencing banks for each bank. You can use Resources some of the banks, while using Addressables for some other and etc. But you should be aware of <strong>asset duplication</strong> as I said. You should write your own logic to getthat working, obviously.</p>
+<h3 id="variablebankreference">VariableBankReference</h3>
+<p>For this, there is a class named: <strong>'VariableBankReference'</strong>. It looks like a direct reference when serialized in the editor but the only thing it holds is the <strong>Guid</strong> of the selected variable bank. Because of this, <strong>it does not cause duplication on build</strong>.</p>
+<p>You can use one of these classes to select a bank, and then in runtime, you can get its <strong>'Bank'</strong> property to find the cloned bank <strong>runtime</strong> with that guid (after ensuring the cloning process is completed successfully).</p>
+<p>When a bank gets cloned, the <strong>Guid remains the same on the cloned one</strong>. That's way the system above works.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Before trying to get the <strong>'Bank'</strong> property of a reference, ensure that the cloning process has ended successfully. If you're in editor, use <strong>'reference.TargetGuid'</strong> to get the original bank's guid.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you're using direct references and handle the cloning process independently, you can <strong>avoid using VariableBankReference class.</strong> Ensuring there are no asset duplications.</p>
+</div>
+<h3 id="variablebankgetinstance">VariableBank.GetInstance(...);</h3>
+<p>Or as an alternative way, you can use <strong>'VariableBank.GetInstance(...)'</strong> method to get a cloned bank with a specific Guid <strong>runtime</strong>.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>You cannot use this method in editor. It only works runtime. Also make sure that the cloning process has ended successfully before calling it.</p>
+</div>
+<h3 id="referencing-in-editor">Referencing (In Editor)</h3>
+<hr>
+<p>Everything is much simpler when you're in editor. You can just call:</p>
+<pre><code class="lang-c#">VariableBankDatabase.GetBankIfExists(string targetGuid);
+</code></pre>
+<p>and you have the bank.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Remember, the system uses Guids instead of direct references to avoid any <strong>asset duplications</strong>. So be aware of this while writing editor code.</p>
+</div>
+<h2 id="how-to-use-manipulators-comparers--setters">How To use Manipulators (Comparers &amp; Setters)</h2>
+<p><strong>Comparers</strong> and <strong>Setters</strong> are you best friend when you want to manipulate any variable stored in a VariableBank <strong>runtime</strong>.</p>
+<p>They are simply classes which contains a string for the <strong>Guid</strong> of a bank, a string for the target variable name, an enum for processing type and a value which represents the new value.</p>
+<h3 id="fixed-manipulators">Fixed Manipulators</h3>
+<p><strong>Fixed Comparers</strong> and the <strong>Fixed Setters</strong> are a little different than normal ones. They don't have a bank selector in editor, instead you give them the target bank's Guid manually with the <strong>'SetFixedBank(...)'</strong> function. This is an example of it:</p>
+<pre><code class="lang-c#">private void OnValidate() 
+{
+    if (Application.isPlaying) return; // Not needed. Just for extra error handling.
+    
+    m_comparers.ForEach(comparer =&gt; comparer.SetFixedBank(m_reference.TargetGuid));
+    m_setters.ForEach(setter =&gt; setter.SetFixedBank(m_reference.TargetGuid));
+}
+</code></pre>
+<p>The code above sets the bank Guids of manipulators of a component every time a change in the inspector occurs. This is the most practical way of using fixed manipulators with components.</p>
+<p>If you don't work with lists, you can also use <strong>'OnEnable()'</strong> instead of using <strong>'OnValidate()'</strong></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can also create your own manipulators via deriving from the <strong>BaseVariableComparer</strong> or <strong>BaseVariableSetter</strong> classes. You can find an example <a href="https://github.com/b1lodHand/absent-dialogues/tree/main/absent-dialogues/Assets/Plugins/absencee_/absent-dialogues/Internal/Graph/Extensions">here.</a>.</p>
+<p>In this example, I used <strong>direct references</strong>. But I mark all <strong>BlackboardBank</strong>s as <strong>ForExternalUse</strong> banks automatically on creation, so this does not cause any duplications.</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>This section is ended. Go to <a href="https://b1lodhand.github.io/absent-variablebanks/docs/getting-started/components.html">Mechanism</a> to continue.</p>
+
+</article>
+                </div>
+
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>    </body>
+</html>

@@ -265,33 +265,70 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/getting-started.md",
+      "source_relative_path": "docs/getting-started/components.md",
       "output": {
         ".html": {
-          "relative_path": "docs/getting-started.html"
+          "relative_path": "docs/getting-started/components.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/introduction.md",
+      "source_relative_path": "docs/getting-started/mechanism.md",
       "output": {
         ".html": {
-          "relative_path": "docs/introduction.html"
+          "relative_path": "docs/getting-started/mechanism.html"
         }
       },
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "docs/toc.yml",
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction/about.md",
       "output": {
         ".html": {
-          "relative_path": "docs/toc.html"
-        },
-        ".json": {
-          "relative_path": "docs/toc.json"
+          "relative_path": "docs/introduction/about.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction/before-installing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction/before-installing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction/contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction/contributing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction/installing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction/installing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction/setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction/setup.html"
         }
       },
       "version": ""

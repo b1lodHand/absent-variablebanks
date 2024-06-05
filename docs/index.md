@@ -2,10 +2,12 @@
 _layout: landing
 ---
 
-# This is the **HOMEPAGE**.
+# absent-variablebanks
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
+### Welcome to the documentation of my completely free and open-source package: absent-variablebanks. Here you will learn how to use, modify and integrate this package with [Unity](https://unity.com/).
 
-## Quick Start Notes:
+### You can find more about me in:
 
-1. Add images to the *images* folder if the file is referencing an image.
+<a href="https://github.com/b1lodHand"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" /> </a>
+<a href="https://www.youtube.com/channel/UCJ6e4ooQWudmDiPUO4RExtw"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" /> </a>
+<a href="https://patreon.com/absencee_"><img src="https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white" /> </a>

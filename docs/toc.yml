@@ -2,6 +2,28 @@ items:
 - name: Home
   href: index.md
 
+  name: Introduction
+  href: docs/introduction/about.md
+  items:
+    - name: About
+      href: docs/introduction/about.md
+    - name: Before Installing
+      href: docs/introduction/before-installing.md
+    - name: Installing
+      href: docs/introduction/installing.md
+    - name: Setup
+      href: docs/introduction/setup.md
+    - name: Contributing
+      href: docs/introduction/contributing.md
+
+- name: Getting Started
+  href: docs/getting-started/mechanism.md
+  items:
+    - name: Mechanism
+      href: docs/getting-started/mechanism.md
+    - name: Components
+      href: docs/getting-started/components.md
+
 - name: Roadmap
   href: roadmap.md
 
