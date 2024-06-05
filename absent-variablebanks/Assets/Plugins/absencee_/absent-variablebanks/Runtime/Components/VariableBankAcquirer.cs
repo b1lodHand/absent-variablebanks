@@ -1,4 +1,5 @@
 using com.absence.variablebanks.internals;
+using com.absence.variablesystem;
 using System;
 using UnityEngine;
 
@@ -39,7 +40,7 @@ namespace com.absence.variablebanks
 
         private void FetchFixedBank()
         {
-            m_bank = VariableBank.GetInstance(m_targetGuid);
+            m_bank = VariableBankManager.GetInstance(m_targetGuid);
         }
     }
 }

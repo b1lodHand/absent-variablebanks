@@ -1,4 +1,5 @@
 using com.absence.variablebanks.internals;
+using com.absence.variablesystem.editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -34,7 +35,7 @@ namespace com.absence.variablebanks.editor
             string bankName = "null (runtime only)";
             EditorGUILayout.LabelField("Guid: " + currentGuid);
 
-            if(Application.isPlaying && VariableBanksCloningHandler.CloningCompleted) bankName = VariableBank.GetInstance(currentGuid).name;
+            if(Application.isPlaying && VariableBanksCloningHandler.CloningCompleted) bankName = VariableBankManager.GetInstance(currentGuid).name;
 
             EditorGUILayout.LabelField("Bank: " + bankName);
 

@@ -1,4 +1,5 @@
 using com.absence.variablebanks.internals;
+using com.absence.variablesystem;
 
 namespace com.absence.variablebanks
 {
@@ -18,6 +19,8 @@ namespace com.absence.variablebanks
         {
             m_targetBankGuid = newBankGuid;
         }
+
+        protected override VariableBank GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
 
         /// <summary>
         /// Use to clone this setter.
