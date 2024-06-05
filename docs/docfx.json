@@ -1,0 +1,56 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "D:\\UnityLibrary\\Other\\absent-variablebanks\\absent-variablebanks",
+          "files":[
+            "Assembly-CSharp-Editor-firstpass.csproj",
+            "Assembly-CSharp-firstpass.csproj"
+          ]
+        }
+      ],
+  
+      "dest": "api",
+      "filter": "filterConfig.yml"
+    }
+  ],
+
+  "build": {
+    "content": [
+      {
+        "files": [
+          "toc.yml",
+          "index.md",
+          "roadmap.md",
+          "docs/*.md",
+          "docs/*.yml",
+          "docs/**/*.md",
+          "docs/**/*.yml",
+          "api/**.yml",
+          "api/index.md"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [ "default", "templates/singulinkfx" ],
+    "globalMetadata": {
+      "_appName": "absent-variablebanks",
+      "_appTitle": "absent-variablebanks",
+      "_appLogoPath": "images/logo5.svg",
+      "_appFooter": "© 2024 absencee_ All rights reserved.",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}
