@@ -2,6 +2,7 @@
   "dependencies": {
     "com.absence.attributes": "https://github.com/b1lodHand/absent-attributes.git",
     "com.absence.utilities": "https://github.com/b1lodHand/absent-utilities.git",
+    "com.absence.variablesystem": "https://github.com/b1lodHand/absent-variables.git",
     "com.unity.addressables": "1.21.21",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.1",
