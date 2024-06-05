@@ -1,3 +1,4 @@
+using com.absence.variablesystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,38 +28,23 @@ namespace com.absence.variablebanks.internals
         {
             m_bankTable.Clear();
             CloningCompleted = false;
+            List<VariableBank> originalBanks = Resources.LoadAll<VariableBank>(internals.Constants.K_RESOURCES_PATH).ToList();
 
-            UnityEngine.AddressableAssets.Addressables.LoadAssetsAsync<VariableBank>(internals.Constants.K_ADDRESSABLES_TAG, null, true).Completed += asyncOperationHandle =>
+            originalBanks.ForEach(bank =>
             {
-                if (asyncOperationHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Failed)
-                {
-                    throw new Exception("Failed to load variable banks.");
-                }
+                if (bank.IsClone) return;
+                if (bank.ForExternalUse) return;
 
-                else if (asyncOperationHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
-                {
-                    List<VariableBank> originalBanks = asyncOperationHandle.Result.ToList();
+                VariableBank clonedBank = bank.Clone();
 
-                    originalBanks.ForEach(bank =>
-                    {
-                        if (bank.IsClone) return;
-                        if (bank.ForExternalUse) return;
+                m_bankTable.Add(bank.Guid, clonedBank);
+                Debug.Log(clonedBank.name);
+            });
 
-                        VariableBank clonedBank = bank.Clone();
+            CloningCompleted = true;
 
-                        m_bankTable.Add(bank.Guid, clonedBank);
-
-                        Debug.Log(clonedBank.name);
-                    });
-
-                    UnityEngine.AddressableAssets.Addressables.Release(asyncOperationHandle);
-
-                    CloningCompleted = true;
-
-                    OnCloningCompleted?.Invoke();
-                    OnCloningCompleted = null;
-                }
-            };
+            OnCloningCompleted?.Invoke();
+            OnCloningCompleted = null;
         }
 
         /// <summary>

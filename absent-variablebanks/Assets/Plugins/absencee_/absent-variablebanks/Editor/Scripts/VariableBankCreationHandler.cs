@@ -1,3 +1,5 @@
+using com.absence.variablesystem;
+using com.absence.variablesystem.editor;
 using System.IO;
 using UnityEditor;
 using UnityEditor.ProjectWindowCallback;

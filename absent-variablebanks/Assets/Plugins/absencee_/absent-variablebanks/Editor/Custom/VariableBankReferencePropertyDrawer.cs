@@ -1,3 +1,5 @@
+using com.absence.variablesystem;
+using com.absence.variablesystem.editor;
 using UnityEditor;
 using UnityEngine;
 

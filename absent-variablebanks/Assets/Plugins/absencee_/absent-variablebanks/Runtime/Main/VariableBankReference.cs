@@ -1,5 +1,4 @@
-using com.absence.variablebanks.internals;
-using System;
+using com.absence.variablesystem;
 using UnityEngine;
 
 namespace com.absence.variablebanks
@@ -22,7 +21,7 @@ namespace com.absence.variablebanks
         /// <summary>
         /// Use to get the bank referenced. <b>Runtime only.</b>
         /// </summary>
-        public VariableBank Bank => VariableBank.GetInstance(m_targetGuid);
+        public VariableBank Bank => VariableBankManager.GetInstance(m_targetGuid);
     }
 
 }
