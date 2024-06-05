@@ -24,10 +24,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableComparerDrawer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: A custom property drawer for <xref href="com.absence.variablebanks.internals.BaseVariableComparer" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: >-
       [CustomPropertyDrawer(typeof(BaseVariableComparer), true)]
@@ -72,10 +74,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: StyleSheetPath
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: Path of the uss file.
+  example: []
   syntax:
     content: protected static readonly string StyleSheetPath
     return:
@@ -99,7 +103,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetPropertyHeight
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 15
+    startLine: 21
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -138,7 +142,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CreatePropertyGUI
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 20
+    startLine: 26
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -174,7 +178,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: DrawGUI
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 37
+    startLine: 43
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -207,7 +211,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnGUI
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableComparerDrawer.cs
-    startLine: 225
+    startLine: 231
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -229,6 +233,13 @@ items:
   overridden: UnityEditor.PropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
   overload: com.absence.variablebanks.editor.VariableComparerDrawer.OnGUI*
 references:
+- uid: com.absence.variablebanks.internals.BaseVariableComparer
+  commentId: T:com.absence.variablebanks.internals.BaseVariableComparer
+  parent: com.absence.variablebanks.internals
+  href: com.absence.variablebanks.internals.BaseVariableComparer.html
+  name: BaseVariableComparer
+  nameWithType: BaseVariableComparer
+  fullName: com.absence.variablebanks.internals.BaseVariableComparer
 - uid: com.absence.variablebanks.editor
   commentId: N:com.absence.variablebanks.editor
   href: com.html
@@ -338,6 +349,44 @@ references:
   name: preferredLabel
   nameWithType: PropertyDrawer.preferredLabel
   fullName: UnityEditor.PropertyDrawer.preferredLabel
+- uid: com.absence.variablebanks.internals
+  commentId: N:com.absence.variablebanks.internals
+  href: com.html
+  name: com.absence.variablebanks.internals
+  nameWithType: com.absence.variablebanks.internals
+  fullName: com.absence.variablebanks.internals
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
 - uid: System
   commentId: N:System
   isExternal: true

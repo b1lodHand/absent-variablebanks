@@ -29,10 +29,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: BaseVariableComparer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: The base class for comparers.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -69,7 +71,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_comparisonType
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 18
+    startLine: 24
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -106,7 +108,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_targetBankGuid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 19
+    startLine: 25
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -143,7 +145,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_targetVariableName
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 20
+    startLine: 26
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -180,7 +182,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_intValue
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 22
+    startLine: 28
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -217,7 +219,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_floatValue
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 23
+    startLine: 29
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -254,7 +256,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_stringValue
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 24
+    startLine: 30
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -291,7 +293,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_boolValue
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 25
+    startLine: 31
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -328,10 +330,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 27
+    startLine: 36
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Will the bank selector be hidden in the editor?
+  example: []
   syntax:
     content: public abstract bool HasFixedBank { get; }
     parameters: []
@@ -357,15 +361,18 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetRuntimeBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 29
+    startLine: 42
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Override to define how this comparer will find it's runtime bank.
+  example: []
   syntax:
-    content: public virtual VariableBank GetRuntimeBank()
+    content: protected virtual VariableBank GetRuntimeBank()
     return:
       type: com.absence.variablebanks.VariableBank
-    content.vb: Public Overridable Function GetRuntimeBank() As VariableBank
+      description: The runtime bank or null
+    content.vb: Protected Overridable Function GetRuntimeBank() As VariableBank
   overload: com.absence.variablebanks.internals.BaseVariableComparer.GetRuntimeBank*
 - uid: com.absence.variablebanks.internals.BaseVariableComparer.GetResult
   commentId: M:com.absence.variablebanks.internals.BaseVariableComparer.GetResult
@@ -385,14 +392,17 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetResult
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Abstract/BaseVariableComparer.cs
-    startLine: 31
+    startLine: 48
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Use to get the result of the comparer. <b>Runtime only.</b>
+  example: []
   syntax:
     content: public virtual bool GetResult()
     return:
       type: System.Boolean
+      description: Result of the comparer. Returns true directly if anything goes wrong.
     content.vb: Public Overridable Function GetResult() As Boolean
   overload: com.absence.variablebanks.internals.BaseVariableComparer.GetResult*
 references:

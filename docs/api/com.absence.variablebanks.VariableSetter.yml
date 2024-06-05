@@ -23,10 +23,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableSetter
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableSetter.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Setter with a dynamic bank you select in the editor.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -40,7 +42,6 @@ items:
   - System.Object
   - com.absence.variablebanks.internals.BaseVariableSetter
   inheritedMembers:
-  - com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank
   - com.absence.variablebanks.internals.BaseVariableSetter.Perform
   attributes:
   - type: System.SerializableAttribute
@@ -64,10 +65,11 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableSetter.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Will the bank selector be hidden in the editor?
   example: []
   syntax:
     content: public override bool HasFixedBank { get; }
@@ -95,15 +97,18 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetBankGuid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableSetter.cs
-    startLine: 9
+    startLine: 16
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Set this setter's target bank Guid.
+  example: []
   syntax:
     content: public void SetBankGuid(string newBankGuid)
     parameters:
     - id: newBankGuid
       type: System.String
+      description: New Guid.
     content.vb: Public Sub SetBankGuid(newBankGuid As String)
   overload: com.absence.variablebanks.VariableSetter.SetBankGuid*
   nameWithType.vb: VariableSetter.SetBankGuid(String)
@@ -127,17 +132,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableSetter.cs
-    startLine: 14
+    startLine: 26
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to clone this setter.
+  example: []
   syntax:
     content: public VariableSetter Clone(string overrideBankGuid)
     parameters:
     - id: overrideBankGuid
       type: System.String
+      description: Guid for a new bank.
     return:
       type: com.absence.variablebanks.VariableSetter
+      description: The clone.
     content.vb: Public Function Clone(overrideBankGuid As String) As VariableSetter
   overload: com.absence.variablebanks.VariableSetter.Clone*
   nameWithType.vb: VariableSetter.Clone(String)
@@ -161,14 +170,17 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableSetter.cs
-    startLine: 30
+    startLine: 47
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to clone this setter.
+  example: []
   syntax:
     content: public VariableSetter Clone()
     return:
       type: com.absence.variablebanks.VariableSetter
+      description: The clone.
     content.vb: Public Function Clone() As VariableSetter
   overload: com.absence.variablebanks.VariableSetter.Clone*
 references:
@@ -220,25 +232,6 @@ references:
   name: BaseVariableSetter
   nameWithType: BaseVariableSetter
   fullName: com.absence.variablebanks.internals.BaseVariableSetter
-- uid: com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank
-  commentId: M:com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank
-  parent: com.absence.variablebanks.internals.BaseVariableSetter
-  href: com.absence.variablebanks.internals.BaseVariableSetter.html#com_absence_variablebanks_internals_BaseVariableSetter_GetRuntimeBank
-  name: GetRuntimeBank()
-  nameWithType: BaseVariableSetter.GetRuntimeBank()
-  fullName: com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank()
-  spec.csharp:
-  - uid: com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank
-    name: GetRuntimeBank
-    href: com.absence.variablebanks.internals.BaseVariableSetter.html#com_absence_variablebanks_internals_BaseVariableSetter_GetRuntimeBank
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: com.absence.variablebanks.internals.BaseVariableSetter.GetRuntimeBank
-    name: GetRuntimeBank
-    href: com.absence.variablebanks.internals.BaseVariableSetter.html#com_absence_variablebanks_internals_BaseVariableSetter_GetRuntimeBank
-  - name: (
-  - name: )
 - uid: com.absence.variablebanks.internals.BaseVariableSetter.Perform
   commentId: M:com.absence.variablebanks.internals.BaseVariableSetter.Perform
   parent: com.absence.variablebanks.internals.BaseVariableSetter

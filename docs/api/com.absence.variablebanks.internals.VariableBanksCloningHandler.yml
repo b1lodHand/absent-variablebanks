@@ -22,10 +22,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBanksCloningHandler
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: The static class responsible for cloning the banks at startup.
+  example: []
   syntax:
     content: public static class VariableBanksCloningHandler
     content.vb: Public Module VariableBanksCloningHandler
@@ -49,10 +51,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnCloningCompleted
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Action which will get invoked when cloning process gets completed successfully. It gets cleared automatically after invoking.
+  example: []
   syntax:
     content: public static event Action OnCloningCompleted
     return:
@@ -76,10 +80,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CloningCompleted
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-    startLine: 11
+    startLine: 22
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Use to check if the cloning process got completed successfully.
+  example: []
   syntax:
     content: public static bool CloningCompleted { get; }
     parameters: []
@@ -105,17 +111,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddCloningCompleteCallbackOrInvoke
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-    startLine: 52
+    startLine: 69
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: >-
+    Adds the action passed to <xref href="com.absence.variablebanks.internals.VariableBanksCloningHandler.OnCloningCompleted" data-throw-if-not-resolved="false"></xref> if the cloning process is not ended yet. If it is ended already,
+
+    the action passed gets invoked instantly.
+  example: []
   syntax:
     content: public static bool AddCloningCompleteCallbackOrInvoke(Action callbackContext)
     parameters:
     - id: callbackContext
       type: System.Action
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Shared Function AddCloningCompleteCallbackOrInvoke(callbackContext As Action) As Boolean
   overload: com.absence.variablebanks.internals.VariableBanksCloningHandler.AddCloningCompleteCallbackOrInvoke*
 references:
@@ -200,6 +213,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: com.absence.variablebanks.internals.VariableBanksCloningHandler.OnCloningCompleted
+  commentId: E:com.absence.variablebanks.internals.VariableBanksCloningHandler.OnCloningCompleted
+  href: com.absence.variablebanks.internals.VariableBanksCloningHandler.html#com_absence_variablebanks_internals_VariableBanksCloningHandler_OnCloningCompleted
+  name: OnCloningCompleted
+  nameWithType: VariableBanksCloningHandler.OnCloningCompleted
+  fullName: com.absence.variablebanks.internals.VariableBanksCloningHandler.OnCloningCompleted
 - uid: com.absence.variablebanks.internals.VariableBanksCloningHandler.AddCloningCompleteCallbackOrInvoke*
   commentId: Overload:com.absence.variablebanks.internals.VariableBanksCloningHandler.AddCloningCompleteCallbackOrInvoke
   href: com.absence.variablebanks.internals.VariableBanksCloningHandler.html#com_absence_variablebanks_internals_VariableBanksCloningHandler_AddCloningCompleteCallbackOrInvoke_System_Action_

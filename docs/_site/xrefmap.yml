@@ -256,19 +256,6 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.VariableBank.ForExternalUse
   nameWithType: VariableBank.ForExternalUse
-- uid: com.absence.variablebanks.VariableBank.GUID
-  name: GUID
-  href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_GUID
-  commentId: P:com.absence.variablebanks.VariableBank.GUID
-  fullName: com.absence.variablebanks.VariableBank.GUID
-  nameWithType: VariableBank.GUID
-- uid: com.absence.variablebanks.VariableBank.GUID*
-  name: GUID
-  href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_GUID_
-  commentId: Overload:com.absence.variablebanks.VariableBank.GUID
-  isSpec: "True"
-  fullName: com.absence.variablebanks.VariableBank.GUID
-  nameWithType: VariableBank.GUID
 - uid: com.absence.variablebanks.VariableBank.GetAllVariableNames
   name: GetAllVariableNames()
   href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_GetAllVariableNames
@@ -311,6 +298,19 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.VariableBank.GetInstance
   nameWithType: VariableBank.GetInstance
+- uid: com.absence.variablebanks.VariableBank.Guid
+  name: Guid
+  href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_Guid
+  commentId: P:com.absence.variablebanks.VariableBank.Guid
+  fullName: com.absence.variablebanks.VariableBank.Guid
+  nameWithType: VariableBank.Guid
+- uid: com.absence.variablebanks.VariableBank.Guid*
+  name: Guid
+  href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_Guid_
+  commentId: Overload:com.absence.variablebanks.VariableBank.Guid
+  isSpec: "True"
+  fullName: com.absence.variablebanks.VariableBank.Guid
+  nameWithType: VariableBank.Guid
 - uid: com.absence.variablebanks.VariableBank.HasAny(System.String)
   name: HasAny(string)
   href: api/com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_HasAny_System_String_

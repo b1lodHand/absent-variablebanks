@@ -20,10 +20,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBankAcquirerCustomEditor
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankAcquirerCustomEditor.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: A custom editor script for <xref href="com.absence.variablebanks.VariableBankAcquirer" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: >-
       [CustomEditor(typeof(VariableBankAcquirer), true)]
@@ -108,7 +110,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnInspectorGUI
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankAcquirerCustomEditor.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -120,6 +122,13 @@ items:
   overridden: UnityEditor.Editor.OnInspectorGUI
   overload: com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.OnInspectorGUI*
 references:
+- uid: com.absence.variablebanks.VariableBankAcquirer
+  commentId: T:com.absence.variablebanks.VariableBankAcquirer
+  parent: com.absence.variablebanks
+  href: com.absence.variablebanks.VariableBankAcquirer.html
+  name: VariableBankAcquirer
+  nameWithType: VariableBankAcquirer
+  fullName: com.absence.variablebanks.VariableBankAcquirer
 - uid: com.absence.variablebanks.editor
   commentId: N:com.absence.variablebanks.editor
   href: com.html
@@ -1393,6 +1402,36 @@ references:
   - name: )
   - name: (
   - name: )
+- uid: com.absence.variablebanks
+  commentId: N:com.absence.variablebanks
+  href: com.html
+  name: com.absence.variablebanks
+  nameWithType: com.absence.variablebanks
+  fullName: com.absence.variablebanks
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
 - uid: System
   commentId: N:System
   isExternal: true

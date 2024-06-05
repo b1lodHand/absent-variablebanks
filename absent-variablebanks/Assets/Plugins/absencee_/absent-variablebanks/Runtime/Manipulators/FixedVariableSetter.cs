@@ -2,6 +2,9 @@ using com.absence.variablebanks.internals;
 
 namespace com.absence.variablebanks
 {
+    /// <summary>
+    /// Setter with a fixed bank.
+    /// </summary>
     [System.Serializable]
     public sealed class FixedVariableSetter : BaseVariableSetter
     {

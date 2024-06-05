@@ -14,10 +14,10 @@ items:
   - com.absence.variablebanks.VariableBank.ClonedFrom
   - com.absence.variablebanks.VariableBank.Floats
   - com.absence.variablebanks.VariableBank.ForExternalUse
-  - com.absence.variablebanks.VariableBank.GUID
   - com.absence.variablebanks.VariableBank.GetAllVariableNames
   - com.absence.variablebanks.VariableBank.GetAllVariableNamesWithTypes
   - com.absence.variablebanks.VariableBank.GetInstance(System.String)
+  - com.absence.variablebanks.VariableBank.Guid
   - com.absence.variablebanks.VariableBank.HasAny(System.String)
   - com.absence.variablebanks.VariableBank.HasBoolean(System.String)
   - com.absence.variablebanks.VariableBank.HasFloat(System.String)
@@ -54,10 +54,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: The scriptable object represents a bank of variables.
+  example: []
   syntax:
     content: 'public class VariableBank : ScriptableObject'
     content.vb: Public Class VariableBank Inherits ScriptableObject
@@ -88,44 +90,48 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: "Null"
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 13
+    startLine: 18
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: A constant string that represents a null variable name (with the prefix).
+  example: []
   syntax:
-    content: public static readonly string Null
+    content: 'public const string Null = "null: null"'
     return:
       type: System.String
-    content.vb: Public Shared ReadOnly Null As String
-- uid: com.absence.variablebanks.VariableBank.GUID
-  commentId: P:com.absence.variablebanks.VariableBank.GUID
-  id: GUID
+    content.vb: 'Public Const Null As String = "null: null"'
+- uid: com.absence.variablebanks.VariableBank.Guid
+  commentId: P:com.absence.variablebanks.VariableBank.Guid
+  id: Guid
   parent: com.absence.variablebanks.VariableBank
   langs:
   - csharp
   - vb
-  name: GUID
-  nameWithType: VariableBank.GUID
-  fullName: com.absence.variablebanks.VariableBank.GUID
+  name: Guid
+  nameWithType: VariableBank.Guid
+  fullName: com.absence.variablebanks.VariableBank.Guid
   type: Property
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
       branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
-    id: GUID
+    id: Guid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 15
+    startLine: 26
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Guid of this bank.
+  example: []
   syntax:
-    content: public string GUID { get; }
+    content: public string Guid { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public ReadOnly Property GUID As String
-  overload: com.absence.variablebanks.VariableBank.GUID*
+    content.vb: Public ReadOnly Property Guid As String
+  overload: com.absence.variablebanks.VariableBank.Guid*
 - uid: com.absence.variablebanks.VariableBank.GetInstance(System.String)
   commentId: M:com.absence.variablebanks.VariableBank.GetInstance(System.String)
   id: GetInstance(System.String)
@@ -144,17 +150,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetInstance
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 17
+    startLine: 33
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get a cloned bank with a specific Guid. <b>Runtime Only.</b>
+  example: []
   syntax:
     content: public static VariableBank GetInstance(string targetGuid)
     parameters:
     - id: targetGuid
       type: System.String
+      description: Target Guid.
     return:
       type: com.absence.variablebanks.VariableBank
+      description: Throws an error if a clone with the target Guid does not exist. Returns the bank otherwise.
     content.vb: Public Shared Function GetInstance(targetGuid As String) As VariableBank
   overload: com.absence.variablebanks.VariableBank.GetInstance*
   nameWithType.vb: VariableBank.GetInstance(String)
@@ -178,10 +188,15 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: ForExternalUse
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 20
+    startLine: 42
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: >-
+    If true, this bank won't get cloned in the startup and also will not get shown on the variable bank name lists. Set to
+
+    true if you'll use direct references of such. For more information, read the docs.
+  example: []
   syntax:
     content: public bool ForExternalUse { get; set; }
     parameters: []
@@ -207,7 +222,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_ints
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 35
+    startLine: 57
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -244,7 +259,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_floats
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 36
+    startLine: 58
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -281,7 +296,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_strings
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 37
+    startLine: 59
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -318,7 +333,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: m_booleans
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 38
+    startLine: 60
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -355,10 +370,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Ints
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 40
+    startLine: 65
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: All of the integer variables within this bank.
+  example: []
   syntax:
     content: public List<Variable_Integer> Ints { get; }
     parameters: []
@@ -384,10 +401,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Floats
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 41
+    startLine: 70
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: All of the floating point variables within this bank.
+  example: []
   syntax:
     content: public List<Variable_Float> Floats { get; }
     parameters: []
@@ -413,10 +432,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Strings
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 42
+    startLine: 75
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: All of the string variables within this bank.
+  example: []
   syntax:
     content: public List<Variable_String> Strings { get; }
     parameters: []
@@ -442,10 +463,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Booleans
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 43
+    startLine: 80
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: All of the boolean variables within this bank.
+  example: []
   syntax:
     content: public List<Variable_Boolean> Booleans { get; }
     parameters: []
@@ -471,10 +494,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnDestroyAction
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 45
+    startLine: 85
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: The action gets invoked when this bank gets destroyed.
+  example: []
   syntax:
     content: public event Action OnDestroyAction
     return:
@@ -498,10 +523,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: ClonedFrom
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 48
+    startLine: 92
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Returns null if this is not a clone. Returns the original bank if this is a clone.
+  example: []
   syntax:
     content: public VariableBank ClonedFrom { get; }
     parameters: []
@@ -527,10 +554,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: IsClone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 50
+    startLine: 97
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if this bank is a clone.
+  example: []
   syntax:
     content: public bool IsClone { get; }
     parameters: []
@@ -556,14 +585,17 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetAllVariableNames
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 52
+    startLine: 103
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get a list of all variables' names of this bank.
+  example: []
   syntax:
     content: public List<string> GetAllVariableNames()
     return:
       type: System.Collections.Generic.List{System.String}
+      description: 'A list of variable names. Example: "example_int"'
     content.vb: Public Function GetAllVariableNames() As List(Of String)
   overload: com.absence.variablebanks.VariableBank.GetAllVariableNames*
 - uid: com.absence.variablebanks.VariableBank.GetAllVariableNamesWithTypes
@@ -584,14 +616,20 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetAllVariableNamesWithTypes
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 65
+    startLine: 122
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: >-
+    Use to get a list of all variables' names of this bank, each one of the names will contain a type prefix. <b>Those
+
+    prefixes get trimmed when you pass them to any function of a variable bank.</b>
+  example: []
   syntax:
     content: public List<string> GetAllVariableNamesWithTypes()
     return:
       type: System.Collections.Generic.List{System.String}
+      description: 'A list of all variable names with the prefixes. Example: "int: example_int"'
     content.vb: Public Function GetAllVariableNamesWithTypes() As List(Of String)
   overload: com.absence.variablebanks.VariableBank.GetAllVariableNamesWithTypes*
 - uid: com.absence.variablebanks.VariableBank.TryGetInt(System.String,System.Int32@)
@@ -612,19 +650,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: TryGetInt
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 79
+    startLine: 143
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get value of an integer variable within this bank.
+  example: []
   syntax:
     content: public bool TryGetInt(string variableName, out int value)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: value
       type: System.Int32
+      description: Value of the variable.
     return:
       type: System.Boolean
+      description: True if a variable with the target name exists within the bank.
     content.vb: Public Function TryGetInt(variableName As String, value As Integer) As Boolean
   overload: com.absence.variablebanks.VariableBank.TryGetInt*
   nameWithType.vb: VariableBank.TryGetInt(String, Integer)
@@ -648,19 +691,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: TryGetFloat
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 90
+    startLine: 161
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get value of a floating point variable within this bank.
+  example: []
   syntax:
     content: public bool TryGetFloat(string variableName, out float value)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: value
       type: System.Single
+      description: Value of the variable.
     return:
       type: System.Boolean
+      description: True if a variable with the target name exists within the bank.
     content.vb: Public Function TryGetFloat(variableName As String, value As Single) As Boolean
   overload: com.absence.variablebanks.VariableBank.TryGetFloat*
   nameWithType.vb: VariableBank.TryGetFloat(String, Single)
@@ -684,19 +732,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: TryGetString
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 101
+    startLine: 179
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get value of a string variable within this bank.
+  example: []
   syntax:
     content: public bool TryGetString(string variableName, out string value)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: value
       type: System.String
+      description: Value of the variable.
     return:
       type: System.Boolean
+      description: True if a variable with the target name exists within the bank.
     content.vb: Public Function TryGetString(variableName As String, value As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.TryGetString*
   nameWithType.vb: VariableBank.TryGetString(String, String)
@@ -720,19 +773,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: TryGetBoolean
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 112
+    startLine: 197
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to get value of a boolean variable within this bank.
+  example: []
   syntax:
     content: public bool TryGetBoolean(string variableName, out bool value)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: value
       type: System.Boolean
+      description: Value of the variable.
     return:
       type: System.Boolean
+      description: True if a variable with the target name exists within the bank.
     content.vb: Public Function TryGetBoolean(variableName As String, value As Boolean) As Boolean
   overload: com.absence.variablebanks.VariableBank.TryGetBoolean*
   nameWithType.vb: VariableBank.TryGetBoolean(String, Boolean)
@@ -756,17 +814,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddValueChangeListenerToInt
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 124
+    startLine: 214
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to add a value change callback to an integer variable with a specific name.
+  example: []
   syntax:
     content: public void AddValueChangeListenerToInt(string variableName, Action<VariableValueChangedCallbackContext<int>> callbackAction)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: callbackAction
       type: System.Action{com.absence.variablesystem.VariableValueChangedCallbackContext{System.Int32}}
+      description: What to do when value of the variable changes.
     content.vb: Public Sub AddValueChangeListenerToInt(variableName As String, callbackAction As Action(Of VariableValueChangedCallbackContext(Of Integer)))
   overload: com.absence.variablebanks.VariableBank.AddValueChangeListenerToInt*
   nameWithType.vb: VariableBank.AddValueChangeListenerToInt(String, Action(Of VariableValueChangedCallbackContext(Of Integer)))
@@ -790,17 +852,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddValueChangeListenerToFloat
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 133
+    startLine: 229
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to add a value change callback to a floating point variable with a specific name.
+  example: []
   syntax:
     content: public void AddValueChangeListenerToFloat(string variableName, Action<VariableValueChangedCallbackContext<float>> callbackAction)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: callbackAction
       type: System.Action{com.absence.variablesystem.VariableValueChangedCallbackContext{System.Single}}
+      description: What to do when value of the variable changes.
     content.vb: Public Sub AddValueChangeListenerToFloat(variableName As String, callbackAction As Action(Of VariableValueChangedCallbackContext(Of Single)))
   overload: com.absence.variablebanks.VariableBank.AddValueChangeListenerToFloat*
   nameWithType.vb: VariableBank.AddValueChangeListenerToFloat(String, Action(Of VariableValueChangedCallbackContext(Of Single)))
@@ -824,17 +890,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddValueChangeListenerToString
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 142
+    startLine: 244
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to add a value change callback to a string variable with a specific name.
+  example: []
   syntax:
     content: public void AddValueChangeListenerToString(string variableName, Action<VariableValueChangedCallbackContext<string>> callbackAction)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: callbackAction
       type: System.Action{com.absence.variablesystem.VariableValueChangedCallbackContext{System.String}}
+      description: What to do when value of the variable changes.
     content.vb: Public Sub AddValueChangeListenerToString(variableName As String, callbackAction As Action(Of VariableValueChangedCallbackContext(Of String)))
   overload: com.absence.variablebanks.VariableBank.AddValueChangeListenerToString*
   nameWithType.vb: VariableBank.AddValueChangeListenerToString(String, Action(Of VariableValueChangedCallbackContext(Of String)))
@@ -858,17 +928,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddValueChangeListenerToBoolean
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 151
+    startLine: 259
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to add a value change callback to a boolean variable with a specific name.
+  example: []
   syntax:
     content: public void AddValueChangeListenerToBoolean(string variableName, Action<VariableValueChangedCallbackContext<bool>> callbackAction)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: callbackAction
       type: System.Action{com.absence.variablesystem.VariableValueChangedCallbackContext{System.Boolean}}
+      description: What to do when value of the variable changes.
     content.vb: Public Sub AddValueChangeListenerToBoolean(variableName As String, callbackAction As Action(Of VariableValueChangedCallbackContext(Of Boolean)))
   overload: com.absence.variablebanks.VariableBank.AddValueChangeListenerToBoolean*
   nameWithType.vb: VariableBank.AddValueChangeListenerToBoolean(String, Action(Of VariableValueChangedCallbackContext(Of Boolean)))
@@ -892,19 +966,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetInt
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 161
+    startLine: 275
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to change an integer variable's value.
+  example: []
   syntax:
     content: public bool SetInt(string variableName, int newValue)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: newValue
       type: System.Int32
+      description: New value for the variable.
     return:
       type: System.Boolean
+      description: True if value changing process ended successfully. False otherwise.
     content.vb: Public Function SetInt(variableName As String, newValue As Integer) As Boolean
   overload: com.absence.variablebanks.VariableBank.SetInt*
   nameWithType.vb: VariableBank.SetInt(String, Integer)
@@ -928,19 +1007,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetFloat
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 171
+    startLine: 292
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to change a floating point variable's value.
+  example: []
   syntax:
     content: public bool SetFloat(string variableName, float newValue)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: newValue
       type: System.Single
+      description: New value for the variable.
     return:
       type: System.Boolean
+      description: True if value changing process ended successfully. False otherwise.
     content.vb: Public Function SetFloat(variableName As String, newValue As Single) As Boolean
   overload: com.absence.variablebanks.VariableBank.SetFloat*
   nameWithType.vb: VariableBank.SetFloat(String, Single)
@@ -964,19 +1048,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetString
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 181
+    startLine: 309
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to change a string variable's value.
+  example: []
   syntax:
     content: public bool SetString(string variableName, string newValue)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: newValue
       type: System.String
+      description: New value for the variable.
     return:
       type: System.Boolean
+      description: True if value changing process ended successfully. False otherwise.
     content.vb: Public Function SetString(variableName As String, newValue As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.SetString*
   nameWithType.vb: VariableBank.SetString(String, String)
@@ -1000,19 +1089,24 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetBoolean
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 191
+    startLine: 326
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to change a boolean variable's value.
+  example: []
   syntax:
     content: public bool SetBoolean(string variableName, bool newValue)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     - id: newValue
       type: System.Boolean
+      description: New value for the variable.
     return:
       type: System.Boolean
+      description: True if value changing process ended successfully. False otherwise.
     content.vb: Public Function SetBoolean(variableName As String, newValue As Boolean) As Boolean
   overload: com.absence.variablebanks.VariableBank.SetBoolean*
   nameWithType.vb: VariableBank.SetBoolean(String, Boolean)
@@ -1036,17 +1130,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasInt
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 202
+    startLine: 342
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if an integer variable with the target name exists within this bank.
+  example: []
   syntax:
     content: public bool HasInt(string variableName)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     return:
       type: System.Boolean
+      description: True if exists, false otherwise.
     content.vb: Public Function HasInt(variableName As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.HasInt*
   nameWithType.vb: VariableBank.HasInt(String)
@@ -1070,17 +1168,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFloat
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 203
+    startLine: 349
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if a floating point variable with the target name exists within this bank.
+  example: []
   syntax:
     content: public bool HasFloat(string variableName)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     return:
       type: System.Boolean
+      description: True if exists, false otherwise.
     content.vb: Public Function HasFloat(variableName As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.HasFloat*
   nameWithType.vb: VariableBank.HasFloat(String)
@@ -1104,17 +1206,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasString
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 204
+    startLine: 356
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if a string variable with the target name exists within this bank.
+  example: []
   syntax:
     content: public bool HasString(string variableName)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     return:
       type: System.Boolean
+      description: True if exists, false otherwise.
     content.vb: Public Function HasString(variableName As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.HasString*
   nameWithType.vb: VariableBank.HasString(String)
@@ -1138,17 +1244,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasBoolean
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 205
+    startLine: 363
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if a boolean variable with the target name exists within this bank.
+  example: []
   syntax:
     content: public bool HasBoolean(string variableName)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     return:
       type: System.Boolean
+      description: True if exists, false otherwise.
     content.vb: Public Function HasBoolean(variableName As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.HasBoolean*
   nameWithType.vb: VariableBank.HasBoolean(String)
@@ -1172,17 +1282,21 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasAny
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 206
+    startLine: 370
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to check if a variable with the target name exists within this bank.
+  example: []
   syntax:
     content: public bool HasAny(string variableName)
     parameters:
     - id: variableName
       type: System.String
+      description: Target name.
     return:
       type: System.Boolean
+      description: True if exists, false otherwise.
     content.vb: Public Function HasAny(variableName As String) As Boolean
   overload: com.absence.variablebanks.VariableBank.HasAny*
   nameWithType.vb: VariableBank.HasAny(String)
@@ -1206,14 +1320,17 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBank.cs
-    startLine: 233
+    startLine: 388
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
+  summary: Use to clone this bank.
+  example: []
   syntax:
     content: public VariableBank Clone()
     return:
       type: com.absence.variablebanks.VariableBank
+      description: Returns the clone created.
     content.vb: Public Function Clone() As VariableBank
   overload: com.absence.variablebanks.VariableBank.Clone*
 references:
@@ -1404,12 +1521,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: com.absence.variablebanks.VariableBank.GUID*
-  commentId: Overload:com.absence.variablebanks.VariableBank.GUID
-  href: com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_GUID
-  name: GUID
-  nameWithType: VariableBank.GUID
-  fullName: com.absence.variablebanks.VariableBank.GUID
+- uid: com.absence.variablebanks.VariableBank.Guid*
+  commentId: Overload:com.absence.variablebanks.VariableBank.Guid
+  href: com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_Guid
+  name: Guid
+  nameWithType: VariableBank.Guid
+  fullName: com.absence.variablebanks.VariableBank.Guid
 - uid: com.absence.variablebanks.VariableBank.GetInstance*
   commentId: Overload:com.absence.variablebanks.VariableBank.GetInstance
   href: com.absence.variablebanks.VariableBank.html#com_absence_variablebanks_VariableBank_GetInstance_System_String_
