@@ -34,7 +34,7 @@ You can open the Package Manager via the: **'Window/Package Manager'** menu on t
 
 Because of it's **asset management** aspect, I can't just say: "click this, and that and you have it!" with this package. So, I will lead you to it's own website hosted on github-pages. There, you will learn what you need to know in order to set this tool up properly.
 
-You can find the website [here.](...)
+You can find the website [here.](https://b1lodhand.github.io/absent-variablebanks/)
 
 ## Wrapping up
 
