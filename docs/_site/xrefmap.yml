@@ -35,6 +35,19 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.FixedVariableComparer.Clone
   nameWithType: FixedVariableComparer.Clone
+- uid: com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank
+  name: GetRuntimeBank()
+  href: api/com.absence.variablebanks.FixedVariableComparer.html#com_absence_variablebanks_FixedVariableComparer_GetRuntimeBank
+  commentId: M:com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank
+  fullName: com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank()
+  nameWithType: FixedVariableComparer.GetRuntimeBank()
+- uid: com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank*
+  name: GetRuntimeBank
+  href: api/com.absence.variablebanks.FixedVariableComparer.html#com_absence_variablebanks_FixedVariableComparer_GetRuntimeBank_
+  commentId: Overload:com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank
+  isSpec: "True"
+  fullName: com.absence.variablebanks.FixedVariableComparer.GetRuntimeBank
+  nameWithType: FixedVariableComparer.GetRuntimeBank
 - uid: com.absence.variablebanks.FixedVariableComparer.HasFixedBank
   name: HasFixedBank
   href: api/com.absence.variablebanks.FixedVariableComparer.html#com_absence_variablebanks_FixedVariableComparer_HasFixedBank
@@ -92,6 +105,19 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.FixedVariableSetter.Clone
   nameWithType: FixedVariableSetter.Clone
+- uid: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank
+  name: GetRuntimeBank()
+  href: api/com.absence.variablebanks.FixedVariableSetter.html#com_absence_variablebanks_FixedVariableSetter_GetRuntimeBank
+  commentId: M:com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank
+  fullName: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank()
+  nameWithType: FixedVariableSetter.GetRuntimeBank()
+- uid: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank*
+  name: GetRuntimeBank
+  href: api/com.absence.variablebanks.FixedVariableSetter.html#com_absence_variablebanks_FixedVariableSetter_GetRuntimeBank_
+  commentId: Overload:com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank
+  isSpec: "True"
+  fullName: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank
+  nameWithType: FixedVariableSetter.GetRuntimeBank
 - uid: com.absence.variablebanks.FixedVariableSetter.HasFixedBank
   name: HasFixedBank
   href: api/com.absence.variablebanks.FixedVariableSetter.html#com_absence_variablebanks_FixedVariableSetter_HasFixedBank
@@ -626,6 +652,28 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.VariableBankAcquirer.TargetGuid
   nameWithType: VariableBankAcquirer.TargetGuid
+- uid: com.absence.variablebanks.VariableBankManager
+  name: VariableBankManager
+  href: api/com.absence.variablebanks.VariableBankManager.html
+  commentId: T:com.absence.variablebanks.VariableBankManager
+  fullName: com.absence.variablebanks.VariableBankManager
+  nameWithType: VariableBankManager
+- uid: com.absence.variablebanks.VariableBankManager.GetInstance(System.String)
+  name: GetInstance(string)
+  href: api/com.absence.variablebanks.VariableBankManager.html#com_absence_variablebanks_VariableBankManager_GetInstance_System_String_
+  commentId: M:com.absence.variablebanks.VariableBankManager.GetInstance(System.String)
+  name.vb: GetInstance(String)
+  fullName: com.absence.variablebanks.VariableBankManager.GetInstance(string)
+  fullName.vb: com.absence.variablebanks.VariableBankManager.GetInstance(String)
+  nameWithType: VariableBankManager.GetInstance(string)
+  nameWithType.vb: VariableBankManager.GetInstance(String)
+- uid: com.absence.variablebanks.VariableBankManager.GetInstance*
+  name: GetInstance
+  href: api/com.absence.variablebanks.VariableBankManager.html#com_absence_variablebanks_VariableBankManager_GetInstance_
+  commentId: Overload:com.absence.variablebanks.VariableBankManager.GetInstance
+  isSpec: "True"
+  fullName: com.absence.variablebanks.VariableBankManager.GetInstance
+  nameWithType: VariableBankManager.GetInstance
 - uid: com.absence.variablebanks.VariableBankReference
   name: VariableBankReference
   href: api/com.absence.variablebanks.VariableBankReference.html
@@ -686,6 +734,19 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.VariableComparer.Clone
   nameWithType: VariableComparer.Clone
+- uid: com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  name: GetRuntimeBank()
+  href: api/com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_GetRuntimeBank
+  commentId: M:com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  fullName: com.absence.variablebanks.VariableComparer.GetRuntimeBank()
+  nameWithType: VariableComparer.GetRuntimeBank()
+- uid: com.absence.variablebanks.VariableComparer.GetRuntimeBank*
+  name: GetRuntimeBank
+  href: api/com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_GetRuntimeBank_
+  commentId: Overload:com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  isSpec: "True"
+  fullName: com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  nameWithType: VariableComparer.GetRuntimeBank
 - uid: com.absence.variablebanks.VariableComparer.HasFixedBank
   name: HasFixedBank
   href: api/com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_HasFixedBank
@@ -743,6 +804,19 @@ references:
   isSpec: "True"
   fullName: com.absence.variablebanks.VariableSetter.Clone
   nameWithType: VariableSetter.Clone
+- uid: com.absence.variablebanks.VariableSetter.GetRuntimeBank
+  name: GetRuntimeBank()
+  href: api/com.absence.variablebanks.VariableSetter.html#com_absence_variablebanks_VariableSetter_GetRuntimeBank
+  commentId: M:com.absence.variablebanks.VariableSetter.GetRuntimeBank
+  fullName: com.absence.variablebanks.VariableSetter.GetRuntimeBank()
+  nameWithType: VariableSetter.GetRuntimeBank()
+- uid: com.absence.variablebanks.VariableSetter.GetRuntimeBank*
+  name: GetRuntimeBank
+  href: api/com.absence.variablebanks.VariableSetter.html#com_absence_variablebanks_VariableSetter_GetRuntimeBank_
+  commentId: Overload:com.absence.variablebanks.VariableSetter.GetRuntimeBank
+  isSpec: "True"
+  fullName: com.absence.variablebanks.VariableSetter.GetRuntimeBank
+  nameWithType: VariableSetter.GetRuntimeBank
 - uid: com.absence.variablebanks.VariableSetter.HasFixedBank
   name: HasFixedBank
   href: api/com.absence.variablebanks.VariableSetter.html#com_absence_variablebanks_VariableSetter_HasFixedBank

@@ -52,6 +52,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.VariableBankManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.VariableBankManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/com.absence.variablebanks.VariableBankReference.yml",
       "output": {
         ".html": {
