@@ -6,10 +6,7 @@ items:
   children:
   - com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
   - com.absence.variablebanks.editor.VariableBankCreationHandler
-  - com.absence.variablebanks.editor.VariableBankDatabase
   - com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer
-  - com.absence.variablebanks.editor.VariableComparerDrawer
-  - com.absence.variablebanks.editor.VariableSetterDrawer
   langs:
   - csharp
   - vb
@@ -20,24 +17,6 @@ items:
   assemblies:
   - Assembly-CSharp-Editor-firstpass
 references:
-- uid: com.absence.variablebanks.editor.VariableBankDatabase
-  commentId: T:com.absence.variablebanks.editor.VariableBankDatabase
-  href: com.absence.variablebanks.editor.VariableBankDatabase.html
-  name: VariableBankDatabase
-  nameWithType: VariableBankDatabase
-  fullName: com.absence.variablebanks.editor.VariableBankDatabase
-- uid: com.absence.variablebanks.editor.VariableComparerDrawer
-  commentId: T:com.absence.variablebanks.editor.VariableComparerDrawer
-  href: com.absence.variablebanks.editor.VariableComparerDrawer.html
-  name: VariableComparerDrawer
-  nameWithType: VariableComparerDrawer
-  fullName: com.absence.variablebanks.editor.VariableComparerDrawer
-- uid: com.absence.variablebanks.editor.VariableSetterDrawer
-  commentId: T:com.absence.variablebanks.editor.VariableSetterDrawer
-  href: com.absence.variablebanks.editor.VariableSetterDrawer.html
-  name: VariableSetterDrawer
-  nameWithType: VariableSetterDrawer
-  fullName: com.absence.variablebanks.editor.VariableSetterDrawer
 - uid: com.absence.variablebanks.editor.VariableBankCreationHandler
   commentId: T:com.absence.variablebanks.editor.VariableBankCreationHandler
   href: com.absence.variablebanks.editor.VariableBankCreationHandler.html

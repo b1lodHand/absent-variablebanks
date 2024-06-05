@@ -7,6 +7,7 @@ items:
   children:
   - com.absence.variablebanks.VariableComparer.Clone
   - com.absence.variablebanks.VariableComparer.Clone(System.String)
+  - com.absence.variablebanks.VariableComparer.GetRuntimeBank
   - com.absence.variablebanks.VariableComparer.HasFixedBank
   - com.absence.variablebanks.VariableComparer.SetBankGuid(System.String)
   langs:
@@ -19,7 +20,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableComparer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -40,9 +41,9 @@ items:
       Public NotInheritable Class VariableComparer Inherits BaseVariableComparer
   inheritance:
   - System.Object
-  - com.absence.variablebanks.internals.BaseVariableComparer
+  - com.absence.variablesystem.BaseVariableComparer
   inheritedMembers:
-  - com.absence.variablebanks.internals.BaseVariableComparer.GetResult
+  - com.absence.variablesystem.BaseVariableComparer.GetResult
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -61,7 +62,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -69,7 +70,6 @@ items:
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
-  summary: Will the bank selector be hidden in the editor?
   example: []
   syntax:
     content: public override bool HasFixedBank { get; }
@@ -77,7 +77,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Overrides ReadOnly Property HasFixedBank As Boolean
-  overridden: com.absence.variablebanks.internals.BaseVariableComparer.HasFixedBank
+  overridden: com.absence.variablesystem.BaseVariableComparer.HasFixedBank
   overload: com.absence.variablebanks.VariableComparer.HasFixedBank*
 - uid: com.absence.variablebanks.VariableComparer.SetBankGuid(System.String)
   commentId: M:com.absence.variablebanks.VariableComparer.SetBankGuid(System.String)
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetBankGuid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -114,6 +114,36 @@ items:
   nameWithType.vb: VariableComparer.SetBankGuid(String)
   fullName.vb: com.absence.variablebanks.VariableComparer.SetBankGuid(String)
   name.vb: SetBankGuid(String)
+- uid: com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  commentId: M:com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  id: GetRuntimeBank
+  parent: com.absence.variablebanks.VariableComparer
+  langs:
+  - csharp
+  - vb
+  name: GetRuntimeBank()
+  nameWithType: VariableComparer.GetRuntimeBank()
+  fullName: com.absence.variablebanks.VariableComparer.GetRuntimeBank()
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
+      branch: development
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: GetRuntimeBank
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks
+  example: []
+  syntax:
+    content: protected override VariableBank GetRuntimeBank()
+    return:
+      type: com.absence.variablesystem.VariableBank
+    content.vb: Protected Overrides Function GetRuntimeBank() As VariableBank
+  overridden: com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank
+  overload: com.absence.variablebanks.VariableComparer.GetRuntimeBank*
 - uid: com.absence.variablebanks.VariableComparer.Clone(System.String)
   commentId: M:com.absence.variablebanks.VariableComparer.Clone(System.String)
   id: Clone(System.String)
@@ -128,11 +158,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-    startLine: 26
+    startLine: 28
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -166,11 +196,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-    startLine: 47
+    startLine: 49
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -225,30 +255,30 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: com.absence.variablebanks.internals.BaseVariableComparer
-  commentId: T:com.absence.variablebanks.internals.BaseVariableComparer
-  parent: com.absence.variablebanks.internals
-  href: com.absence.variablebanks.internals.BaseVariableComparer.html
+- uid: com.absence.variablesystem.BaseVariableComparer
+  commentId: T:com.absence.variablesystem.BaseVariableComparer
+  parent: com.absence.variablesystem
+  isExternal: true
   name: BaseVariableComparer
   nameWithType: BaseVariableComparer
-  fullName: com.absence.variablebanks.internals.BaseVariableComparer
-- uid: com.absence.variablebanks.internals.BaseVariableComparer.GetResult
-  commentId: M:com.absence.variablebanks.internals.BaseVariableComparer.GetResult
-  parent: com.absence.variablebanks.internals.BaseVariableComparer
-  href: com.absence.variablebanks.internals.BaseVariableComparer.html#com_absence_variablebanks_internals_BaseVariableComparer_GetResult
+  fullName: com.absence.variablesystem.BaseVariableComparer
+- uid: com.absence.variablesystem.BaseVariableComparer.GetResult
+  commentId: M:com.absence.variablesystem.BaseVariableComparer.GetResult
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
   name: GetResult()
   nameWithType: BaseVariableComparer.GetResult()
-  fullName: com.absence.variablebanks.internals.BaseVariableComparer.GetResult()
+  fullName: com.absence.variablesystem.BaseVariableComparer.GetResult()
   spec.csharp:
-  - uid: com.absence.variablebanks.internals.BaseVariableComparer.GetResult
+  - uid: com.absence.variablesystem.BaseVariableComparer.GetResult
     name: GetResult
-    href: com.absence.variablebanks.internals.BaseVariableComparer.html#com_absence_variablebanks_internals_BaseVariableComparer_GetResult
+    isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: com.absence.variablebanks.internals.BaseVariableComparer.GetResult
+  - uid: com.absence.variablesystem.BaseVariableComparer.GetResult
     name: GetResult
-    href: com.absence.variablebanks.internals.BaseVariableComparer.html#com_absence_variablebanks_internals_BaseVariableComparer_GetResult
+    isExternal: true
   - name: (
   - name: )
 - uid: System
@@ -258,51 +288,43 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: com.absence.variablebanks.internals
-  commentId: N:com.absence.variablebanks.internals
-  href: com.html
-  name: com.absence.variablebanks.internals
-  nameWithType: com.absence.variablebanks.internals
-  fullName: com.absence.variablebanks.internals
+- uid: com.absence.variablesystem
+  commentId: N:com.absence.variablesystem
+  isExternal: true
+  name: com.absence.variablesystem
+  nameWithType: com.absence.variablesystem
+  fullName: com.absence.variablesystem
   spec.csharp:
   - uid: com
     name: com
-    href: com.html
+    isExternal: true
   - name: .
   - uid: com.absence
     name: absence
-    href: com.absence.html
+    isExternal: true
   - name: .
-  - uid: com.absence.variablebanks
-    name: variablebanks
-    href: com.absence.variablebanks.html
-  - name: .
-  - uid: com.absence.variablebanks.internals
-    name: internals
-    href: com.absence.variablebanks.internals.html
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true
   spec.vb:
   - uid: com
     name: com
-    href: com.html
+    isExternal: true
   - name: .
   - uid: com.absence
     name: absence
-    href: com.absence.html
+    isExternal: true
   - name: .
-  - uid: com.absence.variablebanks
-    name: variablebanks
-    href: com.absence.variablebanks.html
-  - name: .
-  - uid: com.absence.variablebanks.internals
-    name: internals
-    href: com.absence.variablebanks.internals.html
-- uid: com.absence.variablebanks.internals.BaseVariableComparer.HasFixedBank
-  commentId: P:com.absence.variablebanks.internals.BaseVariableComparer.HasFixedBank
-  parent: com.absence.variablebanks.internals.BaseVariableComparer
-  href: com.absence.variablebanks.internals.BaseVariableComparer.html#com_absence_variablebanks_internals_BaseVariableComparer_HasFixedBank
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true
+- uid: com.absence.variablesystem.BaseVariableComparer.HasFixedBank
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.HasFixedBank
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
   name: HasFixedBank
   nameWithType: BaseVariableComparer.HasFixedBank
-  fullName: com.absence.variablebanks.internals.BaseVariableComparer.HasFixedBank
+  fullName: com.absence.variablesystem.BaseVariableComparer.HasFixedBank
 - uid: com.absence.variablebanks.VariableComparer.HasFixedBank*
   commentId: Overload:com.absence.variablebanks.VariableComparer.HasFixedBank
   href: com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_HasFixedBank
@@ -337,6 +359,38 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank
+  commentId: M:com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: GetRuntimeBank()
+  nameWithType: BaseVariableComparer.GetRuntimeBank()
+  fullName: com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank()
+  spec.csharp:
+  - uid: com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank
+    name: GetRuntimeBank
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: com.absence.variablesystem.BaseVariableComparer.GetRuntimeBank
+    name: GetRuntimeBank
+    isExternal: true
+  - name: (
+  - name: )
+- uid: com.absence.variablebanks.VariableComparer.GetRuntimeBank*
+  commentId: Overload:com.absence.variablebanks.VariableComparer.GetRuntimeBank
+  href: com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_GetRuntimeBank
+  name: GetRuntimeBank
+  nameWithType: VariableComparer.GetRuntimeBank
+  fullName: com.absence.variablebanks.VariableComparer.GetRuntimeBank
+- uid: com.absence.variablesystem.VariableBank
+  commentId: T:com.absence.variablesystem.VariableBank
+  parent: com.absence.variablesystem
+  isExternal: true
+  name: VariableBank
+  nameWithType: VariableBank
+  fullName: com.absence.variablesystem.VariableBank
 - uid: com.absence.variablebanks.VariableComparer.Clone*
   commentId: Overload:com.absence.variablebanks.VariableComparer.Clone
   href: com.absence.variablebanks.VariableComparer.html#com_absence_variablebanks_VariableComparer_Clone_System_String_
