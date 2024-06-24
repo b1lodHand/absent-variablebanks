@@ -24,7 +24,7 @@ namespace com.absence.variablebanks.internals
         public static bool CloningCompleted { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
-        static void CloneAllBanks()
+        static void CloneAll()
         {
             m_bankTable.Clear();
             CloningCompleted = false;
@@ -40,6 +40,10 @@ namespace com.absence.variablebanks.internals
                 m_bankTable.Add(bank.Guid, clonedBank);
                 Debug.Log(clonedBank.name);
             });
+
+            originalBanks.ForEach(bank => Resources.UnloadAsset(bank));
+            originalBanks.Clear();
+            originalBanks = null;
 
             CloningCompleted = true;
 
