@@ -355,10 +355,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fixedBankReference:
     m_targetGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
-  m_comparers: []
-  m_setters: []
-  m_fixedComparers: []
-  m_fixedSetters: []
+  m_comparers:
+  - m_comparisonType: 2
+    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+    m_targetVariableName: 'null: null'
+    m_intValue: 0
+    m_floatValue: 0
+    m_stringValue: 
+    m_boolValue: 0
+  m_setters:
+  - m_setType: 0
+    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+    m_targetVariableName: 'null: null'
+    m_intValue: 0
+    m_floatValue: 0
+    m_stringValue: 
+    m_boolValue: 0
+  m_fixedComparers:
+  - m_comparisonType: 2
+    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+    m_targetVariableName: 'bool: example_bool'
+    m_intValue: 0
+    m_floatValue: 0
+    m_stringValue: 
+    m_boolValue: 1
+  m_fixedSetters:
+  - m_setType: 0
+    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+    m_targetVariableName: 'int: example_integer'
+    m_intValue: 0
+    m_floatValue: 0
+    m_stringValue: 
+    m_boolValue: 0
 --- !u!4 &1473633978
 Transform:
   m_ObjectHideFlags: 0

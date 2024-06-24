@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 8fd8e389437c44840b9ad54bd778c27b
-  m_SerializeEntries:
-  - m_GUID: dfc3c79c5222ec94588ddc5f08456881
-    m_Address: Assets/Scriptables/VariableBanks
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - variable-banks
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: eb1baf9d5ce3b084189cc3c33fdf5f22, type: 2}
   m_SchemaSet:
