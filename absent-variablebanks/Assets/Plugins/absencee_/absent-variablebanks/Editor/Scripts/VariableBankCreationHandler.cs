@@ -12,7 +12,7 @@ namespace com.absence.variablebanks.editor
     /// </summary>
     public static class VariableBankCreationHandler
     {
-        [MenuItem("Assets/absencee_/absent-variabes/Create Variable Bank", priority = 0)]
+        [MenuItem("Assets/absencee_/absent-variablebanks/Variable Bank", priority = 0)]
         static void CreateVariableBank()
         {
             string selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
