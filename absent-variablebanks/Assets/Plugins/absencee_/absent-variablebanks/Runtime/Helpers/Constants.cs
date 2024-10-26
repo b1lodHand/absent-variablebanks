@@ -14,5 +14,7 @@ namespace com.absence.variablebanks.internals
         /// The addressables label of variable banks if you're using <b>Addressables</b> as the asset management tool.
         /// </summary>
         public const string K_ADDRESSABLES_TAG = "variable-banks";
+
+        public const string K_SCRIPTING_DEFINE_SYMBOL = "VB_ADDRESSABLES";
     }
 }
