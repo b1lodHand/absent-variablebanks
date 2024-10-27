@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider
+  commentId: T:com.absence.variablebanks.editor.PackageSettingsProvider
+  id: PackageSettingsProvider
+  parent: com.absence.variablebanks.editor
+  children:
+  - com.absence.variablebanks.editor.PackageSettingsProvider.#ctor(System.String,UnityEditor.SettingsScope)
+  - com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  - com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(System.String)
+  langs:
+  - csharp
+  - vb
+  name: PackageSettingsProvider
+  nameWithType: PackageSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: PackageSettingsProvider
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: 'public class PackageSettingsProvider : SettingsProvider'
+    content.vb: Public Class PackageSettingsProvider Inherits SettingsProvider
+  inheritance:
+  - System.Object
+  - UnityEditor.SettingsProvider
+  inheritedMembers:
+  - UnityEditor.SettingsProvider.OnActivate(System.String,UnityEngine.UIElements.VisualElement)
+  - UnityEditor.SettingsProvider.OnDeactivate
+  - UnityEditor.SettingsProvider.HasSearchInterest(System.String)
+  - UnityEditor.SettingsProvider.OnTitleBarGUI
+  - UnityEditor.SettingsProvider.OnFooterBarGUI
+  - UnityEditor.SettingsProvider.OnInspectorUpdate
+  - UnityEditor.SettingsProvider.Repaint
+  - UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties``1
+  - UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties``1
+  - UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+  - UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(System.String)
+  - UnityEditor.SettingsProvider.label
+  - UnityEditor.SettingsProvider.settingsPath
+  - UnityEditor.SettingsProvider.scope
+  - UnityEditor.SettingsProvider.keywords
+  - UnityEditor.SettingsProvider.guiHandler
+  - UnityEditor.SettingsProvider.titleBarGuiHandler
+  - UnityEditor.SettingsProvider.footerBarGuiHandler
+  - UnityEditor.SettingsProvider.activateHandler
+  - UnityEditor.SettingsProvider.deactivateHandler
+  - UnityEditor.SettingsProvider.hasSearchInterestHandler
+  - UnityEditor.SettingsProvider.inspectorUpdateHandler
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.#ctor(System.String,UnityEditor.SettingsScope)
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.#ctor(System.String,UnityEditor.SettingsScope)
+  id: '#ctor(System.String,UnityEditor.SettingsScope)'
+  parent: com.absence.variablebanks.editor.PackageSettingsProvider
+  langs:
+  - csharp
+  - vb
+  name: PackageSettingsProvider(string, SettingsScope)
+  nameWithType: PackageSettingsProvider.PackageSettingsProvider(string, SettingsScope)
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.PackageSettingsProvider(string, UnityEditor.SettingsScope)
+  type: Constructor
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: .ctor
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: public PackageSettingsProvider(string path, SettingsScope scope)
+    parameters:
+    - id: path
+      type: System.String
+    - id: scope
+      type: UnityEditor.SettingsScope
+    content.vb: Public Sub New(path As String, scope As SettingsScope)
+  overload: com.absence.variablebanks.editor.PackageSettingsProvider.#ctor*
+  nameWithType.vb: PackageSettingsProvider.New(String, SettingsScope)
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.New(String, UnityEditor.SettingsScope)
+  name.vb: New(String, SettingsScope)
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(System.String)
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(System.String)
+  id: OnGUI(System.String)
+  parent: com.absence.variablebanks.editor.PackageSettingsProvider
+  langs:
+  - csharp
+  - vb
+  name: OnGUI(string)
+  nameWithType: PackageSettingsProvider.OnGUI(string)
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(string)
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: OnGUI
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  summary: <p>Use this function to draw the UI based on IMGUI. This assumes you haven't added any children to the rootElement passed to the OnActivate function.</p>
+  example: []
+  syntax:
+    content: public override void OnGUI(string searchContext)
+    parameters:
+    - id: searchContext
+      type: System.String
+      description: Search context for the Settings window. Used to show or hide relevant properties.
+    content.vb: Public Overrides Sub OnGUI(searchContext As String)
+  overridden: UnityEditor.SettingsProvider.OnGUI(System.String)
+  overload: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI*
+  nameWithType.vb: PackageSettingsProvider.OnGUI(String)
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(String)
+  name.vb: OnGUI(String)
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  id: CreateSettingsProvider
+  parent: com.absence.variablebanks.editor.PackageSettingsProvider
+  langs:
+  - csharp
+  - vb
+  name: CreateSettingsProvider()
+  nameWithType: PackageSettingsProvider.CreateSettingsProvider()
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider()
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: CreateSettingsProvider
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettingsProvider.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: >-
+      [SettingsProvider]
+
+      public static SettingsProvider CreateSettingsProvider()
+    return:
+      type: UnityEditor.SettingsProvider
+    content.vb: >-
+      <SettingsProvider>
+
+      Public Shared Function CreateSettingsProvider() As SettingsProvider
+  overload: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider*
+  attributes:
+  - type: UnityEditor.SettingsProviderAttribute
+    ctor: UnityEditor.SettingsProviderAttribute.#ctor
+    arguments: []
+references:
+- uid: com.absence.variablebanks.editor
+  commentId: N:com.absence.variablebanks.editor
+  href: com.html
+  name: com.absence.variablebanks.editor
+  nameWithType: com.absence.variablebanks.editor
+  fullName: com.absence.variablebanks.editor
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEditor.SettingsProvider
+  commentId: T:UnityEditor.SettingsProvider
+  parent: UnityEditor
+  isExternal: true
+  name: SettingsProvider
+  nameWithType: SettingsProvider
+  fullName: UnityEditor.SettingsProvider
+- uid: UnityEditor.SettingsProvider.OnActivate(System.String,UnityEngine.UIElements.VisualElement)
+  commentId: M:UnityEditor.SettingsProvider.OnActivate(System.String,UnityEngine.UIElements.VisualElement)
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnActivate(string, VisualElement)
+  nameWithType: SettingsProvider.OnActivate(string, VisualElement)
+  fullName: UnityEditor.SettingsProvider.OnActivate(string, UnityEngine.UIElements.VisualElement)
+  nameWithType.vb: SettingsProvider.OnActivate(String, VisualElement)
+  fullName.vb: UnityEditor.SettingsProvider.OnActivate(String, UnityEngine.UIElements.VisualElement)
+  name.vb: OnActivate(String, VisualElement)
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnActivate(System.String,UnityEngine.UIElements.VisualElement)
+    name: OnActivate
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnActivate(System.String,UnityEngine.UIElements.VisualElement)
+    name: OnActivate
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.UIElements.VisualElement
+    name: VisualElement
+    isExternal: true
+  - name: )
+- uid: UnityEditor.SettingsProvider.OnDeactivate
+  commentId: M:UnityEditor.SettingsProvider.OnDeactivate
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: OnDeactivate()
+  nameWithType: SettingsProvider.OnDeactivate()
+  fullName: UnityEditor.SettingsProvider.OnDeactivate()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnDeactivate
+    name: OnDeactivate
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnDeactivate
+    name: OnDeactivate
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.HasSearchInterest(System.String)
+  commentId: M:UnityEditor.SettingsProvider.HasSearchInterest(System.String)
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: HasSearchInterest(string)
+  nameWithType: SettingsProvider.HasSearchInterest(string)
+  fullName: UnityEditor.SettingsProvider.HasSearchInterest(string)
+  nameWithType.vb: SettingsProvider.HasSearchInterest(String)
+  fullName.vb: UnityEditor.SettingsProvider.HasSearchInterest(String)
+  name.vb: HasSearchInterest(String)
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.HasSearchInterest(System.String)
+    name: HasSearchInterest
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.HasSearchInterest(System.String)
+    name: HasSearchInterest
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEditor.SettingsProvider.OnTitleBarGUI
+  commentId: M:UnityEditor.SettingsProvider.OnTitleBarGUI
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: OnTitleBarGUI()
+  nameWithType: SettingsProvider.OnTitleBarGUI()
+  fullName: UnityEditor.SettingsProvider.OnTitleBarGUI()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnTitleBarGUI
+    name: OnTitleBarGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnTitleBarGUI
+    name: OnTitleBarGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.OnFooterBarGUI
+  commentId: M:UnityEditor.SettingsProvider.OnFooterBarGUI
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: OnFooterBarGUI()
+  nameWithType: SettingsProvider.OnFooterBarGUI()
+  fullName: UnityEditor.SettingsProvider.OnFooterBarGUI()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnFooterBarGUI
+    name: OnFooterBarGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnFooterBarGUI
+    name: OnFooterBarGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.OnInspectorUpdate
+  commentId: M:UnityEditor.SettingsProvider.OnInspectorUpdate
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: OnInspectorUpdate()
+  nameWithType: SettingsProvider.OnInspectorUpdate()
+  fullName: UnityEditor.SettingsProvider.OnInspectorUpdate()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnInspectorUpdate
+    name: OnInspectorUpdate
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnInspectorUpdate
+    name: OnInspectorUpdate
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.Repaint
+  commentId: M:UnityEditor.SettingsProvider.Repaint
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: Repaint()
+  nameWithType: SettingsProvider.Repaint()
+  fullName: UnityEditor.SettingsProvider.Repaint()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.Repaint
+    name: Repaint
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.Repaint
+    name: Repaint
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties``1
+  commentId: M:UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties``1
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: PopulateSearchKeywordsFromGUIContentProperties<T>()
+  nameWithType: SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties<T>()
+  fullName: UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties<T>()
+  nameWithType.vb: SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties(Of T)()
+  fullName.vb: UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties(Of T)()
+  name.vb: PopulateSearchKeywordsFromGUIContentProperties(Of T)()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties``1
+    name: PopulateSearchKeywordsFromGUIContentProperties
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.PopulateSearchKeywordsFromGUIContentProperties``1
+    name: PopulateSearchKeywordsFromGUIContentProperties
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties``1
+  commentId: M:UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties``1
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: GetSearchKeywordsFromGUIContentProperties<T>()
+  nameWithType: SettingsProvider.GetSearchKeywordsFromGUIContentProperties<T>()
+  fullName: UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties<T>()
+  nameWithType.vb: SettingsProvider.GetSearchKeywordsFromGUIContentProperties(Of T)()
+  fullName.vb: UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties(Of T)()
+  name.vb: GetSearchKeywordsFromGUIContentProperties(Of T)()
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties``1
+    name: GetSearchKeywordsFromGUIContentProperties
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromGUIContentProperties``1
+    name: GetSearchKeywordsFromGUIContentProperties
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+  commentId: M:UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: GetSearchKeywordsFromSerializedObject(SerializedObject)
+  nameWithType: SettingsProvider.GetSearchKeywordsFromSerializedObject(SerializedObject)
+  fullName: UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+    name: GetSearchKeywordsFromSerializedObject
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.SerializedObject
+    name: SerializedObject
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromSerializedObject(UnityEditor.SerializedObject)
+    name: GetSearchKeywordsFromSerializedObject
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.SerializedObject
+    name: SerializedObject
+    isExternal: true
+  - name: )
+- uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(System.String)
+  commentId: M:UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(System.String)
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: GetSearchKeywordsFromPath(string)
+  nameWithType: SettingsProvider.GetSearchKeywordsFromPath(string)
+  fullName: UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(string)
+  nameWithType.vb: SettingsProvider.GetSearchKeywordsFromPath(String)
+  fullName.vb: UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(String)
+  name.vb: GetSearchKeywordsFromPath(String)
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(System.String)
+    name: GetSearchKeywordsFromPath
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.GetSearchKeywordsFromPath(System.String)
+    name: GetSearchKeywordsFromPath
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEditor.SettingsProvider.label
+  commentId: P:UnityEditor.SettingsProvider.label
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: label
+  nameWithType: SettingsProvider.label
+  fullName: UnityEditor.SettingsProvider.label
+- uid: UnityEditor.SettingsProvider.settingsPath
+  commentId: P:UnityEditor.SettingsProvider.settingsPath
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: settingsPath
+  nameWithType: SettingsProvider.settingsPath
+  fullName: UnityEditor.SettingsProvider.settingsPath
+- uid: UnityEditor.SettingsProvider.scope
+  commentId: P:UnityEditor.SettingsProvider.scope
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: scope
+  nameWithType: SettingsProvider.scope
+  fullName: UnityEditor.SettingsProvider.scope
+- uid: UnityEditor.SettingsProvider.keywords
+  commentId: P:UnityEditor.SettingsProvider.keywords
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: keywords
+  nameWithType: SettingsProvider.keywords
+  fullName: UnityEditor.SettingsProvider.keywords
+- uid: UnityEditor.SettingsProvider.guiHandler
+  commentId: P:UnityEditor.SettingsProvider.guiHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: guiHandler
+  nameWithType: SettingsProvider.guiHandler
+  fullName: UnityEditor.SettingsProvider.guiHandler
+- uid: UnityEditor.SettingsProvider.titleBarGuiHandler
+  commentId: P:UnityEditor.SettingsProvider.titleBarGuiHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: titleBarGuiHandler
+  nameWithType: SettingsProvider.titleBarGuiHandler
+  fullName: UnityEditor.SettingsProvider.titleBarGuiHandler
+- uid: UnityEditor.SettingsProvider.footerBarGuiHandler
+  commentId: P:UnityEditor.SettingsProvider.footerBarGuiHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: footerBarGuiHandler
+  nameWithType: SettingsProvider.footerBarGuiHandler
+  fullName: UnityEditor.SettingsProvider.footerBarGuiHandler
+- uid: UnityEditor.SettingsProvider.activateHandler
+  commentId: P:UnityEditor.SettingsProvider.activateHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: activateHandler
+  nameWithType: SettingsProvider.activateHandler
+  fullName: UnityEditor.SettingsProvider.activateHandler
+- uid: UnityEditor.SettingsProvider.deactivateHandler
+  commentId: P:UnityEditor.SettingsProvider.deactivateHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: deactivateHandler
+  nameWithType: SettingsProvider.deactivateHandler
+  fullName: UnityEditor.SettingsProvider.deactivateHandler
+- uid: UnityEditor.SettingsProvider.hasSearchInterestHandler
+  commentId: P:UnityEditor.SettingsProvider.hasSearchInterestHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: hasSearchInterestHandler
+  nameWithType: SettingsProvider.hasSearchInterestHandler
+  fullName: UnityEditor.SettingsProvider.hasSearchInterestHandler
+- uid: UnityEditor.SettingsProvider.inspectorUpdateHandler
+  commentId: P:UnityEditor.SettingsProvider.inspectorUpdateHandler
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  name: inspectorUpdateHandler
+  nameWithType: SettingsProvider.inspectorUpdateHandler
+  fullName: UnityEditor.SettingsProvider.inspectorUpdateHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.#ctor*
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.#ctor
+  href: com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider__ctor_System_String_UnityEditor_SettingsScope_
+  name: PackageSettingsProvider
+  nameWithType: PackageSettingsProvider.PackageSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.PackageSettingsProvider
+  nameWithType.vb: PackageSettingsProvider.New
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEditor.SettingsScope
+  commentId: T:UnityEditor.SettingsScope
+  parent: UnityEditor
+  isExternal: true
+  name: SettingsScope
+  nameWithType: SettingsScope
+  fullName: UnityEditor.SettingsScope
+- uid: UnityEditor.SettingsProvider.OnGUI(System.String)
+  commentId: M:UnityEditor.SettingsProvider.OnGUI(System.String)
+  parent: UnityEditor.SettingsProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnGUI(string)
+  nameWithType: SettingsProvider.OnGUI(string)
+  fullName: UnityEditor.SettingsProvider.OnGUI(string)
+  nameWithType.vb: SettingsProvider.OnGUI(String)
+  fullName.vb: UnityEditor.SettingsProvider.OnGUI(String)
+  name.vb: OnGUI(String)
+  spec.csharp:
+  - uid: UnityEditor.SettingsProvider.OnGUI(System.String)
+    name: OnGUI
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.SettingsProvider.OnGUI(System.String)
+    name: OnGUI
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI*
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI
+  href: com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_OnGUI_System_String_
+  name: OnGUI
+  nameWithType: PackageSettingsProvider.OnGUI
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider*
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  href: com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_CreateSettingsProvider
+  name: CreateSettingsProvider
+  nameWithType: PackageSettingsProvider.CreateSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider

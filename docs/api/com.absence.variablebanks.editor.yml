@@ -4,6 +4,11 @@ items:
   commentId: N:com.absence.variablebanks.editor
   id: com.absence.variablebanks.editor
   children:
+  - com.absence.variablebanks.editor.EditorJobsHelper
+  - com.absence.variablebanks.editor.PackageSettings
+  - com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  - com.absence.variablebanks.editor.PackageSettingsProvider
+  - com.absence.variablebanks.editor.SymbolInitializer
   - com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
   - com.absence.variablebanks.editor.VariableBankCreationHandler
   - com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer
@@ -17,18 +22,64 @@ items:
   assemblies:
   - Assembly-CSharp-Editor-firstpass
 references:
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider
+  commentId: T:com.absence.variablebanks.editor.PackageSettingsProvider
+  href: com.absence.variablebanks.editor.PackageSettingsProvider.html
+  name: PackageSettingsProvider
+  nameWithType: PackageSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider
 - uid: com.absence.variablebanks.editor.VariableBankCreationHandler
   commentId: T:com.absence.variablebanks.editor.VariableBankCreationHandler
   href: com.absence.variablebanks.editor.VariableBankCreationHandler.html
   name: VariableBankCreationHandler
   nameWithType: VariableBankCreationHandler
   fullName: com.absence.variablebanks.editor.VariableBankCreationHandler
+- uid: com.absence.variablebanks.editor.SymbolInitializer
+  commentId: T:com.absence.variablebanks.editor.SymbolInitializer
+  href: com.absence.variablebanks.editor.SymbolInitializer.html
+  name: SymbolInitializer
+  nameWithType: SymbolInitializer
+  fullName: com.absence.variablebanks.editor.SymbolInitializer
 - uid: com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer
   commentId: T:com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer
   href: com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer.html
   name: VariableBankReferencePropertyDrawer
   nameWithType: VariableBankReferencePropertyDrawer
   fullName: com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer
+- uid: com.absence.variablebanks.editor.EditorJobsHelper
+  commentId: T:com.absence.variablebanks.editor.EditorJobsHelper
+  href: com.absence.variablebanks.editor.EditorJobsHelper.html
+  name: EditorJobsHelper
+  nameWithType: EditorJobsHelper
+  fullName: com.absence.variablebanks.editor.EditorJobsHelper
+- uid: com.absence.variablebanks.editor.PackageSettings
+  commentId: T:com.absence.variablebanks.editor.PackageSettings
+  href: com.absence.variablebanks.editor.PackageSettings.html
+  name: PackageSettings
+  nameWithType: PackageSettings
+  fullName: com.absence.variablebanks.editor.PackageSettings
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  commentId: T:com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  href: com.absence.variablebanks.editor.PackageSettings.html
+  name: PackageSettings.AssetManagementConstants
+  nameWithType: PackageSettings.AssetManagementConstants
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  spec.csharp:
+  - uid: com.absence.variablebanks.editor.PackageSettings
+    name: PackageSettings
+    href: com.absence.variablebanks.editor.PackageSettings.html
+  - name: .
+  - uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+    name: AssetManagementConstants
+    href: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html
+  spec.vb:
+  - uid: com.absence.variablebanks.editor.PackageSettings
+    name: PackageSettings
+    href: com.absence.variablebanks.editor.PackageSettings.html
+  - name: .
+  - uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+    name: AssetManagementConstants
+    href: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html
 - uid: com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
   commentId: T:com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
   href: com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.html

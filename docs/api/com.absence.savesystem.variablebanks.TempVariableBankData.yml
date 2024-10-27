@@ -1,0 +1,638 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData
+  commentId: T:com.absence.savesystem.variablebanks.TempVariableBankData
+  id: TempVariableBankData
+  parent: com.absence.savesystem.variablebanks
+  children:
+  - com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  - com.absence.savesystem.variablebanks.TempVariableBankData.#ctor(com.absence.variablesystem.VariableBank)
+  - com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  - com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  - com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  - com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  - com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  - com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  - com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  - com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  langs:
+  - csharp
+  - vb
+  name: TempVariableBankData
+  nameWithType: TempVariableBankData
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: TempVariableBankData
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class TempVariableBankData
+    content.vb: >-
+      <Serializable>
+
+      Public Class TempVariableBankData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  id: IntCount
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: IntCount
+  nameWithType: TempVariableBankData.IntCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: IntCount
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public int IntCount
+    return:
+      type: System.Int32
+    content.vb: Public IntCount As Integer
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  id: FloatCount
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: FloatCount
+  nameWithType: TempVariableBankData.FloatCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: FloatCount
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public int FloatCount
+    return:
+      type: System.Int32
+    content.vb: Public FloatCount As Integer
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  id: StringCount
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: StringCount
+  nameWithType: TempVariableBankData.StringCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: StringCount
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public int StringCount
+    return:
+      type: System.Int32
+    content.vb: Public StringCount As Integer
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  id: BooleanCount
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: BooleanCount
+  nameWithType: TempVariableBankData.BooleanCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: BooleanCount
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public int BooleanCount
+    return:
+      type: System.Int32
+    content.vb: Public BooleanCount As Integer
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  id: Ints
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: Ints
+  nameWithType: TempVariableBankData.Ints
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Ints
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public List<Variable_Integer> Ints
+    return:
+      type: System.Collections.Generic.List{com.absence.variablesystem.Variable_Integer}
+    content.vb: Public Ints As List(Of Variable_Integer)
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  id: Floats
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: Floats
+  nameWithType: TempVariableBankData.Floats
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Floats
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public List<Variable_Float> Floats
+    return:
+      type: System.Collections.Generic.List{com.absence.variablesystem.Variable_Float}
+    content.vb: Public Floats As List(Of Variable_Float)
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  id: Strings
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: Strings
+  nameWithType: TempVariableBankData.Strings
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Strings
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public List<Variable_String> Strings
+    return:
+      type: System.Collections.Generic.List{com.absence.variablesystem.Variable_String}
+    content.vb: Public Strings As List(Of Variable_String)
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  id: Booleans
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: Booleans
+  nameWithType: TempVariableBankData.Booleans
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Booleans
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public List<Variable_Boolean> Booleans
+    return:
+      type: System.Collections.Generic.List{com.absence.variablesystem.Variable_Boolean}
+    content.vb: Public Booleans As List(Of Variable_Boolean)
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  commentId: M:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  id: '#ctor'
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: TempVariableBankData()
+  nameWithType: TempVariableBankData.TempVariableBankData()
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData()
+  type: Constructor
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: .ctor
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public TempVariableBankData()
+    content.vb: Public Sub New()
+  overload: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor*
+  nameWithType.vb: TempVariableBankData.New()
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New()
+  name.vb: New()
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor(com.absence.variablesystem.VariableBank)
+  commentId: M:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor(com.absence.variablesystem.VariableBank)
+  id: '#ctor(com.absence.variablesystem.VariableBank)'
+  parent: com.absence.savesystem.variablebanks.TempVariableBankData
+  langs:
+  - csharp
+  - vb
+  name: TempVariableBankData(VariableBank)
+  nameWithType: TempVariableBankData.TempVariableBankData(VariableBank)
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData(com.absence.variablesystem.VariableBank)
+  type: Constructor
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: .ctor
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/TempVariableBankData.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public TempVariableBankData(VariableBank copyFrom)
+    parameters:
+    - id: copyFrom
+      type: com.absence.variablesystem.VariableBank
+    content.vb: Public Sub New(copyFrom As VariableBank)
+  overload: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor*
+  nameWithType.vb: TempVariableBankData.New(VariableBank)
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New(com.absence.variablesystem.VariableBank)
+  name.vb: New(VariableBank)
+references:
+- uid: com.absence.savesystem.variablebanks
+  commentId: N:com.absence.savesystem.variablebanks
+  href: com.html
+  name: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{com.absence.variablesystem.Variable_Integer}
+  commentId: T:System.Collections.Generic.List{com.absence.variablesystem.Variable_Integer}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Variable_Integer>
+  nameWithType: List<Variable_Integer>
+  fullName: System.Collections.Generic.List<com.absence.variablesystem.Variable_Integer>
+  nameWithType.vb: List(Of Variable_Integer)
+  fullName.vb: System.Collections.Generic.List(Of com.absence.variablesystem.Variable_Integer)
+  name.vb: List(Of Variable_Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: com.absence.variablesystem.Variable_Integer
+    name: Variable_Integer
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablesystem.Variable_Integer
+    name: Variable_Integer
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{com.absence.variablesystem.Variable_Float}
+  commentId: T:System.Collections.Generic.List{com.absence.variablesystem.Variable_Float}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Variable_Float>
+  nameWithType: List<Variable_Float>
+  fullName: System.Collections.Generic.List<com.absence.variablesystem.Variable_Float>
+  nameWithType.vb: List(Of Variable_Float)
+  fullName.vb: System.Collections.Generic.List(Of com.absence.variablesystem.Variable_Float)
+  name.vb: List(Of Variable_Float)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: com.absence.variablesystem.Variable_Float
+    name: Variable_Float
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablesystem.Variable_Float
+    name: Variable_Float
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List{com.absence.variablesystem.Variable_String}
+  commentId: T:System.Collections.Generic.List{com.absence.variablesystem.Variable_String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Variable_String>
+  nameWithType: List<Variable_String>
+  fullName: System.Collections.Generic.List<com.absence.variablesystem.Variable_String>
+  nameWithType.vb: List(Of Variable_String)
+  fullName.vb: System.Collections.Generic.List(Of com.absence.variablesystem.Variable_String)
+  name.vb: List(Of Variable_String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: com.absence.variablesystem.Variable_String
+    name: Variable_String
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablesystem.Variable_String
+    name: Variable_String
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List{com.absence.variablesystem.Variable_Boolean}
+  commentId: T:System.Collections.Generic.List{com.absence.variablesystem.Variable_Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Variable_Boolean>
+  nameWithType: List<Variable_Boolean>
+  fullName: System.Collections.Generic.List<com.absence.variablesystem.Variable_Boolean>
+  nameWithType.vb: List(Of Variable_Boolean)
+  fullName.vb: System.Collections.Generic.List(Of com.absence.variablesystem.Variable_Boolean)
+  name.vb: List(Of Variable_Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: com.absence.variablesystem.Variable_Boolean
+    name: Variable_Boolean
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablesystem.Variable_Boolean
+    name: Variable_Boolean
+    isExternal: true
+  - name: )
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor*
+  commentId: Overload:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  href: com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData__ctor
+  name: TempVariableBankData
+  nameWithType: TempVariableBankData.TempVariableBankData
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData
+  nameWithType.vb: TempVariableBankData.New
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New
+  name.vb: New
+- uid: com.absence.variablesystem.VariableBank
+  commentId: T:com.absence.variablesystem.VariableBank
+  parent: com.absence.variablesystem
+  isExternal: true
+  name: VariableBank
+  nameWithType: VariableBank
+  fullName: com.absence.variablesystem.VariableBank
+- uid: com.absence.variablesystem
+  commentId: N:com.absence.variablesystem
+  isExternal: true
+  name: com.absence.variablesystem
+  nameWithType: com.absence.variablesystem
+  fullName: com.absence.variablesystem
+  spec.csharp:
+  - uid: com
+    name: com
+    isExternal: true
+  - name: .
+  - uid: com.absence
+    name: absence
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true
+  spec.vb:
+  - uid: com
+    name: com
+    isExternal: true
+  - name: .
+  - uid: com.absence
+    name: absence
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true

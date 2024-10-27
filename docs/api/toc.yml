@@ -1,5 +1,14 @@
 ### YamlMime:TableOfContent
 items:
+- uid: com.absence.savesystem.variablebanks
+  name: com.absence.savesystem.variablebanks
+  items:
+  - uid: com.absence.savesystem.variablebanks.ExtensionMethods
+    name: ExtensionMethods
+  - uid: com.absence.savesystem.variablebanks.TempVariableBankData
+    name: TempVariableBankData
+  - uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+    name: VariableBankSerializationSurrogate
 - uid: com.absence.variablebanks
   name: com.absence.variablebanks
   items:
@@ -20,6 +29,16 @@ items:
 - uid: com.absence.variablebanks.editor
   name: com.absence.variablebanks.editor
   items:
+  - uid: com.absence.variablebanks.editor.EditorJobsHelper
+    name: EditorJobsHelper
+  - uid: com.absence.variablebanks.editor.PackageSettings
+    name: PackageSettings
+  - uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+    name: PackageSettings.AssetManagementConstants
+  - uid: com.absence.variablebanks.editor.PackageSettingsProvider
+    name: PackageSettingsProvider
+  - uid: com.absence.variablebanks.editor.SymbolInitializer
+    name: SymbolInitializer
   - uid: com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
     name: VariableBankAcquirerCustomEditor
   - uid: com.absence.variablebanks.editor.VariableBankCreationHandler
@@ -31,6 +50,10 @@ items:
   items:
   - uid: com.absence.variablebanks.internals.Constants
     name: Constants
+  - uid: com.absence.variablebanks.internals.Package
+    name: Package
+  - uid: com.absence.variablebanks.internals.Package.PackageVersion
+    name: Package.PackageVersion
   - uid: com.absence.variablebanks.internals.VariableBanksCloningHandler
     name: VariableBanksCloningHandler
 - uid: com.absence.variablebanks.testing

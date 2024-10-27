@@ -23,9 +23,6 @@ All you need to do is copying the URLs above and pasting them into you package m
 
 You can open the Package Manager via the: **'Window/Package Manager'** menu on the toolbar of Unity itself. Also, you can find the documentation of these tools in the same links above.
 
-> [!WARNING]
-> I highly recommend reading the [Before Installing](https://b1lodhand.github.io/absent-variablebanks/docs/introduction/before-installing.html) page before downloading the package.
-
 ## Installing the Package
 So, you've installed all the things necessary to run this tool. Now, it is the time of installing the tool itself.
 
@@ -35,10 +32,10 @@ This step is pretty much straightforward:
 
 2. Find the the best release for you (I'd recommend the latest).
 
-3. Download the right ".unitypackage" file (depending on the **asset management** package you're using. For more details, see [Before Installing](https://b1lodhand.github.io/absent-variablebanks/docs/introduction/before-installing.html)) in that release by clicking it.
+3. Download the ".unitypackage" in that release by clicking and open that file with Unity.
 
 4. **You have it!**
 
 ## What's Next?
 
-This section is ended. Go to [Setup](https://b1lodhand.github.io/absent-variablebanks/docs/introduction/setup.html) to continue.
+This section is ended. Go to [Mechanism](https://b1lodhand.github.io/absent-variablebanks/docs/getting-started/mechanism.html) to continue.

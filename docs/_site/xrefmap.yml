@@ -1,6 +1,151 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: com.absence.savesystem.variablebanks
+  name: com.absence.savesystem.variablebanks
+  href: api/com.absence.savesystem.variablebanks.html
+  commentId: N:com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods
+  name: ExtensionMethods
+  href: api/com.absence.savesystem.variablebanks.ExtensionMethods.html
+  commentId: T:com.absence.savesystem.variablebanks.ExtensionMethods
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods
+  nameWithType: ExtensionMethods
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  name: Load(VariableBank, TempVariableBankData)
+  href: api/com.absence.savesystem.variablebanks.ExtensionMethods.html#com_absence_savesystem_variablebanks_ExtensionMethods_Load_com_absence_variablesystem_VariableBank_com_absence_savesystem_variablebanks_TempVariableBankData_
+  commentId: M:com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank, com.absence.savesystem.variablebanks.TempVariableBankData)
+  nameWithType: ExtensionMethods.Load(VariableBank, TempVariableBankData)
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods.Load*
+  name: Load
+  href: api/com.absence.savesystem.variablebanks.ExtensionMethods.html#com_absence_savesystem_variablebanks_ExtensionMethods_Load_
+  commentId: Overload:com.absence.savesystem.variablebanks.ExtensionMethods.Load
+  isSpec: "True"
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods.Load
+  nameWithType: ExtensionMethods.Load
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData
+  name: TempVariableBankData
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html
+  commentId: T:com.absence.savesystem.variablebanks.TempVariableBankData
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData
+  nameWithType: TempVariableBankData
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  name: TempVariableBankData()
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData__ctor
+  commentId: M:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  name.vb: New()
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData()
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New()
+  nameWithType: TempVariableBankData.TempVariableBankData()
+  nameWithType.vb: TempVariableBankData.New()
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor(com.absence.variablesystem.VariableBank)
+  name: TempVariableBankData(VariableBank)
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData__ctor_com_absence_variablesystem_VariableBank_
+  commentId: M:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor(com.absence.variablesystem.VariableBank)
+  name.vb: New(VariableBank)
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData(com.absence.variablesystem.VariableBank)
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New(com.absence.variablesystem.VariableBank)
+  nameWithType: TempVariableBankData.TempVariableBankData(VariableBank)
+  nameWithType.vb: TempVariableBankData.New(VariableBank)
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.#ctor*
+  name: TempVariableBankData
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData__ctor_
+  commentId: Overload:com.absence.savesystem.variablebanks.TempVariableBankData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.TempVariableBankData
+  fullName.vb: com.absence.savesystem.variablebanks.TempVariableBankData.New
+  nameWithType: TempVariableBankData.TempVariableBankData
+  nameWithType.vb: TempVariableBankData.New
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  name: BooleanCount
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_BooleanCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.BooleanCount
+  nameWithType: TempVariableBankData.BooleanCount
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  name: Booleans
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_Booleans
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Booleans
+  nameWithType: TempVariableBankData.Booleans
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  name: FloatCount
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_FloatCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.FloatCount
+  nameWithType: TempVariableBankData.FloatCount
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  name: Floats
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_Floats
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Floats
+  nameWithType: TempVariableBankData.Floats
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  name: IntCount
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_IntCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.IntCount
+  nameWithType: TempVariableBankData.IntCount
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  name: Ints
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_Ints
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Ints
+  nameWithType: TempVariableBankData.Ints
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  name: StringCount
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_StringCount
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.StringCount
+  nameWithType: TempVariableBankData.StringCount
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  name: Strings
+  href: api/com.absence.savesystem.variablebanks.TempVariableBankData.html#com_absence_savesystem_variablebanks_TempVariableBankData_Strings
+  commentId: F:com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData.Strings
+  nameWithType: TempVariableBankData.Strings
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  name: VariableBankSerializationSurrogate
+  href: api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html
+  commentId: T:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  nameWithType: VariableBankSerializationSurrogate
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: GetObjectData(object, SerializationInfo, StreamingContext)
+  href: api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_GetObjectData_System_Object_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: GetObjectData(Object, SerializationInfo, StreamingContext)
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: VariableBankSerializationSurrogate.GetObjectData(object, SerializationInfo, StreamingContext)
+  nameWithType.vb: VariableBankSerializationSurrogate.GetObjectData(Object, SerializationInfo, StreamingContext)
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData*
+  name: GetObjectData
+  href: api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_GetObjectData_
+  commentId: Overload:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData
+  isSpec: "True"
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData
+  nameWithType: VariableBankSerializationSurrogate.GetObjectData
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  name: SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  href: api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_SetObjectData_System_Object_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_System_Runtime_Serialization_ISurrogateSelector_
+  commentId: M:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  name.vb: SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  fullName.vb: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  nameWithType: VariableBankSerializationSurrogate.SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  nameWithType.vb: VariableBankSerializationSurrogate.SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData*
+  name: SetObjectData
+  href: api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_SetObjectData_
+  commentId: Overload:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData
+  isSpec: "True"
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData
+  nameWithType: VariableBankSerializationSurrogate.SetObjectData
 - uid: com.absence.variablebanks
   name: com.absence.variablebanks
   href: api/com.absence.variablebanks.html
@@ -852,6 +997,148 @@ references:
   commentId: N:com.absence.variablebanks.editor
   fullName: com.absence.variablebanks.editor
   nameWithType: com.absence.variablebanks.editor
+- uid: com.absence.variablebanks.editor.EditorJobsHelper
+  name: EditorJobsHelper
+  href: api/com.absence.variablebanks.editor.EditorJobsHelper.html
+  commentId: T:com.absence.variablebanks.editor.EditorJobsHelper
+  fullName: com.absence.variablebanks.editor.EditorJobsHelper
+  nameWithType: EditorJobsHelper
+- uid: com.absence.variablebanks.editor.PackageSettings
+  name: PackageSettings
+  href: api/com.absence.variablebanks.editor.PackageSettings.html
+  commentId: T:com.absence.variablebanks.editor.PackageSettings
+  fullName: com.absence.variablebanks.editor.PackageSettings
+  nameWithType: PackageSettings
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  name: AssetManagementAPISelection
+  href: api/com.absence.variablebanks.editor.PackageSettings.html#com_absence_variablebanks_editor_PackageSettings_AssetManagementAPISelection
+  commentId: P:com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  nameWithType: PackageSettings.AssetManagementAPISelection
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection*
+  name: AssetManagementAPISelection
+  href: api/com.absence.variablebanks.editor.PackageSettings.html#com_absence_variablebanks_editor_PackageSettings_AssetManagementAPISelection_
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  nameWithType: PackageSettings.AssetManagementAPISelection
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  name: PackageSettings.AssetManagementConstants
+  href: api/com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html
+  commentId: T:com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants
+  nameWithType: PackageSettings.AssetManagementConstants
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_ADDRESSABLES_INDEX
+  name: K_ADDRESSABLES_INDEX
+  href: api/com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html#com_absence_variablebanks_editor_PackageSettings_AssetManagementConstants_K_ADDRESSABLES_INDEX
+  commentId: F:com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_ADDRESSABLES_INDEX
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_ADDRESSABLES_INDEX
+  nameWithType: PackageSettings.AssetManagementConstants.K_ADDRESSABLES_INDEX
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_RESOURCES_INDEX
+  name: K_RESOURCES_INDEX
+  href: api/com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html#com_absence_variablebanks_editor_PackageSettings_AssetManagementConstants_K_RESOURCES_INDEX
+  commentId: F:com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_RESOURCES_INDEX
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.K_RESOURCES_INDEX
+  nameWithType: PackageSettings.AssetManagementConstants.K_RESOURCES_INDEX
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider
+  name: PackageSettingsProvider
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html
+  commentId: T:com.absence.variablebanks.editor.PackageSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider
+  nameWithType: PackageSettingsProvider
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.#ctor(System.String,UnityEditor.SettingsScope)
+  name: PackageSettingsProvider(string, SettingsScope)
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider__ctor_System_String_UnityEditor_SettingsScope_
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.#ctor(System.String,UnityEditor.SettingsScope)
+  name.vb: New(String, SettingsScope)
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.PackageSettingsProvider(string, UnityEditor.SettingsScope)
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.New(String, UnityEditor.SettingsScope)
+  nameWithType: PackageSettingsProvider.PackageSettingsProvider(string, SettingsScope)
+  nameWithType.vb: PackageSettingsProvider.New(String, SettingsScope)
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.#ctor*
+  name: PackageSettingsProvider
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider__ctor_
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.PackageSettingsProvider
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.New
+  nameWithType: PackageSettingsProvider.PackageSettingsProvider
+  nameWithType.vb: PackageSettingsProvider.New
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  name: CreateSettingsProvider()
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_CreateSettingsProvider
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider()
+  nameWithType: PackageSettingsProvider.CreateSettingsProvider()
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider*
+  name: CreateSettingsProvider
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_CreateSettingsProvider_
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.CreateSettingsProvider
+  nameWithType: PackageSettingsProvider.CreateSettingsProvider
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(System.String)
+  name: OnGUI(string)
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_OnGUI_System_String_
+  commentId: M:com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(System.String)
+  name.vb: OnGUI(String)
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(string)
+  fullName.vb: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI(String)
+  nameWithType: PackageSettingsProvider.OnGUI(string)
+  nameWithType.vb: PackageSettingsProvider.OnGUI(String)
+- uid: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI*
+  name: OnGUI
+  href: api/com.absence.variablebanks.editor.PackageSettingsProvider.html#com_absence_variablebanks_editor_PackageSettingsProvider_OnGUI_
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.PackageSettingsProvider.OnGUI
+  nameWithType: PackageSettingsProvider.OnGUI
+- uid: com.absence.variablebanks.editor.SymbolInitializer
+  name: SymbolInitializer
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html
+  commentId: T:com.absence.variablebanks.editor.SymbolInitializer
+  fullName: com.absence.variablebanks.editor.SymbolInitializer
+  nameWithType: SymbolInitializer
+- uid: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  name: AddAddressablesLabelOnce()
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_AddAddressablesLabelOnce
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce()
+  nameWithType: SymbolInitializer.AddAddressablesLabelOnce()
+- uid: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce*
+  name: AddAddressablesLabelOnce
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_AddAddressablesLabelOnce_
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  nameWithType: SymbolInitializer.AddAddressablesLabelOnce
+- uid: com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  name: Refresh()
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_Refresh
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.Refresh()
+  nameWithType: SymbolInitializer.Refresh()
+- uid: com.absence.variablebanks.editor.SymbolInitializer.Refresh*
+  name: Refresh
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_Refresh_
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  nameWithType: SymbolInitializer.Refresh
+- uid: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  name: RemoveAddressablesLabelIfExists()
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_RemoveAddressablesLabelIfExists
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists()
+  nameWithType: SymbolInitializer.RemoveAddressablesLabelIfExists()
+- uid: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists*
+  name: RemoveAddressablesLabelIfExists
+  href: api/com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_RemoveAddressablesLabelIfExists_
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  nameWithType: SymbolInitializer.RemoveAddressablesLabelIfExists
 - uid: com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor
   name: VariableBankAcquirerCustomEditor
   href: api/com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.html
@@ -1468,12 +1755,79 @@ references:
   commentId: F:com.absence.variablebanks.internals.Constants.K_ADDRESSABLES_TAG
   fullName: com.absence.variablebanks.internals.Constants.K_ADDRESSABLES_TAG
   nameWithType: Constants.K_ADDRESSABLES_TAG
+- uid: com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  name: K_CLONE_AUTOMATICALLY
+  href: api/com.absence.variablebanks.internals.Constants.html#com_absence_variablebanks_internals_Constants_K_CLONE_AUTOMATICALLY
+  commentId: F:com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  fullName: com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  nameWithType: Constants.K_CLONE_AUTOMATICALLY
+- uid: com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  name: K_DEBUG_MODE
+  href: api/com.absence.variablebanks.internals.Constants.html#com_absence_variablebanks_internals_Constants_K_DEBUG_MODE
+  commentId: F:com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  fullName: com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  nameWithType: Constants.K_DEBUG_MODE
 - uid: com.absence.variablebanks.internals.Constants.K_RESOURCES_PATH
   name: K_RESOURCES_PATH
   href: api/com.absence.variablebanks.internals.Constants.html#com_absence_variablebanks_internals_Constants_K_RESOURCES_PATH
   commentId: F:com.absence.variablebanks.internals.Constants.K_RESOURCES_PATH
   fullName: com.absence.variablebanks.internals.Constants.K_RESOURCES_PATH
   nameWithType: Constants.K_RESOURCES_PATH
+- uid: com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  name: K_SCRIPTING_DEFINE_SYMBOL
+  href: api/com.absence.variablebanks.internals.Constants.html#com_absence_variablebanks_internals_Constants_K_SCRIPTING_DEFINE_SYMBOL
+  commentId: F:com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  fullName: com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  nameWithType: Constants.K_SCRIPTING_DEFINE_SYMBOL
+- uid: com.absence.variablebanks.internals.Package
+  name: Package
+  href: api/com.absence.variablebanks.internals.Package.html
+  commentId: T:com.absence.variablebanks.internals.Package
+  fullName: com.absence.variablebanks.internals.Package
+  nameWithType: Package
+- uid: com.absence.variablebanks.internals.Package.PackageVersion
+  name: Package.PackageVersion
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html
+  commentId: T:com.absence.variablebanks.internals.Package.PackageVersion
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion
+  nameWithType: Package.PackageVersion
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Major
+  name: Major
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Major
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Major
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Major
+  nameWithType: Package.PackageVersion.Major
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  name: Minor
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Minor
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  nameWithType: Package.PackageVersion.Minor
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  name: Patch
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Patch
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  nameWithType: Package.PackageVersion.Patch
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Text
+  name: Text
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Text
+  commentId: P:com.absence.variablebanks.internals.Package.PackageVersion.Text
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Text
+  nameWithType: Package.PackageVersion.Text
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Text*
+  name: Text
+  href: api/com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Text_
+  commentId: Overload:com.absence.variablebanks.internals.Package.PackageVersion.Text
+  isSpec: "True"
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Text
+  nameWithType: Package.PackageVersion.Text
+- uid: com.absence.variablebanks.internals.Package.Version
+  name: Version
+  href: api/com.absence.variablebanks.internals.Package.html#com_absence_variablebanks_internals_Package_Version
+  commentId: F:com.absence.variablebanks.internals.Package.Version
+  fullName: com.absence.variablebanks.internals.Package.Version
+  nameWithType: Package.Version
 - uid: com.absence.variablebanks.internals.VariableBanksCloningHandler
   name: VariableBanksCloningHandler
   href: api/com.absence.variablebanks.internals.VariableBanksCloningHandler.html

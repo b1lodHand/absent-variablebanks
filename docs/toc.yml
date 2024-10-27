@@ -7,12 +7,8 @@ items:
   items:
     - name: About
       href: docs/introduction/about.md
-    - name: Before Installing
-      href: docs/introduction/before-installing.md
     - name: Installing
       href: docs/introduction/installing.md
-    - name: Setup
-      href: docs/introduction/setup.md
     - name: Contributing
       href: docs/introduction/contributing.md
 

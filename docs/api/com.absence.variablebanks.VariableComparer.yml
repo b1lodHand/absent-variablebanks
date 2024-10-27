@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableComparer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -44,6 +44,12 @@ items:
   - com.absence.variablesystem.BaseVariableComparer
   inheritedMembers:
   - com.absence.variablesystem.BaseVariableComparer.GetResult
+  - com.absence.variablesystem.BaseVariableComparer.TargetVariableName
+  - com.absence.variablesystem.BaseVariableComparer.TypeOfComparison
+  - com.absence.variablesystem.BaseVariableComparer.IntValue
+  - com.absence.variablesystem.BaseVariableComparer.FloatValue
+  - com.absence.variablesystem.BaseVariableComparer.StringValue
+  - com.absence.variablesystem.BaseVariableComparer.BooleanValue
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -62,7 +68,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -93,7 +99,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetBankGuid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -128,7 +134,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetRuntimeBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -158,7 +164,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -196,7 +202,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/VariableComparer.cs
@@ -281,6 +287,48 @@ references:
     isExternal: true
   - name: (
   - name: )
+- uid: com.absence.variablesystem.BaseVariableComparer.TargetVariableName
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.TargetVariableName
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: TargetVariableName
+  nameWithType: BaseVariableComparer.TargetVariableName
+  fullName: com.absence.variablesystem.BaseVariableComparer.TargetVariableName
+- uid: com.absence.variablesystem.BaseVariableComparer.TypeOfComparison
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.TypeOfComparison
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: TypeOfComparison
+  nameWithType: BaseVariableComparer.TypeOfComparison
+  fullName: com.absence.variablesystem.BaseVariableComparer.TypeOfComparison
+- uid: com.absence.variablesystem.BaseVariableComparer.IntValue
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.IntValue
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: IntValue
+  nameWithType: BaseVariableComparer.IntValue
+  fullName: com.absence.variablesystem.BaseVariableComparer.IntValue
+- uid: com.absence.variablesystem.BaseVariableComparer.FloatValue
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.FloatValue
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: FloatValue
+  nameWithType: BaseVariableComparer.FloatValue
+  fullName: com.absence.variablesystem.BaseVariableComparer.FloatValue
+- uid: com.absence.variablesystem.BaseVariableComparer.StringValue
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.StringValue
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: StringValue
+  nameWithType: BaseVariableComparer.StringValue
+  fullName: com.absence.variablesystem.BaseVariableComparer.StringValue
+- uid: com.absence.variablesystem.BaseVariableComparer.BooleanValue
+  commentId: P:com.absence.variablesystem.BaseVariableComparer.BooleanValue
+  parent: com.absence.variablesystem.BaseVariableComparer
+  isExternal: true
+  name: BooleanValue
+  nameWithType: BaseVariableComparer.BooleanValue
+  fullName: com.absence.variablesystem.BaseVariableComparer.BooleanValue
 - uid: System
   commentId: N:System
   isExternal: true

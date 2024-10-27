@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+#if ABSENT_VB_ADDRESSABLES
+using UnityEngine.AddressableAssets;
+#endif
+
 namespace com.absence.variablebanks.internals
 {
     /// <summary>
@@ -26,29 +30,74 @@ namespace com.absence.variablebanks.internals
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
         static void CloneAll()
         {
+#pragma warning disable CS0162 // Unreachable code detected
+            if (!Constants.K_CLONE_AUTOMATICALLY) return;
+#pragma warning restore CS0162 // Unreachable code detected
+
             m_bankTable.Clear();
             CloningCompleted = false;
-            List<VariableBank> originalBanks = Resources.LoadAll<VariableBank>(internals.Constants.K_RESOURCES_PATH).ToList();
 
-            originalBanks.ForEach(bank =>
+            List<VariableBank> originalBanks = null;
+
+#if ABSENT_VB_ADDRESSABLES
+            Addressables.LoadAssetsAsync<VariableBank>(Constants.K_ADDRESSABLES_TAG, null, true)
+                .Completed += asyncOperationHandle =>
             {
-                if (bank.IsClone) return;
-                if (bank.ForExternalUse) return;
+                if (asyncOperationHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Failed)
+                {
+                    throw new Exception("Failed to load variable banks.");
+                }
+                else if (asyncOperationHandle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+                {
+                    originalBanks = asyncOperationHandle.Result.ToList();
 
-                VariableBank clonedBank = bank.Clone();
+                    TraceList();
+                    CleanUp();
+                    InvokeEvents();
 
-                m_bankTable.Add(bank.Guid, clonedBank);
-                Debug.Log(clonedBank.name);
-            });
+                    Addressables.Release(asyncOperationHandle);
+                }
+            };
+#else
+            originalBanks = Resources.LoadAll<VariableBank>(internals.Constants.K_RESOURCES_PATH).ToList(); 
+
+            TraceList();
 
             originalBanks.ForEach(bank => Resources.UnloadAsset(bank));
-            originalBanks.Clear();
-            originalBanks = null;
 
-            CloningCompleted = true;
+            CleanUp();
+            InvokeEvents();
+#endif
 
-            OnCloningCompleted?.Invoke();
-            OnCloningCompleted = null;
+            return;
+
+            void TraceList()
+            {
+                originalBanks.ForEach(bank =>
+                {
+                    if (bank.IsClone) return;
+                    if (bank.ForExternalUse) return;
+
+                    VariableBank clonedBank = bank.Clone();
+
+                    m_bankTable.Add(bank.Guid, clonedBank);
+                    if (Constants.K_DEBUG_MODE) Debug.Log(clonedBank.name);
+                });
+            }
+
+            void CleanUp()
+            {
+                originalBanks.Clear();
+                originalBanks = null;
+            }
+
+            void InvokeEvents()
+            {
+                CloningCompleted = true;
+
+                OnCloningCompleted?.Invoke();
+                OnCloningCompleted = null;
+            }
         }
 
         /// <summary>

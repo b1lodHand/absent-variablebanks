@@ -44,8 +44,8 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 11400000, guid: 3bdfe4a53a9b838499cdf0d9bf8cca24, type: 2}
   - {fileID: 11400000, guid: 28d444bf707ed4e4f8c5cf7e9582e4e0, type: 2}
+  - {fileID: 11400000, guid: 3bdfe4a53a9b838499cdf0d9bf8cca24, type: 2}
   - {fileID: 11400000, guid: 647781aa03799824c958636329d59323, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
@@ -58,19 +58,19 @@ MonoBehaviour:
       m_Id: 5d94ec059f155304d886b2000727387f
       m_ProfileName: Default
       m_Values:
-      - m_Id: c003e7e39e9d5cd4f99f053d034ab2d7
-        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 0ad5e4cfae7848a47aabea9b58de8a12
+        m_Value: ServerData/[BuildTarget]
       - m_Id: 92fa0306d7ad2d6419082b915bcb7db2
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: aacd678b34edcd34b8bd5e9b49777cb2
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
-      - m_Id: 0ad5e4cfae7848a47aabea9b58de8a12
-        m_Value: ServerData/[BuildTarget]
+      - m_Id: c003e7e39e9d5cd4f99f053d034ab2d7
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: e3a11e0d59ca579499b8408f95942f95
         m_Value: http://[PrivateIpAddress]:[HostingServicePort]
     m_ProfileEntryNames:
-    - m_Id: c003e7e39e9d5cd4f99f053d034ab2d7
-      m_Name: BuildTarget
+    - m_Id: 0ad5e4cfae7848a47aabea9b58de8a12
+      m_Name: Remote.BuildPath
       m_InlineUsage: 0
     - m_Id: 92fa0306d7ad2d6419082b915bcb7db2
       m_Name: Local.BuildPath
@@ -78,8 +78,8 @@ MonoBehaviour:
     - m_Id: aacd678b34edcd34b8bd5e9b49777cb2
       m_Name: Local.LoadPath
       m_InlineUsage: 0
-    - m_Id: 0ad5e4cfae7848a47aabea9b58de8a12
-      m_Name: Remote.BuildPath
+    - m_Id: c003e7e39e9d5cd4f99f053d034ab2d7
+      m_Name: BuildTarget
       m_InlineUsage: 0
     - m_Id: e3a11e0d59ca579499b8408f95942f95
       m_Name: Remote.LoadPath

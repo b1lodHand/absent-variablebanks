@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods
+  commentId: T:com.absence.savesystem.variablebanks.ExtensionMethods
+  id: ExtensionMethods
+  parent: com.absence.savesystem.variablebanks
+  children:
+  - com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  langs:
+  - csharp
+  - vb
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/ExtensionMethods.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: ExtensionMethods
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/ExtensionMethods.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public static class ExtensionMethods
+    content.vb: Public Module ExtensionMethods
+  inheritance:
+  - System.Object
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  commentId: M:com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  id: Load(com.absence.variablesystem.VariableBank,com.absence.savesystem.variablebanks.TempVariableBankData)
+  isExtensionMethod: true
+  parent: com.absence.savesystem.variablebanks.ExtensionMethods
+  langs:
+  - csharp
+  - vb
+  name: Load(VariableBank, TempVariableBankData)
+  nameWithType: ExtensionMethods.Load(VariableBank, TempVariableBankData)
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods.Load(com.absence.variablesystem.VariableBank, com.absence.savesystem.variablebanks.TempVariableBankData)
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/ExtensionMethods.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Load
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/ExtensionMethods.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: public static void Load(this VariableBank bank, TempVariableBankData dataToLoad)
+    parameters:
+    - id: bank
+      type: com.absence.variablesystem.VariableBank
+    - id: dataToLoad
+      type: com.absence.savesystem.variablebanks.TempVariableBankData
+    content.vb: Public Shared Sub Load(bank As VariableBank, dataToLoad As TempVariableBankData)
+  overload: com.absence.savesystem.variablebanks.ExtensionMethods.Load*
+references:
+- uid: com.absence.savesystem.variablebanks
+  commentId: N:com.absence.savesystem.variablebanks
+  href: com.html
+  name: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods.Load*
+  commentId: Overload:com.absence.savesystem.variablebanks.ExtensionMethods.Load
+  href: com.absence.savesystem.variablebanks.ExtensionMethods.html#com_absence_savesystem_variablebanks_ExtensionMethods_Load_com_absence_variablesystem_VariableBank_com_absence_savesystem_variablebanks_TempVariableBankData_
+  name: Load
+  nameWithType: ExtensionMethods.Load
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods.Load
+- uid: com.absence.variablesystem.VariableBank
+  commentId: T:com.absence.variablesystem.VariableBank
+  parent: com.absence.variablesystem
+  isExternal: true
+  name: VariableBank
+  nameWithType: VariableBank
+  fullName: com.absence.variablesystem.VariableBank
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData
+  commentId: T:com.absence.savesystem.variablebanks.TempVariableBankData
+  parent: com.absence.savesystem.variablebanks
+  href: com.absence.savesystem.variablebanks.TempVariableBankData.html
+  name: TempVariableBankData
+  nameWithType: TempVariableBankData
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData
+- uid: com.absence.variablesystem
+  commentId: N:com.absence.variablesystem
+  isExternal: true
+  name: com.absence.variablesystem
+  nameWithType: com.absence.variablesystem
+  fullName: com.absence.variablesystem
+  spec.csharp:
+  - uid: com
+    name: com
+    isExternal: true
+  - name: .
+  - uid: com.absence
+    name: absence
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true
+  spec.vb:
+  - uid: com
+    name: com
+    isExternal: true
+  - name: .
+  - uid: com.absence
+    name: absence
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem
+    name: variablesystem
+    isExternal: true
