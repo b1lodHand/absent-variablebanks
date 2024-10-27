@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-#if VB_ADDRESSABLES
+#if ABSENT_VB_ADDRESSABLES
 using UnityEngine.AddressableAssets;
 #endif
 
@@ -39,7 +39,7 @@ namespace com.absence.variablebanks.internals
 
             List<VariableBank> originalBanks = null;
 
-#if VB_ADDRESSABLES
+#if ABSENT_VB_ADDRESSABLES
             Addressables.LoadAssetsAsync<VariableBank>(Constants.K_ADDRESSABLES_TAG, null, true)
                 .Completed += asyncOperationHandle =>
             {

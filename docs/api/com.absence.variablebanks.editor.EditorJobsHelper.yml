@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.editor.EditorJobsHelper
+  commentId: T:com.absence.variablebanks.editor.EditorJobsHelper
+  id: EditorJobsHelper
+  parent: com.absence.variablebanks.editor
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EditorJobsHelper
+  nameWithType: EditorJobsHelper
+  fullName: com.absence.variablebanks.editor.EditorJobsHelper
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/EditorJobsHelper.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: EditorJobsHelper
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/EditorJobsHelper.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  summary: The static class responsible for handling the editor-side things of this package.
+  example: []
+  syntax:
+    content: >-
+      [InitializeOnLoad]
+
+      public static class EditorJobsHelper
+    content.vb: >-
+      <InitializeOnLoad>
+
+      Public Module EditorJobsHelper
+  inheritance:
+  - System.Object
+  attributes:
+  - type: UnityEditor.InitializeOnLoadAttribute
+    ctor: UnityEditor.InitializeOnLoadAttribute.#ctor
+    arguments: []
+references:
+- uid: com.absence.variablebanks.editor
+  commentId: N:com.absence.variablebanks.editor
+  href: com.html
+  name: com.absence.variablebanks.editor
+  nameWithType: com.absence.variablebanks.editor
+  fullName: com.absence.variablebanks.editor
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

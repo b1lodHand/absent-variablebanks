@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 
-#if VB_ADDRESSABLES
+#if ABSENT_VB_ADDRESSABLES
 using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
 #endif
@@ -27,7 +27,7 @@ namespace com.absence.variablebanks.editor
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true)]
         static bool CreateVariableBank_Addressables_Validation()
         {
-#if VB_ADDRESSABLES
+#if ABSENT_VB_ADDRESSABLES
             return true;
 #else
             return false;
@@ -37,7 +37,7 @@ namespace com.absence.variablebanks.editor
         [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
         static bool CreateVariableBank_ResourcesAPI_Validation()
         {
-#if !VB_ADDRESSABLES
+#if !ABSENT_VB_ADDRESSABLES
             return true;
 #else
             return false;
@@ -105,7 +105,7 @@ namespace com.absence.variablebanks.editor
 
                 itemCreated.ForExternalUse = forExternalUse;
 
-#if VB_ADDRESSABLES
+#if ABSENT_VB_ADDRESSABLES
                 if (setupForAddressables)
                 {
                     AddressableAssetSettings addressableSettings = AddressableAssetSettingsDefaultObject.Settings;

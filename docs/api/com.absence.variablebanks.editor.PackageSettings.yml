@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.editor.PackageSettings
+  commentId: T:com.absence.variablebanks.editor.PackageSettings
+  id: PackageSettings
+  parent: com.absence.variablebanks.editor
+  children:
+  - com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  langs:
+  - csharp
+  - vb
+  name: PackageSettings
+  nameWithType: PackageSettings
+  fullName: com.absence.variablebanks.editor.PackageSettings
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettings.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: PackageSettings
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettings.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: >-
+      [FilePath("ProjectSettings/absent-variablebanks-settings.assets", FilePathAttribute.Location.ProjectFolder)]
+
+      public class PackageSettings : ScriptableSingleton<PackageSettings>
+    content.vb: >-
+      <FilePath("ProjectSettings/absent-variablebanks-settings.assets", FilePathAttribute.Location.ProjectFolder)>
+
+      Public Class PackageSettings Inherits ScriptableSingleton(Of PackageSettings)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  inheritedMembers:
+  - UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.Save(System.Boolean)
+  - UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.GetFilePath
+  - UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.instance
+  - UnityEngine.ScriptableObject.SetDirty
+  - UnityEngine.ScriptableObject.CreateInstance(System.String)
+  - UnityEngine.ScriptableObject.CreateInstance(System.Type)
+  - UnityEngine.ScriptableObject.CreateInstance``1
+  attributes:
+  - type: UnityEditor.FilePathAttribute
+    ctor: UnityEditor.FilePathAttribute.#ctor(System.String,UnityEditor.FilePathAttribute.Location)
+    arguments:
+    - type: System.String
+      value: ProjectSettings/absent-variablebanks-settings.assets
+    - type: UnityEditor.FilePathAttribute.Location
+      value: 1
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  commentId: P:com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  id: AssetManagementAPISelection
+  parent: com.absence.variablebanks.editor.PackageSettings
+  langs:
+  - csharp
+  - vb
+  name: AssetManagementAPISelection
+  nameWithType: PackageSettings.AssetManagementAPISelection
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  type: Property
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettings.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: AssetManagementAPISelection
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Initial/PackageSettings.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: public int AssetManagementAPISelection { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AssetManagementAPISelection As Integer
+  overload: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection*
+references:
+- uid: com.absence.variablebanks.editor
+  commentId: N:com.absence.variablebanks.editor
+  href: com.html
+  name: com.absence.variablebanks.editor
+  nameWithType: com.absence.variablebanks.editor
+  fullName: com.absence.variablebanks.editor
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  commentId: T:UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  parent: UnityEditor
+  definition: UnityEditor.ScriptableSingleton`1
+  href: com.absence.variablebanks.editor.PackageSettings.html
+  name: ScriptableSingleton<PackageSettings>
+  nameWithType: ScriptableSingleton<PackageSettings>
+  fullName: UnityEditor.ScriptableSingleton<com.absence.variablebanks.editor.PackageSettings>
+  nameWithType.vb: ScriptableSingleton(Of PackageSettings)
+  fullName.vb: UnityEditor.ScriptableSingleton(Of com.absence.variablebanks.editor.PackageSettings)
+  name.vb: ScriptableSingleton(Of PackageSettings)
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton`1
+    name: ScriptableSingleton
+    isExternal: true
+  - name: <
+  - uid: com.absence.variablebanks.editor.PackageSettings
+    name: PackageSettings
+    href: com.absence.variablebanks.editor.PackageSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton`1
+    name: ScriptableSingleton
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablebanks.editor.PackageSettings
+    name: PackageSettings
+    href: com.absence.variablebanks.editor.PackageSettings.html
+  - name: )
+- uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.Save(System.Boolean)
+  commentId: M:UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.Save(System.Boolean)
+  parent: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  definition: UnityEditor.ScriptableSingleton`1.Save(System.Boolean)
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Save(bool)
+  nameWithType: ScriptableSingleton<PackageSettings>.Save(bool)
+  fullName: UnityEditor.ScriptableSingleton<com.absence.variablebanks.editor.PackageSettings>.Save(bool)
+  nameWithType.vb: ScriptableSingleton(Of PackageSettings).Save(Boolean)
+  fullName.vb: UnityEditor.ScriptableSingleton(Of com.absence.variablebanks.editor.PackageSettings).Save(Boolean)
+  name.vb: Save(Boolean)
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.Save(System.Boolean)
+    name: Save
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.Save(System.Boolean)
+    name: Save
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.GetFilePath
+  commentId: M:UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.GetFilePath
+  parent: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  definition: UnityEditor.ScriptableSingleton`1.GetFilePath
+  name: GetFilePath()
+  nameWithType: ScriptableSingleton<PackageSettings>.GetFilePath()
+  fullName: UnityEditor.ScriptableSingleton<com.absence.variablebanks.editor.PackageSettings>.GetFilePath()
+  nameWithType.vb: ScriptableSingleton(Of PackageSettings).GetFilePath()
+  fullName.vb: UnityEditor.ScriptableSingleton(Of com.absence.variablebanks.editor.PackageSettings).GetFilePath()
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.GetFilePath
+    name: GetFilePath
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.GetFilePath
+    name: GetFilePath
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.instance
+  commentId: P:UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}.instance
+  parent: UnityEditor.ScriptableSingleton{com.absence.variablebanks.editor.PackageSettings}
+  definition: UnityEditor.ScriptableSingleton`1.instance
+  name: instance
+  nameWithType: ScriptableSingleton<PackageSettings>.instance
+  fullName: UnityEditor.ScriptableSingleton<com.absence.variablebanks.editor.PackageSettings>.instance
+  nameWithType.vb: ScriptableSingleton(Of PackageSettings).instance
+  fullName.vb: UnityEditor.ScriptableSingleton(Of com.absence.variablebanks.editor.PackageSettings).instance
+- uid: UnityEngine.ScriptableObject.SetDirty
+  commentId: M:UnityEngine.ScriptableObject.SetDirty
+  parent: UnityEngine.ScriptableObject
+  isExternal: true
+  name: SetDirty()
+  nameWithType: ScriptableObject.SetDirty()
+  fullName: UnityEngine.ScriptableObject.SetDirty()
+  spec.csharp:
+  - uid: UnityEngine.ScriptableObject.SetDirty
+    name: SetDirty
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.ScriptableObject.SetDirty
+    name: SetDirty
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.ScriptableObject.CreateInstance(System.String)
+  commentId: M:UnityEngine.ScriptableObject.CreateInstance(System.String)
+  parent: UnityEngine.ScriptableObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: CreateInstance(string)
+  nameWithType: ScriptableObject.CreateInstance(string)
+  fullName: UnityEngine.ScriptableObject.CreateInstance(string)
+  nameWithType.vb: ScriptableObject.CreateInstance(String)
+  fullName.vb: UnityEngine.ScriptableObject.CreateInstance(String)
+  name.vb: CreateInstance(String)
+  spec.csharp:
+  - uid: UnityEngine.ScriptableObject.CreateInstance(System.String)
+    name: CreateInstance
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.ScriptableObject.CreateInstance(System.String)
+    name: CreateInstance
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UnityEngine.ScriptableObject.CreateInstance(System.Type)
+  commentId: M:UnityEngine.ScriptableObject.CreateInstance(System.Type)
+  parent: UnityEngine.ScriptableObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CreateInstance(Type)
+  nameWithType: ScriptableObject.CreateInstance(Type)
+  fullName: UnityEngine.ScriptableObject.CreateInstance(System.Type)
+  spec.csharp:
+  - uid: UnityEngine.ScriptableObject.CreateInstance(System.Type)
+    name: CreateInstance
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.ScriptableObject.CreateInstance(System.Type)
+    name: CreateInstance
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: UnityEngine.ScriptableObject.CreateInstance``1
+  commentId: M:UnityEngine.ScriptableObject.CreateInstance``1
+  parent: UnityEngine.ScriptableObject
+  isExternal: true
+  name: CreateInstance<T>()
+  nameWithType: ScriptableObject.CreateInstance<T>()
+  fullName: UnityEngine.ScriptableObject.CreateInstance<T>()
+  nameWithType.vb: ScriptableObject.CreateInstance(Of T)()
+  fullName.vb: UnityEngine.ScriptableObject.CreateInstance(Of T)()
+  name.vb: CreateInstance(Of T)()
+  spec.csharp:
+  - uid: UnityEngine.ScriptableObject.CreateInstance``1
+    name: CreateInstance
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.ScriptableObject.CreateInstance``1
+    name: CreateInstance
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor.ScriptableSingleton`1
+  commentId: T:UnityEditor.ScriptableSingleton`1
+  isExternal: true
+  name: ScriptableSingleton<T>
+  nameWithType: ScriptableSingleton<T>
+  fullName: UnityEditor.ScriptableSingleton<T>
+  nameWithType.vb: ScriptableSingleton(Of T)
+  fullName.vb: UnityEditor.ScriptableSingleton(Of T)
+  name.vb: ScriptableSingleton(Of T)
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton`1
+    name: ScriptableSingleton
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton`1
+    name: ScriptableSingleton
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: UnityEditor.ScriptableSingleton`1.Save(System.Boolean)
+  commentId: M:UnityEditor.ScriptableSingleton`1.Save(System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Save(bool)
+  nameWithType: ScriptableSingleton<T>.Save(bool)
+  fullName: UnityEditor.ScriptableSingleton<T>.Save(bool)
+  nameWithType.vb: ScriptableSingleton(Of T).Save(Boolean)
+  fullName.vb: UnityEditor.ScriptableSingleton(Of T).Save(Boolean)
+  name.vb: Save(Boolean)
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton`1.Save(System.Boolean)
+    name: Save
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton`1.Save(System.Boolean)
+    name: Save
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UnityEditor.ScriptableSingleton`1.GetFilePath
+  commentId: M:UnityEditor.ScriptableSingleton`1.GetFilePath
+  isExternal: true
+  name: GetFilePath()
+  nameWithType: ScriptableSingleton<T>.GetFilePath()
+  fullName: UnityEditor.ScriptableSingleton<T>.GetFilePath()
+  nameWithType.vb: ScriptableSingleton(Of T).GetFilePath()
+  fullName.vb: UnityEditor.ScriptableSingleton(Of T).GetFilePath()
+  spec.csharp:
+  - uid: UnityEditor.ScriptableSingleton`1.GetFilePath
+    name: GetFilePath
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.ScriptableSingleton`1.GetFilePath
+    name: GetFilePath
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEditor.ScriptableSingleton`1.instance
+  commentId: P:UnityEditor.ScriptableSingleton`1.instance
+  isExternal: true
+  name: instance
+  nameWithType: ScriptableSingleton<T>.instance
+  fullName: UnityEditor.ScriptableSingleton<T>.instance
+  nameWithType.vb: ScriptableSingleton(Of T).instance
+  fullName.vb: UnityEditor.ScriptableSingleton(Of T).instance
+- uid: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection*
+  commentId: Overload:com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+  href: com.absence.variablebanks.editor.PackageSettings.html#com_absence_variablebanks_editor_PackageSettings_AssetManagementAPISelection
+  name: AssetManagementAPISelection
+  nameWithType: PackageSettings.AssetManagementAPISelection
+  fullName: com.absence.variablebanks.editor.PackageSettings.AssetManagementAPISelection
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -12,6 +12,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.savesystem.variablebanks.ExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.savesystem.variablebanks.ExtensionMethods.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.savesystem.variablebanks.TempVariableBankData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.savesystem.variablebanks.TempVariableBankData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.savesystem.variablebanks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.savesystem.variablebanks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/com.absence.variablebanks.FixedVariableComparer.yml",
       "output": {
         ".html": {
@@ -86,6 +126,56 @@
       "output": {
         ".html": {
           "relative_path": "api/com.absence.variablebanks.VariableSetter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.editor.EditorJobsHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.editor.EditorJobsHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.editor.PackageSettings.AssetManagementConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.editor.PackageSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.editor.PackageSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.editor.PackageSettingsProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.editor.PackageSettingsProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.editor.SymbolInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.editor.SymbolInitializer.html"
         }
       },
       "version": ""
@@ -212,6 +302,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.internals.Package.PackageVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.internals.Package.PackageVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/com.absence.variablebanks.internals.Package.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/com.absence.variablebanks.internals.Package.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/com.absence.variablebanks.internals.VariableBanksCloningHandler.yml",
       "output": {
         ".html": {
@@ -305,16 +415,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/introduction/before-installing.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/introduction/before-installing.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "docs/introduction/contributing.md",
       "output": {
         ".html": {
@@ -329,16 +429,6 @@
       "output": {
         ".html": {
           "relative_path": "docs/introduction/installing.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/introduction/setup.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/introduction/setup.html"
         }
       },
       "version": ""

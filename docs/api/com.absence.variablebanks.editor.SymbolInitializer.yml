@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.editor.SymbolInitializer
+  commentId: T:com.absence.variablebanks.editor.SymbolInitializer
+  id: SymbolInitializer
+  parent: com.absence.variablebanks.editor
+  children:
+  - com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  - com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  - com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  langs:
+  - csharp
+  - vb
+  name: SymbolInitializer
+  nameWithType: SymbolInitializer
+  fullName: com.absence.variablebanks.editor.SymbolInitializer
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: SymbolInitializer
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: >-
+      [InitializeOnLoad]
+
+      public static class SymbolInitializer
+    content.vb: >-
+      <InitializeOnLoad>
+
+      Public Module SymbolInitializer
+  inheritance:
+  - System.Object
+  attributes:
+  - type: UnityEditor.InitializeOnLoadAttribute
+    ctor: UnityEditor.InitializeOnLoadAttribute.#ctor
+    arguments: []
+- uid: com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  id: Refresh
+  parent: com.absence.variablebanks.editor.SymbolInitializer
+  langs:
+  - csharp
+  - vb
+  name: Refresh()
+  nameWithType: SymbolInitializer.Refresh()
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.Refresh()
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Refresh
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: public static void Refresh()
+    content.vb: Public Shared Sub Refresh()
+  overload: com.absence.variablebanks.editor.SymbolInitializer.Refresh*
+- uid: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  id: RemoveAddressablesLabelIfExists
+  parent: com.absence.variablebanks.editor.SymbolInitializer
+  langs:
+  - csharp
+  - vb
+  name: RemoveAddressablesLabelIfExists()
+  nameWithType: SymbolInitializer.RemoveAddressablesLabelIfExists()
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists()
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: RemoveAddressablesLabelIfExists
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: public static void RemoveAddressablesLabelIfExists()
+    content.vb: Public Shared Sub RemoveAddressablesLabelIfExists()
+  overload: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists*
+- uid: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  commentId: M:com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  id: AddAddressablesLabelOnce
+  parent: com.absence.variablebanks.editor.SymbolInitializer
+  langs:
+  - csharp
+  - vb
+  name: AddAddressablesLabelOnce()
+  nameWithType: SymbolInitializer.AddAddressablesLabelOnce()
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce()
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: AddAddressablesLabelOnce
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
+    startLine: 54
+  assemblies:
+  - Assembly-CSharp-Editor-firstpass
+  namespace: com.absence.variablebanks.editor
+  syntax:
+    content: public static void AddAddressablesLabelOnce()
+    content.vb: Public Shared Sub AddAddressablesLabelOnce()
+  overload: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce*
+references:
+- uid: com.absence.variablebanks.editor
+  commentId: N:com.absence.variablebanks.editor
+  href: com.html
+  name: com.absence.variablebanks.editor
+  nameWithType: com.absence.variablebanks.editor
+  fullName: com.absence.variablebanks.editor
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.editor
+    name: editor
+    href: com.absence.variablebanks.editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: com.absence.variablebanks.editor.SymbolInitializer.Refresh*
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.Refresh
+  href: com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_Refresh
+  name: Refresh
+  nameWithType: SymbolInitializer.Refresh
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.Refresh
+- uid: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists*
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+  href: com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_RemoveAddressablesLabelIfExists
+  name: RemoveAddressablesLabelIfExists
+  nameWithType: SymbolInitializer.RemoveAddressablesLabelIfExists
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.RemoveAddressablesLabelIfExists
+- uid: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce*
+  commentId: Overload:com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce
+  href: com.absence.variablebanks.editor.SymbolInitializer.html#com_absence_variablebanks_editor_SymbolInitializer_AddAddressablesLabelOnce
+  name: AddAddressablesLabelOnce
+  nameWithType: SymbolInitializer.AddAddressablesLabelOnce
+  fullName: com.absence.variablebanks.editor.SymbolInitializer.AddAddressablesLabelOnce

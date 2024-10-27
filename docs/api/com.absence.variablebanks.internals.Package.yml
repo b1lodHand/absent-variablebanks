@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.internals.Package
+  commentId: T:com.absence.variablebanks.internals.Package
+  id: Package
+  parent: com.absence.variablebanks.internals
+  children:
+  - com.absence.variablebanks.internals.Package.Version
+  langs:
+  - csharp
+  - vb
+  name: Package
+  nameWithType: Package
+  fullName: com.absence.variablebanks.internals.Package
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Package
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public static class Package
+    content.vb: Public Module Package
+  inheritance:
+  - System.Object
+- uid: com.absence.variablebanks.internals.Package.Version
+  commentId: F:com.absence.variablebanks.internals.Package.Version
+  id: Version
+  parent: com.absence.variablebanks.internals.Package
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: Package.Version
+  fullName: com.absence.variablebanks.internals.Package.Version
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Version
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public static readonly Package.PackageVersion Version
+    return:
+      type: com.absence.variablebanks.internals.Package.PackageVersion
+    content.vb: Public Shared ReadOnly Version As Package.PackageVersion
+references:
+- uid: com.absence.variablebanks.internals
+  commentId: N:com.absence.variablebanks.internals
+  href: com.html
+  name: com.absence.variablebanks.internals
+  nameWithType: com.absence.variablebanks.internals
+  fullName: com.absence.variablebanks.internals
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: com.absence.variablebanks.internals.Package.PackageVersion
+  commentId: T:com.absence.variablebanks.internals.Package.PackageVersion
+  parent: com.absence.variablebanks.internals
+  href: com.absence.variablebanks.internals.Package.html
+  name: Package.PackageVersion
+  nameWithType: Package.PackageVersion
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion
+  spec.csharp:
+  - uid: com.absence.variablebanks.internals.Package
+    name: Package
+    href: com.absence.variablebanks.internals.Package.html
+  - name: .
+  - uid: com.absence.variablebanks.internals.Package.PackageVersion
+    name: PackageVersion
+    href: com.absence.variablebanks.internals.Package.PackageVersion.html
+  spec.vb:
+  - uid: com.absence.variablebanks.internals.Package
+    name: Package
+    href: com.absence.variablebanks.internals.Package.html
+  - name: .
+  - uid: com.absence.variablebanks.internals.Package.PackageVersion
+    name: PackageVersion
+    href: com.absence.variablebanks.internals.Package.PackageVersion.html

@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.savesystem.variablebanks
+  commentId: N:com.absence.savesystem.variablebanks
+  id: com.absence.savesystem.variablebanks
+  children:
+  - com.absence.savesystem.variablebanks.ExtensionMethods
+  - com.absence.savesystem.variablebanks.TempVariableBankData
+  - com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  langs:
+  - csharp
+  - vb
+  name: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp-firstpass
+references:
+- uid: com.absence.savesystem.variablebanks.ExtensionMethods
+  commentId: T:com.absence.savesystem.variablebanks.ExtensionMethods
+  href: com.absence.savesystem.variablebanks.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: com.absence.savesystem.variablebanks.ExtensionMethods
+- uid: com.absence.savesystem.variablebanks.TempVariableBankData
+  commentId: T:com.absence.savesystem.variablebanks.TempVariableBankData
+  parent: com.absence.savesystem.variablebanks
+  href: com.absence.savesystem.variablebanks.TempVariableBankData.html
+  name: TempVariableBankData
+  nameWithType: TempVariableBankData
+  fullName: com.absence.savesystem.variablebanks.TempVariableBankData
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  commentId: T:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  href: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html
+  name: VariableBankSerializationSurrogate
+  nameWithType: VariableBankSerializationSurrogate
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+- uid: com.absence.savesystem.variablebanks
+  commentId: N:com.absence.savesystem.variablebanks
+  href: com.html
+  name: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html

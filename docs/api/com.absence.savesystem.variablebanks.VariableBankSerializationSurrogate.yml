@@ -1,0 +1,380 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  commentId: T:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  id: VariableBankSerializationSurrogate
+  parent: com.absence.savesystem.variablebanks
+  children:
+  - com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  langs:
+  - csharp
+  - vb
+  name: VariableBankSerializationSurrogate
+  nameWithType: VariableBankSerializationSurrogate
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: VariableBankSerializationSurrogate
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  syntax:
+    content: 'public class VariableBankSerializationSurrogate : ISerializationSurrogate'
+    content.vb: Public Class VariableBankSerializationSurrogate Implements ISerializationSurrogate
+  inheritance:
+  - System.Object
+  implements:
+  - System.Runtime.Serialization.ISerializationSurrogate
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  langs:
+  - csharp
+  - vb
+  name: GetObjectData(object, SerializationInfo, StreamingContext)
+  nameWithType: VariableBankSerializationSurrogate.GetObjectData(object, SerializationInfo, StreamingContext)
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: GetObjectData
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  example: []
+  syntax:
+    content: public void GetObjectData(object obj, SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+    content.vb: Public Sub GetObjectData(obj As Object, info As SerializationInfo, context As StreamingContext)
+  overload: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData*
+  implements:
+  - System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  nameWithType.vb: VariableBankSerializationSurrogate.GetObjectData(Object, SerializationInfo, StreamingContext)
+  fullName.vb: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  name.vb: GetObjectData(Object, SerializationInfo, StreamingContext)
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  commentId: M:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  id: SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  parent: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
+  langs:
+  - csharp
+  - vb
+  name: SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  nameWithType: VariableBankSerializationSurrogate.SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  type: Method
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: SetObjectData
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/extensions/variablebank-saves/VariableBankSerializationSurrogate.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.savesystem.variablebanks
+  example: []
+  syntax:
+    content: public object SetObjectData(object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+    - id: selector
+      type: System.Runtime.Serialization.ISurrogateSelector
+    return:
+      type: System.Object
+    content.vb: Public Function SetObjectData(obj As Object, info As SerializationInfo, context As StreamingContext, selector As ISurrogateSelector) As Object
+  overload: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData*
+  implements:
+  - System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  nameWithType.vb: VariableBankSerializationSurrogate.SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  fullName.vb: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  name.vb: SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+references:
+- uid: com.absence.savesystem.variablebanks
+  commentId: N:com.absence.savesystem.variablebanks
+  href: com.html
+  name: com.absence.savesystem.variablebanks
+  nameWithType: com.absence.savesystem.variablebanks
+  fullName: com.absence.savesystem.variablebanks
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.savesystem
+    name: savesystem
+    href: com.absence.savesystem.html
+  - name: .
+  - uid: com.absence.savesystem.variablebanks
+    name: variablebanks
+    href: com.absence.savesystem.variablebanks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Runtime.Serialization.ISerializationSurrogate
+  commentId: T:System.Runtime.Serialization.ISerializationSurrogate
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate
+  name: ISerializationSurrogate
+  nameWithType: ISerializationSurrogate
+  fullName: System.Runtime.Serialization.ISerializationSurrogate
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData*
+  commentId: Overload:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData
+  href: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_GetObjectData_System_Object_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  name: GetObjectData
+  nameWithType: VariableBankSerializationSurrogate.GetObjectData
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.GetObjectData
+- uid: System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Runtime.Serialization.ISerializationSurrogate
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.getobjectdata
+  name: GetObjectData(object, SerializationInfo, StreamingContext)
+  nameWithType: ISerializationSurrogate.GetObjectData(object, SerializationInfo, StreamingContext)
+  fullName: System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType.vb: ISerializationSurrogate.GetObjectData(Object, SerializationInfo, StreamingContext)
+  fullName.vb: System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  name.vb: GetObjectData(Object, SerializationInfo, StreamingContext)
+  spec.csharp:
+  - uid: System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.getobjectdata
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+  spec.vb:
+  - uid: System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.getobjectdata
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+- uid: System.Runtime.Serialization.SerializationInfo
+  commentId: T:System.Runtime.Serialization.SerializationInfo
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  commentId: T:System.Runtime.Serialization.StreamingContext
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData*
+  commentId: Overload:com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData
+  href: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.html#com_absence_savesystem_variablebanks_VariableBankSerializationSurrogate_SetObjectData_System_Object_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_System_Runtime_Serialization_ISurrogateSelector_
+  name: SetObjectData
+  nameWithType: VariableBankSerializationSurrogate.SetObjectData
+  fullName: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate.SetObjectData
+- uid: System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  commentId: M:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+  parent: System.Runtime.Serialization.ISerializationSurrogate
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.setobjectdata
+  name: SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  nameWithType: ISerializationSurrogate.SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  fullName: System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  nameWithType.vb: ISerializationSurrogate.SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  fullName.vb: System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(Object, System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext, System.Runtime.Serialization.ISurrogateSelector)
+  name.vb: SetObjectData(Object, SerializationInfo, StreamingContext, ISurrogateSelector)
+  spec.csharp:
+  - uid: System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+    name: SetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.setobjectdata
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.ISurrogateSelector
+    name: ISurrogateSelector
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.isurrogateselector
+  - name: )
+  spec.vb:
+  - uid: System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)
+    name: SetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializationsurrogate.setobjectdata
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.ISurrogateSelector
+    name: ISurrogateSelector
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.isurrogateselector
+  - name: )
+- uid: System.Runtime.Serialization.ISurrogateSelector
+  commentId: T:System.Runtime.Serialization.ISurrogateSelector
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.isurrogateselector
+  name: ISurrogateSelector
+  nameWithType: ISurrogateSelector
+  fullName: System.Runtime.Serialization.ISurrogateSelector

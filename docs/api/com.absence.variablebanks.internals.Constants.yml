@@ -6,7 +6,10 @@ items:
   parent: com.absence.variablebanks.internals
   children:
   - com.absence.variablebanks.internals.Constants.K_ADDRESSABLES_TAG
+  - com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  - com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
   - com.absence.variablebanks.internals.Constants.K_RESOURCES_PATH
+  - com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
   langs:
   - csharp
   - vb
@@ -17,7 +20,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Constants
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -46,7 +49,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_RESOURCES_PATH
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -75,7 +78,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: development
+      branch: main
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_ADDRESSABLES_TAG
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -90,6 +93,93 @@ items:
     return:
       type: System.String
     content.vb: Public Const K_ADDRESSABLES_TAG As String = "variable-banks"
+- uid: com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  commentId: F:com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  id: K_SCRIPTING_DEFINE_SYMBOL
+  parent: com.absence.variablebanks.internals.Constants
+  langs:
+  - csharp
+  - vb
+  name: K_SCRIPTING_DEFINE_SYMBOL
+  nameWithType: Constants.K_SCRIPTING_DEFINE_SYMBOL
+  fullName: com.absence.variablebanks.internals.Constants.K_SCRIPTING_DEFINE_SYMBOL
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: K_SCRIPTING_DEFINE_SYMBOL
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  summary: The scripting define symbol used in Player Settings to compile the code associated with the Addressables Package without errors.
+  example: []
+  syntax:
+    content: public const string K_SCRIPTING_DEFINE_SYMBOL = "ABSENT_VB_ADDRESSABLES"
+    return:
+      type: System.String
+    content.vb: Public Const K_SCRIPTING_DEFINE_SYMBOL As String = "ABSENT_VB_ADDRESSABLES"
+- uid: com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  commentId: F:com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  id: K_CLONE_AUTOMATICALLY
+  parent: com.absence.variablebanks.internals.Constants
+  langs:
+  - csharp
+  - vb
+  name: K_CLONE_AUTOMATICALLY
+  nameWithType: Constants.K_CLONE_AUTOMATICALLY
+  fullName: com.absence.variablebanks.internals.Constants.K_CLONE_AUTOMATICALLY
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: K_CLONE_AUTOMATICALLY
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  summary: If true, all VariableBanks (except the ones marked as 'For External Use') will get cloned right before the splash screen.
+  example: []
+  syntax:
+    content: public const bool K_CLONE_AUTOMATICALLY = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const K_CLONE_AUTOMATICALLY As Boolean = True
+- uid: com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  commentId: F:com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  id: K_DEBUG_MODE
+  parent: com.absence.variablebanks.internals.Constants
+  langs:
+  - csharp
+  - vb
+  name: K_DEBUG_MODE
+  nameWithType: Constants.K_DEBUG_MODE
+  fullName: com.absence.variablebanks.internals.Constants.K_DEBUG_MODE
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: K_DEBUG_MODE
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  summary: If true, some internal information will get printed on console when specific events occur.
+  example: []
+  syntax:
+    content: public const bool K_DEBUG_MODE = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const K_DEBUG_MODE As Boolean = True
 references:
 - uid: com.absence.variablebanks.internals
   commentId: N:com.absence.variablebanks.internals
@@ -158,3 +248,14 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

@@ -4,4 +4,4 @@
 
 ### In this documentation, you will learn how to use, modify and extend the system.
 
-### You can start learning by reading [Before Installing](https://b1lodhand.github.io/absent-variablebanks/docs/introduction/before-installing.html).
+### You can start learning by reading [Installing](https://b1lodhand.github.io/absent-variablebanks/docs/introduction/installing.html).

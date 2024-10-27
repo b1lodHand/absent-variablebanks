@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.absence.variablebanks.internals.Package.PackageVersion
+  commentId: T:com.absence.variablebanks.internals.Package.PackageVersion
+  id: Package.PackageVersion
+  parent: com.absence.variablebanks.internals
+  children:
+  - com.absence.variablebanks.internals.Package.PackageVersion.Major
+  - com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  - com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  - com.absence.variablebanks.internals.Package.PackageVersion.Text
+  langs:
+  - csharp
+  - vb
+  name: Package.PackageVersion
+  nameWithType: Package.PackageVersion
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion
+  type: Class
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: PackageVersion
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public class Package.PackageVersion
+    content.vb: Public Class Package.PackageVersion
+  inheritance:
+  - System.Object
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Major
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Major
+  id: Major
+  parent: com.absence.variablebanks.internals.Package.PackageVersion
+  langs:
+  - csharp
+  - vb
+  name: Major
+  nameWithType: Package.PackageVersion.Major
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Major
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Major
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public int Major
+    return:
+      type: System.Int32
+    content.vb: Public Major As Integer
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  id: Minor
+  parent: com.absence.variablebanks.internals.Package.PackageVersion
+  langs:
+  - csharp
+  - vb
+  name: Minor
+  nameWithType: Package.PackageVersion.Minor
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Minor
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Minor
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public int Minor
+    return:
+      type: System.Int32
+    content.vb: Public Minor As Integer
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  commentId: F:com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  id: Patch
+  parent: com.absence.variablebanks.internals.Package.PackageVersion
+  langs:
+  - csharp
+  - vb
+  name: Patch
+  nameWithType: Package.PackageVersion.Patch
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Patch
+  type: Field
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Patch
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public int Patch
+    return:
+      type: System.Int32
+    content.vb: Public Patch As Integer
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Text
+  commentId: P:com.absence.variablebanks.internals.Package.PackageVersion.Text
+  id: Text
+  parent: com.absence.variablebanks.internals.Package.PackageVersion
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: Package.PackageVersion.Text
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Text
+  type: Property
+  source:
+    remote:
+      path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+      branch: main
+      repo: https://github.com/b1lodHand/absent-variablebanks.git
+    id: Text
+    path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp-firstpass
+  namespace: com.absence.variablebanks.internals
+  syntax:
+    content: public string Text { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Text As String
+  overload: com.absence.variablebanks.internals.Package.PackageVersion.Text*
+references:
+- uid: com.absence.variablebanks.internals
+  commentId: N:com.absence.variablebanks.internals
+  href: com.html
+  name: com.absence.variablebanks.internals
+  nameWithType: com.absence.variablebanks.internals
+  fullName: com.absence.variablebanks.internals
+  spec.csharp:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
+  spec.vb:
+  - uid: com
+    name: com
+    href: com.html
+  - name: .
+  - uid: com.absence
+    name: absence
+    href: com.absence.html
+  - name: .
+  - uid: com.absence.variablebanks
+    name: variablebanks
+    href: com.absence.variablebanks.html
+  - name: .
+  - uid: com.absence.variablebanks.internals
+    name: internals
+    href: com.absence.variablebanks.internals.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: com.absence.variablebanks.internals.Package.PackageVersion.Text*
+  commentId: Overload:com.absence.variablebanks.internals.Package.PackageVersion.Text
+  href: com.absence.variablebanks.internals.Package.PackageVersion.html#com_absence_variablebanks_internals_Package_PackageVersion_Text
+  name: Text
+  nameWithType: Package.PackageVersion.Text
+  fullName: com.absence.variablebanks.internals.Package.PackageVersion.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
