@@ -6,6 +6,11 @@ using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 
+#if VB_ADDRESSABLES
+using UnityEditor.AddressableAssets;
+using UnityEditor.AddressableAssets.Settings;
+#endif
+
 namespace com.absence.variablebanks.editor
 {
     /// <summary>
@@ -13,13 +18,13 @@ namespace com.absence.variablebanks.editor
     /// </summary>
     public static class VariableBankCreationHandler
     {
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (External Use)", priority = 0)]
+        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (For External Use)", priority = 0)]
         static void CreateVariableBankForExternalUse()
         {
             CreateVariableBank(true);
         }
 
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank", validate = true)]
+        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true)]
         static bool CreateVariableBank_Addressables_Validation()
         {
 #if VB_ADDRESSABLES
@@ -29,23 +34,39 @@ namespace com.absence.variablebanks.editor
 #endif
         }
 
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank", priority = 0)]
+        [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
+        static bool CreateVariableBank_ResourcesAPI_Validation()
+        {
+#if !VB_ADDRESSABLES
+            return true;
+#else
+            return false;
+#endif
+        }
+
+        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", priority = 0)]
         static void CreateVariableBank_Addressables()
         {
-            CreateVariableBank(false);
+            CreateVariableBank(false, true);
         }
 
         [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)")]
         static void CreateVariableBank_ResourcesAPI()
         {
-            CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
             var path = Path.Combine("Assets/Resources", Constants.K_RESOURCES_PATH, "New VariableBank.asset");
+            CreateVariableBankAtPath(path, false, false);
+        }
+
+        static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)
+        {
+            CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
+            create.forExternalUse = forExternalUse;
+            create.setupForAddressables = addressable;
             var icon = EditorGUIUtility.IconContent("d_ScriptableObject Icon").image as Texture2D;
 
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, create, path, icon, null);
         }
-
-        static void CreateVariableBank(bool forExternalUse)
+        static void CreateVariableBank(bool forExternalUse, bool addressable = false)
         {
             string selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
             if (selectedPath == string.Empty) return;
@@ -55,13 +76,9 @@ namespace com.absence.variablebanks.editor
                 TrimLastSlash(ref selectedPath);
             }
 
-            CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
-            create.forExternalUse = forExternalUse;
-
             var path = Path.Combine(selectedPath, "New VariableBank.asset");
-            var icon = EditorGUIUtility.IconContent("d_ScriptableObject Icon").image as Texture2D;
 
-            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, create, path, icon, null);
+            CreateVariableBankAtPath(path, forExternalUse, addressable);
         }
 
         private static void TrimLastSlash(ref string path)
@@ -87,6 +104,29 @@ namespace com.absence.variablebanks.editor
                 AssetDatabase.CreateAsset(itemCreated, pathName);
 
                 itemCreated.ForExternalUse = forExternalUse;
+
+#if VB_ADDRESSABLES
+                if (setupForAddressables)
+                {
+                    AddressableAssetSettings addressableSettings = AddressableAssetSettingsDefaultObject.Settings;
+
+                    AddressableAssetGroup addressableGroup = addressableSettings.FindGroup(Constants.K_RESOURCES_PATH);
+                    if (addressableGroup == null || !addressableGroup.ReadOnly)
+                    {
+                        addressableGroup = addressableSettings.CreateGroup(Constants.K_RESOURCES_PATH, false, true, true, null);
+                    }
+
+                    AddressableAssetEntry addressableEntry = addressableSettings.CreateOrMoveEntry(AssetDatabase.AssetPathToGUID(pathName), 
+                        addressableGroup, true, true);
+
+                    addressableEntry.SetLabel(Constants.K_ADDRESSABLES_TAG, true);
+
+                    itemCreated.OnDestroyAction += () =>
+                    {
+                        addressableGroup.RemoveAssetEntry(addressableEntry);
+                    };
+                }
+#endif
 
                 itemCreated.OnDestroyAction += () =>
                 {

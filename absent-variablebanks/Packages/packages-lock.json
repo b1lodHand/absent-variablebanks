@@ -5,21 +5,28 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e4de58b6b09f533d74c0fc11cf00f2aa361b1710"
+      "hash": "27b7fea75417521660f1488087fb8204e16b55cb"
+    },
+    "com.absence.savesystem": {
+      "version": "https://github.com/b1lodHand/absent-saves.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c80ec7fd39cda98c8e994b6e833237e679b8b4ad"
     },
     "com.absence.utilities": {
       "version": "https://github.com/b1lodHand/absent-utilities.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5d8e21764fb4fc123fb3ea4fb6c23d842090a939"
+      "hash": "bf5fc11103e0cae2493936a9d4d33841404ab9c7"
     },
     "com.absence.variablesystem": {
       "version": "https://github.com/b1lodHand/absent-variables.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "40ddcda996ac70f03bbea6f335cd11afc22706e2"
+      "hash": "41d781f2cb4934639fed18849463b8f8e57829c9"
     },
     "com.unity.addressables": {
       "version": "1.22.2",

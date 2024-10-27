@@ -15,6 +15,19 @@ namespace com.absence.variablebanks.internals
         /// </summary>
         public const string K_ADDRESSABLES_TAG = "variable-banks";
 
+        /// <summary>
+        /// The scripting define symbol used in Player Settings to compile the code associated with the Addressables Package without errors.
+        /// </summary>
         public const string K_SCRIPTING_DEFINE_SYMBOL = "VB_ADDRESSABLES";
+
+        /// <summary>
+        /// If true, all VariableBanks (except the ones marked as 'For External Use') will get cloned right before the splash screen.
+        /// </summary>
+        public const bool K_CLONE_AUTOMATICALLY = true;
+
+        /// <summary>
+        /// If true, some internal information will get printed on console when specific events occur.
+        /// </summary>
+        public const bool K_DEBUG_MODE = true;
     }
 }

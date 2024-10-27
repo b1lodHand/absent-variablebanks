@@ -15,11 +15,9 @@ MonoBehaviour:
   m_GroupName: VariableBanks
   m_Data:
     m_SerializedData: []
-  m_GUID: 8fd8e389437c44840b9ad54bd778c27b
+  m_GUID: d877fc36da39c8340b20503589ad446b
   m_SerializeEntries: []
-  m_ReadOnly: 0
+  m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: eb1baf9d5ce3b084189cc3c33fdf5f22, type: 2}
   m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: 612a64a25ece7c4478d57fc86ed66311, type: 2}
-    - {fileID: 11400000, guid: 2b70acdaf6e81c045b701acdcc4e1aa0, type: 2}
+    m_Schemas: []

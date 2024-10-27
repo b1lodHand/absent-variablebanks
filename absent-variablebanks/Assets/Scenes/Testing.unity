@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -354,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fixedBankReference:
-    m_targetGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+    m_targetGuid: 
   m_comparers:
   - m_comparisonType: 2
     m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
@@ -371,22 +370,8 @@ MonoBehaviour:
     m_floatValue: 0
     m_stringValue: 
     m_boolValue: 0
-  m_fixedComparers:
-  - m_comparisonType: 2
-    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
-    m_targetVariableName: 'bool: example_bool'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 1
-  m_fixedSetters:
-  - m_setType: 0
-    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
-    m_targetVariableName: 'int: example_integer'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 0
+  m_fixedComparers: []
+  m_fixedSetters: []
 --- !u!4 &1473633978
 Transform:
   m_ObjectHideFlags: 0
