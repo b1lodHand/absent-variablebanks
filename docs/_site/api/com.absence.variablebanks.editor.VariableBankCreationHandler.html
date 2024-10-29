@@ -119,18 +119,18 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/b1lodHand/absent-variablebanks/new/development/apiSpec/new?filename=com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/b1lodHand/absent-variablebanks/new/development/apiSpec/new?filename=com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_System_Action_com_absence_variablesystem_banksystembase_VariableBank_System_Boolean__.md&amp;value=---%0Auid%3A%20com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Action%7Bcom.absence.variablesystem.banksystembase.VariableBank%2CSystem.Boolean%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L60">View Source</a>
+    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L62">View Source</a>
   </span>
   <a id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath*"></a>
-  <h4 id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)">CreateVariableBankAtPath(string, bool, bool)</h4>
+  <h4 id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_System_Action_com_absence_variablesystem_banksystembase_VariableBank_System_Boolean__" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})">CreateVariableBankAtPath(string, bool, bool, Action&lt;VariableBank, bool&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false, Action&lt;VariableBank, bool&gt; onEndAction = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -157,6 +157,11 @@
         <td><span class="parametername">addressable</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<span class="xref">VariableBank</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td><span class="parametername">onEndAction</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
@@ -164,7 +169,7 @@
     <a href="https://github.com/b1lodHand/absent-variablebanks/new/development/apiSpec/new?filename=com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForAddressables.md&amp;value=---%0Auid%3A%20com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L47">View Source</a>
+    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L49">View Source</a>
   </span>
   <a id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForAddressables_" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables*"></a>
   <h4 id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForAddressables" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables">CreateVariableBankForAddressables()</h4>
@@ -180,7 +185,7 @@ public static void CreateVariableBankForAddressables()</code></pre>
     <a href="https://github.com/b1lodHand/absent-variablebanks/new/development/apiSpec/new?filename=com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForResources.md&amp;value=---%0Auid%3A%20com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L53">View Source</a>
+    <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs/#L55">View Source</a>
   </span>
   <a id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForResources_" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources*"></a>
   <h4 id="com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForResources" data-uid="com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources">CreateVariableBankForResources()</h4>

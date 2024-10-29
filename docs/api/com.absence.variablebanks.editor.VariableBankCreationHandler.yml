@@ -5,7 +5,7 @@ items:
   id: VariableBankCreationHandler
   parent: com.absence.variablebanks.editor
   children:
-  - com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
+  - com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
   - com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables
   - com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
   langs:
@@ -22,7 +22,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBankCreationHandler
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -51,7 +51,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CreateVariableBankForAddressables
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -93,7 +93,7 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CreateVariableBankForResources
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs
-    startLine: 52
+    startLine: 54
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
@@ -113,16 +113,16 @@ items:
     arguments:
     - type: System.String
       value: absencee_/absent-variablebanks/Create Variable Bank (Resources)
-- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
-  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
-  id: CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
+  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
+  id: CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
   parent: com.absence.variablebanks.editor.VariableBankCreationHandler
   langs:
   - csharp
   - vb
-  name: CreateVariableBankAtPath(string, bool, bool)
-  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
-  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
+  name: CreateVariableBankAtPath(string, bool, bool, Action<VariableBank, bool>)
+  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool, Action<VariableBank, bool>)
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool, System.Action<com.absence.variablesystem.banksystembase.VariableBank, bool>)
   type: Method
   source:
     remote:
@@ -131,12 +131,12 @@ items:
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CreateVariableBankAtPath
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/VariableBankCreationHandler.cs
-    startLine: 59
+    startLine: 61
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
   syntax:
-    content: public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)
+    content: public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false, Action<VariableBank, bool> onEndAction = null)
     parameters:
     - id: path
       type: System.String
@@ -144,11 +144,13 @@ items:
       type: System.Boolean
     - id: addressable
       type: System.Boolean
-    content.vb: Public Shared Sub CreateVariableBankAtPath(path As String, forExternalUse As Boolean, addressable As Boolean = False)
+    - id: onEndAction
+      type: System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean}
+    content.vb: Public Shared Sub CreateVariableBankAtPath(path As String, forExternalUse As Boolean, addressable As Boolean = False, onEndAction As Action(Of VariableBank, Boolean) = Nothing)
   overload: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath*
-  nameWithType.vb: VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
-  fullName.vb: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
-  name.vb: CreateVariableBankAtPath(String, Boolean, Boolean)
+  nameWithType.vb: VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean, Action(Of VariableBank, Boolean))
+  fullName.vb: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean, System.Action(Of com.absence.variablesystem.banksystembase.VariableBank, Boolean))
+  name.vb: CreateVariableBankAtPath(String, Boolean, Boolean, Action(Of VariableBank, Boolean))
 references:
 - uid: com.absence.variablebanks.editor
   commentId: N:com.absence.variablebanks.editor
@@ -220,7 +222,7 @@ references:
   fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
 - uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath*
   commentId: Overload:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath
-  href: com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_
+  href: com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_System_Action_com_absence_variablesystem_banksystembase_VariableBank_System_Boolean__
   name: CreateVariableBankAtPath
   nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath
   fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath
@@ -246,3 +248,82 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean}
+  commentId: T:System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<VariableBank, bool>
+  nameWithType: Action<VariableBank, bool>
+  fullName: System.Action<com.absence.variablesystem.banksystembase.VariableBank, bool>
+  nameWithType.vb: Action(Of VariableBank, Boolean)
+  fullName.vb: System.Action(Of com.absence.variablesystem.banksystembase.VariableBank, Boolean)
+  name.vb: Action(Of VariableBank, Boolean)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: com.absence.variablesystem.banksystembase.VariableBank
+    name: VariableBank
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: com.absence.variablesystem.banksystembase.VariableBank
+    name: VariableBank
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )

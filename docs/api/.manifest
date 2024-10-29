@@ -50,7 +50,7 @@
   "com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor": "com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.yml",
   "com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.OnInspectorGUI": "com.absence.variablebanks.editor.VariableBankAcquirerCustomEditor.yml",
   "com.absence.variablebanks.editor.VariableBankCreationHandler": "com.absence.variablebanks.editor.VariableBankCreationHandler.yml",
-  "com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)": "com.absence.variablebanks.editor.VariableBankCreationHandler.yml",
+  "com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})": "com.absence.variablebanks.editor.VariableBankCreationHandler.yml",
   "com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables": "com.absence.variablebanks.editor.VariableBankCreationHandler.yml",
   "com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources": "com.absence.variablebanks.editor.VariableBankCreationHandler.yml",
   "com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer": "com.absence.variablebanks.editor.VariableBankReferencePropertyDrawer.yml",
