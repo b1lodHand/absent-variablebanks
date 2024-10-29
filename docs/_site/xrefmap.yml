@@ -1164,15 +1164,15 @@ references:
   commentId: T:com.absence.variablebanks.editor.VariableBankCreationHandler
   fullName: com.absence.variablebanks.editor.VariableBankCreationHandler
   nameWithType: VariableBankCreationHandler
-- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
-  name: CreateVariableBankAtPath(string, bool, bool)
-  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_
-  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
-  name.vb: CreateVariableBankAtPath(String, Boolean, Boolean)
-  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
-  fullName.vb: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
-  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
-  nameWithType.vb: VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
+  name: CreateVariableBankAtPath(string, bool, bool, Action<VariableBank, bool>)
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_System_Action_com_absence_variablesystem_banksystembase_VariableBank_System_Boolean__
+  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean,System.Action{com.absence.variablesystem.banksystembase.VariableBank,System.Boolean})
+  name.vb: CreateVariableBankAtPath(String, Boolean, Boolean, Action(Of VariableBank, Boolean))
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool, System.Action<com.absence.variablesystem.banksystembase.VariableBank, bool>)
+  fullName.vb: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean, System.Action(Of com.absence.variablesystem.banksystembase.VariableBank, Boolean))
+  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool, Action<VariableBank, bool>)
+  nameWithType.vb: VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean, Action(Of VariableBank, Boolean))
 - uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath*
   name: CreateVariableBankAtPath
   href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_

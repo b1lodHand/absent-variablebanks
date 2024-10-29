@@ -5,6 +5,8 @@ using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using com.absence.variablesystem.banksystembase;
 using com.absence.variablesystem.banksystembase.editor;
+using System;
+
 
 #if ABSENT_VB_ADDRESSABLES
 using UnityEditor.AddressableAssets;
@@ -54,12 +56,13 @@ namespace com.absence.variablebanks.editor
         public static void CreateVariableBankForResources()
         {
             var path = Path.Combine("Assets/Resources", Constants.K_RESOURCES_PATH, "New VariableBank.asset");
-            CreateVariableBankAtPath(path, false, false);
+            CreateVariableBankAtPath(path, false, false, null);
         }
 
-        public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)
+        public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false, Action<VariableBank, bool> onEndAction = null)
         {
             CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
+            if (onEndAction != null) create.onEndAction = onEndAction;
             create.forExternalUse = forExternalUse;
             create.setupForAddressables = addressable;
             var icon = EditorGUIUtility.IconContent("d_ScriptableObject Icon").image as Texture2D;
@@ -79,7 +82,7 @@ namespace com.absence.variablebanks.editor
 
             var path = Path.Combine(selectedPath, "New VariableBank.asset");
 
-            CreateVariableBankAtPath(path, forExternalUse, addressable);
+            CreateVariableBankAtPath(path, forExternalUse, addressable, null);
         }
 
         private static void TrimLastSlash(ref string path)
@@ -97,6 +100,7 @@ namespace com.absence.variablebanks.editor
         {
             public bool forExternalUse { get; set; }
             public bool setupForAddressables { get; set; }
+            public Action<VariableBank, bool> onEndAction { get; set; }
 
             public override void Action(int instanceId, string pathName, string resourceFile)
             {
@@ -139,6 +143,8 @@ namespace com.absence.variablebanks.editor
                 VariableBankDatabase.Refresh();
 
                 Selection.activeObject = itemCreated;
+
+                onEndAction?.Invoke(itemCreated, true);
             }
 
             public override void Cancelled(int instanceId, string pathName, string resourceFile)
@@ -147,6 +153,8 @@ namespace com.absence.variablebanks.editor
                 ScriptableObject.DestroyImmediate(item);
 
                 VariableBankDatabase.Refresh();
+
+                onEndAction?.Invoke(null, false);
             }
         }
     }

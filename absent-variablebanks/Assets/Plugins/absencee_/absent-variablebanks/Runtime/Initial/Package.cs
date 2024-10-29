@@ -1,5 +1,5 @@
 #define ABSENT_VARIABLEBANKS
-#define ABSENT_VARIABLEBANKS_1_3_0
+#define ABSENT_VARIABLEBANKS_1_1_2
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Assembly-CSharp-Editor-firstpass")]
 
@@ -28,8 +28,8 @@ namespace com.absence.variablebanks.internals
         public static readonly PackageVersion Version = new PackageVersion()
         {
             Major = 1,
-            Minor = 3,
-            Patch = 0,
+            Minor = 1,
+            Patch = 2,
         };
     }
 }
