@@ -19,14 +19,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: PackageVersion
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: A reference type responsible for holding version information of a package.
+  example: []
   syntax:
     content: public class Package.PackageVersion
     content.vb: Public Class Package.PackageVersion
@@ -46,11 +48,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Major
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 11
+    startLine: 17
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -73,11 +75,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Minor
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 12
+    startLine: 18
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -100,11 +102,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Patch
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
@@ -127,11 +129,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Text
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 15
+    startLine: 21
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals

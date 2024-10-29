@@ -15,11 +15,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/EditorJobsHelper.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: EditorJobsHelper
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/EditorJobsHelper.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor

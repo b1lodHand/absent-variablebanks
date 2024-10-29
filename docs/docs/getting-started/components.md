@@ -2,9 +2,9 @@
 
 ## Variable Bank Acquirer
 
-**Variable Bank Acquirer** is a deprecated component in real. Using **VariableBankReference** class nested in another component instead of using this component directly is much easier to manage.
+**Variable Bank Acquirer** is kind of deprecated to be honest. Using **VariableBankReference** class nested in another component instead of using this component directly is much easier.
 
-It does nealy the same thing with the **VariableBankReference**.
+It does nearly the same thing with the **VariableBankReference**.
 
 ## What's Next?
 

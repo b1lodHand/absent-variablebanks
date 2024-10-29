@@ -89,7 +89,7 @@
                         </div>
 
                          <div id="contribution">
-                               <a href="https://github.com/b1lodHand/absent-variablebanks/blob/main/docs/docs/getting-started/mechanism.md/#L1" class="contribution-link">Edit this page</a>
+                               <a href="https://github.com/b1lodHand/absent-variablebanks/blob/development/docs/docs/getting-started/mechanism.md/#L1" class="contribution-link">Edit this page</a>
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="">
@@ -97,11 +97,11 @@
 
 <p>In this section of the documentation, you will learn how this tool works in general. Let's give it a go!</p>
 <h2 id="what-are-variablebanks">What are VariableBanks?</h2>
-<p><strong>VariableBanks</strong> are simple <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">scriptable objects</a>. There are only two properties important. <strong>'Guid'</strong>, and <strong>'ForExternalUse'</strong> properties. I will be covering them in detail in a second.</p>
+<p><strong>VariableBanks</strong> are simple <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">scriptable objects</a>. There are only two properties important. <strong>'Guid'</strong> and <strong>'ForExternalUse'</strong>. I will be covering them in detail in a second.</p>
 <h2 id="how-to-use-variablebanks">How to use VariableBanks?</h2>
 <h3 id="cloning">Cloning</h3>
 <hr>
-<p>So, because of the intended way of using scriptable objects, the system itself clones some of the banks created (we will be covering which ones are included in that <em>some</em>) when the <strong>splash screen</strong> appears. This cloning process is handled by <strong>VariableBanksCloningHandler</strong> class.</p>
+<p>So, because of the intended way of using scriptable objects, the system itself clones some of the banks created (we will be covering which ones are included in that <em>some</em>) right before the <strong>splash screen</strong>. This cloning process is handled by <strong>VariableBanksCloningHandler</strong>.</p>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>This cloning process is <strong>async</strong> when using <strong>Addressables</strong>.</p>
@@ -125,7 +125,7 @@ VariableBanks with <strong>ForExternalUse</strong> property set to true <strong>
 <li><p>If you're using <strong>Addressables</strong>, any of the assets referenced in the addressables window gets packed with its asset group (you can see asset group in Addressables window).</p>
 </li>
 </ol>
-<p>So, to avoid <strong>asset duplication</strong> you must use only of these way of referencing banks for each bank. You can use Resources some of the banks, while using Addressables for some other and etc. But you should be aware of <strong>asset duplication</strong> as I said. You should write your own logic to getthat working, obviously.</p>
+<p>So, to avoid <strong>asset duplication</strong> you must use only of these way of referencing banks for each bank. You can use Resources for some of the banks, while using Addressables for some other (you need to implement this kind of mixed logic on your own) and etc. But you should be aware of <strong>asset duplication</strong> as I said.</p>
 <h3 id="variablebankreference">VariableBankReference</h3>
 <p>For this, there is a class named: <strong>'VariableBankReference'</strong>. It looks like a direct reference when serialized in the editor but the only thing it holds is the <strong>Guid</strong> of the selected variable bank. Because of this, <strong>it does not cause duplication on build</strong>.</p>
 <p>You can use one of these classes to select a bank, and then in runtime, you can get its <strong>'Bank'</strong> property to find the cloned bank <strong>runtime</strong> with that guid (after ensuring the cloning process is completed successfully).</p>
@@ -161,17 +161,17 @@ VariableBanks with <strong>ForExternalUse</strong> property set to true <strong>
 <p><strong>Fixed Comparers</strong> and the <strong>Fixed Setters</strong> are a little different than normal ones. They don't have a bank selector in editor, instead you give them the target bank's Guid manually with the <strong>'SetFixedBank(...)'</strong> function. This is an example of it:</p>
 <pre><code class="lang-c#">private void OnValidate() 
 {
-    if (Application.isPlaying) return; // Not needed. Just for extra error handling.
+    if (Application.isPlaying) return; // Not needed.
     
     m_comparers.ForEach(comparer =&gt; comparer.SetFixedBank(m_reference.TargetGuid));
     m_setters.ForEach(setter =&gt; setter.SetFixedBank(m_reference.TargetGuid));
 }
 </code></pre>
 <p>The code above sets the bank Guids of manipulators of a component every time a change in the inspector occurs. This is the most practical way of using fixed manipulators with components.</p>
-<p>If you don't work with lists, you can also use <strong>'OnEnable()'</strong> instead of using <strong>'OnValidate()'</strong></p>
+<p>If you are not working with lists, you can also use <strong>'OnEnable()'</strong> instead of using <strong>'OnValidate()'</strong></p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>You can also create your own manipulators via deriving from the <strong>BaseVariableComparer</strong> or <strong>BaseVariableSetter</strong> classes. You can find an example <a href="https://github.com/b1lodHand/absent-dialogues/tree/main/absent-dialogues/Assets/Plugins/absencee_/absent-dialogues/Internal/Graph/Extensions">here.</a>.</p>
+<p>You can also create your own manipulators via deriving from the <strong>BaseVariableComparer</strong> or <strong>BaseVariableSetter</strong> classes. You can find an example <a href="https://github.com/b1lodHand/absent-dialogues/tree/main/absent-dialogues/Assets/Plugins/absencee_/absent-dialogues/Internal/Graph/Extensions">here</a>.</p>
 <p>In this example, I used <strong>direct references</strong>. But I mark all <strong>BlackboardBank</strong>s as <strong>ForExternalUse</strong> banks automatically on creation, so this does not cause any duplications.</p>
 </div>
 <h2 id="whats-next">What's Next?</h2>

@@ -16,14 +16,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Package
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: The static class responsible for holding the package info.
+  example: []
   syntax:
     content: public static class Package
     content.vb: Public Module Package
@@ -43,14 +45,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Version
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Initial/Package.cs
-    startLine: 18
+    startLine: 27
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks.internals
+  summary: Version info of this package.
+  example: []
   syntax:
     content: public static readonly Package.PackageVersion Version
     return:

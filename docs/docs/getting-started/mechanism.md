@@ -4,14 +4,14 @@ In this section of the documentation, you will learn how this tool works in gene
 
 ## What are VariableBanks?
 
-**VariableBanks** are simple [scriptable objects](https://docs.unity3d.com/Manual/class-ScriptableObject.html). There are only two properties important. **'Guid'**, and **'ForExternalUse'** properties. I will be covering them in detail in a second.
+**VariableBanks** are simple [scriptable objects](https://docs.unity3d.com/Manual/class-ScriptableObject.html). There are only two properties important. **'Guid'** and **'ForExternalUse'**. I will be covering them in detail in a second.
 
 ## How to use VariableBanks?
 
 ### Cloning
 ---
 
-So, because of the intended way of using scriptable objects, the system itself clones some of the banks created (we will be covering which ones are included in that *some*) when the **splash screen** appears. This cloning process is handled by **VariableBanksCloningHandler** class.
+So, because of the intended way of using scriptable objects, the system itself clones some of the banks created (we will be covering which ones are included in that *some*) right before the **splash screen**. This cloning process is handled by **VariableBanksCloningHandler**.
 
 >[!WARNING]
 >This cloning process is **async** when using **Addressables**.
@@ -33,7 +33,7 @@ Here, I must get into Unity's asset management procedure for clarity. When you b
 
 3. If you're using **Addressables**, any of the assets referenced in the addressables window gets packed with its asset group (you can see asset group in Addressables window).
 
-So, to avoid **asset duplication** you must use only of these way of referencing banks for each bank. You can use Resources some of the banks, while using Addressables for some other and etc. But you should be aware of **asset duplication** as I said. You should write your own logic to getthat working, obviously.
+So, to avoid **asset duplication** you must use only of these way of referencing banks for each bank. You can use Resources for some of the banks, while using Addressables for some other (you need to implement this kind of mixed logic on your own) and etc. But you should be aware of **asset duplication** as I said.
 
 ### VariableBankReference
 
@@ -83,7 +83,7 @@ They are simply classes which contains a string for the **Guid** of a bank, a st
 ```c#
 private void OnValidate() 
 {
-    if (Application.isPlaying) return; // Not needed. Just for extra error handling.
+    if (Application.isPlaying) return; // Not needed.
     
     m_comparers.ForEach(comparer => comparer.SetFixedBank(m_reference.TargetGuid));
     m_setters.ForEach(setter => setter.SetFixedBank(m_reference.TargetGuid));
@@ -92,10 +92,10 @@ private void OnValidate()
 
 The code above sets the bank Guids of manipulators of a component every time a change in the inspector occurs. This is the most practical way of using fixed manipulators with components.
 
-If you don't work with lists, you can also use **'OnEnable()'** instead of using **'OnValidate()'**
+If you are not working with lists, you can also use **'OnEnable()'** instead of using **'OnValidate()'**
 
 >[!TIP]
->You can also create your own manipulators via deriving from the **BaseVariableComparer** or **BaseVariableSetter** classes. You can find an example [here.](https://github.com/b1lodHand/absent-dialogues/tree/main/absent-dialogues/Assets/Plugins/absencee_/absent-dialogues/Internal/Graph/Extensions). 
+>You can also create your own manipulators via deriving from the **BaseVariableComparer** or **BaseVariableSetter** classes. You can find an example [here](https://github.com/b1lodHand/absent-dialogues/tree/main/absent-dialogues/Assets/Plugins/absencee_/absent-dialogues/Internal/Graph/Extensions). 
 >
 >In this example, I used **direct references**. But I mark all **BlackboardBank**s as **ForExternalUse** banks automatically on creation, so this does not cause any duplications.
 

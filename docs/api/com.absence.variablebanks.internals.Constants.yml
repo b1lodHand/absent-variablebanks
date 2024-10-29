@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Constants
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_RESOURCES_PATH
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_ADDRESSABLES_TAG
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_SCRIPTING_DEFINE_SYMBOL
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_CLONE_AUTOMATICALLY
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: K_DEBUG_MODE
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Helpers/Constants.cs

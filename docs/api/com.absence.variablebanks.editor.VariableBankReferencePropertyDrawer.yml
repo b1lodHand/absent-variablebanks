@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBankReferencePropertyDrawer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetPropertyHeight
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnGUI
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Custom/VariableBankReferencePropertyDrawer.cs

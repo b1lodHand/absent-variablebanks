@@ -38,7 +38,11 @@ namespace com.absence.variablebanks.editor
                 GUI.enabled = false;
             }
 
-            actualLabel.tooltip = $"Guid: {currentGuid}";
+            if (!string.IsNullOrWhiteSpace(label.tooltip)) 
+                actualLabel.tooltip = $"{label.tooltip}\n\nGuid: {currentGuid}";
+            else
+                actualLabel.tooltip = $"Guid: {currentGuid}";
+
             VariableBank editorBank = ((VariableBank)EditorGUI.ObjectField(dynamicRect, actualLabel, VariableBankDatabase.GetBankIfExists(currentGuid), typeof(VariableBank), allowSceneObjects: false));
 
             if (editorBank != null) currentGuid = editorBank.Guid;

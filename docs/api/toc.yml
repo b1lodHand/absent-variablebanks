@@ -1,14 +1,5 @@
 ### YamlMime:TableOfContent
 items:
-- uid: com.absence.savesystem.variablebanks
-  name: com.absence.savesystem.variablebanks
-  items:
-  - uid: com.absence.savesystem.variablebanks.ExtensionMethods
-    name: ExtensionMethods
-  - uid: com.absence.savesystem.variablebanks.TempVariableBankData
-    name: TempVariableBankData
-  - uid: com.absence.savesystem.variablebanks.VariableBankSerializationSurrogate
-    name: VariableBankSerializationSurrogate
 - uid: com.absence.variablebanks
   name: com.absence.variablebanks
   items:

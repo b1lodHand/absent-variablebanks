@@ -18,14 +18,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SymbolInitializer
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: The static class responsible for managing the scripting define symbols for this package (in Player Settings).
+  example: []
   syntax:
     content: >-
       [InitializeOnLoad]
@@ -55,14 +57,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Refresh
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-    startLine: 19
+    startLine: 25
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: Use to check if any define symbols are missing or extra, rewrite and recompile if needed.
+  example: []
   syntax:
     content: public static void Refresh()
     content.vb: Public Shared Sub Refresh()
@@ -81,14 +85,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: RemoveAddressablesLabelIfExists
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-    startLine: 39
+    startLine: 48
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: Use to remove addressables define symbol from Player Settings.
+  example: []
   syntax:
     content: public static void RemoveAddressablesLabelIfExists()
     content.vb: Public Shared Sub RemoveAddressablesLabelIfExists()
@@ -107,14 +113,16 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddAddressablesLabelOnce
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Editor/Scripts/SymbolInitializer.cs
-    startLine: 54
+    startLine: 66
   assemblies:
   - Assembly-CSharp-Editor-firstpass
   namespace: com.absence.variablebanks.editor
+  summary: Use to add addressables define symbol to Player Settings.
+  example: []
   syntax:
     content: public static void AddAddressablesLabelOnce()
     content.vb: Public Shared Sub AddAddressablesLabelOnce()
