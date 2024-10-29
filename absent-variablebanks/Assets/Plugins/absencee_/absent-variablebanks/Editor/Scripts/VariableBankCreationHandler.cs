@@ -1,10 +1,10 @@
 using com.absence.variablebanks.internals;
-using com.absence.variablesystem;
-using com.absence.variablesystem.editor;
 using System.IO;
 using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
+using com.absence.variablesystem.banksystembase;
+using com.absence.variablesystem.banksystembase.editor;
 
 #if ABSENT_VB_ADDRESSABLES
 using UnityEditor.AddressableAssets;

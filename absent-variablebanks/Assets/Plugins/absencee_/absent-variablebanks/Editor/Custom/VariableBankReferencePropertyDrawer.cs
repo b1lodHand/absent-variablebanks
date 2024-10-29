@@ -1,5 +1,5 @@
-using com.absence.variablesystem;
-using com.absence.variablesystem.editor;
+using com.absence.variablesystem.banksystembase;
+using com.absence.variablesystem.banksystembase.editor;
 using UnityEditor;
 using UnityEngine;
 
