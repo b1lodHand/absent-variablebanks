@@ -25,7 +25,7 @@ namespace com.absence.variablebanks.editor
         }
 
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true)]
-        static bool CreateVariableBank_Addressables_Validation()
+        static bool CreateVariableBankForAddressables_Validation()
         {
 #if ABSENT_VB_ADDRESSABLES
             return true;
@@ -35,7 +35,7 @@ namespace com.absence.variablebanks.editor
         }
 
         [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
-        static bool CreateVariableBank_ResourcesAPI_Validation()
+        static bool CreateVariableBankForResources_Validation()
         {
 #if !ABSENT_VB_ADDRESSABLES
             return true;
@@ -45,19 +45,19 @@ namespace com.absence.variablebanks.editor
         }
 
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", priority = 0)]
-        static void CreateVariableBank_Addressables()
+        public static void CreateVariableBankForAddressables()
         {
             CreateVariableBank(false, true);
         }
 
         [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)")]
-        static void CreateVariableBank_ResourcesAPI()
+        public static void CreateVariableBankForResources()
         {
             var path = Path.Combine("Assets/Resources", Constants.K_RESOURCES_PATH, "New VariableBank.asset");
             CreateVariableBankAtPath(path, false, false);
         }
 
-        static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)
+        public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false)
         {
             CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
             create.forExternalUse = forExternalUse;
@@ -66,6 +66,7 @@ namespace com.absence.variablebanks.editor
 
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, create, path, icon, null);
         }
+
         static void CreateVariableBank(bool forExternalUse, bool addressable = false)
         {
             string selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
