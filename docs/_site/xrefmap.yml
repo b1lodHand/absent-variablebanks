@@ -1164,6 +1164,48 @@ references:
   commentId: T:com.absence.variablebanks.editor.VariableBankCreationHandler
   fullName: com.absence.variablebanks.editor.VariableBankCreationHandler
   nameWithType: VariableBankCreationHandler
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
+  name: CreateVariableBankAtPath(string, bool, bool)
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_System_String_System_Boolean_System_Boolean_
+  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(System.String,System.Boolean,System.Boolean)
+  name.vb: CreateVariableBankAtPath(String, Boolean, Boolean)
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
+  fullName.vb: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
+  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath(string, bool, bool)
+  nameWithType.vb: VariableBankCreationHandler.CreateVariableBankAtPath(String, Boolean, Boolean)
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath*
+  name: CreateVariableBankAtPath
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankAtPath_
+  commentId: Overload:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankAtPath
+  nameWithType: VariableBankCreationHandler.CreateVariableBankAtPath
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables
+  name: CreateVariableBankForAddressables()
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForAddressables
+  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables()
+  nameWithType: VariableBankCreationHandler.CreateVariableBankForAddressables()
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables*
+  name: CreateVariableBankForAddressables
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForAddressables_
+  commentId: Overload:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForAddressables
+  nameWithType: VariableBankCreationHandler.CreateVariableBankForAddressables
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
+  name: CreateVariableBankForResources()
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForResources
+  commentId: M:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources()
+  nameWithType: VariableBankCreationHandler.CreateVariableBankForResources()
+- uid: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources*
+  name: CreateVariableBankForResources
+  href: api/com.absence.variablebanks.editor.VariableBankCreationHandler.html#com_absence_variablebanks_editor_VariableBankCreationHandler_CreateVariableBankForResources_
+  commentId: Overload:com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
+  isSpec: "True"
+  fullName: com.absence.variablebanks.editor.VariableBankCreationHandler.CreateVariableBankForResources
+  nameWithType: VariableBankCreationHandler.CreateVariableBankForResources
 - uid: com.absence.variablebanks.editor.VariableBankDatabase
   name: VariableBankDatabase
   href: api/com.absence.variablebanks.editor.VariableBankDatabase.html

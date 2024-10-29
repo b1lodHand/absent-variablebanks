@@ -92,7 +92,7 @@
   "api/com.absence.variablebanks.editor.VariableBankCreationHandler.html": {
     "href": "api/com.absence.variablebanks.editor.VariableBankCreationHandler.html",
     "title": "Class VariableBankCreationHandler | absent-variablebanks",
-    "keywords": "Class VariableBankCreationHandler The static class responsible for handling variable bank creation via editor menu. Inheritance object VariableBankCreationHandler Namespace: com.absence.variablebanks.editor Assembly: Assembly-CSharp-Editor-firstpass.dll Syntax public static class VariableBankCreationHandler"
+    "keywords": "Class VariableBankCreationHandler The static class responsible for handling variable bank creation via editor menu. Inheritance object VariableBankCreationHandler Namespace: com.absence.variablebanks.editor Assembly: Assembly-CSharp-Editor-firstpass.dll Syntax public static class VariableBankCreationHandler Methods | Edit this page View Source CreateVariableBankAtPath(string, bool, bool) Declaration public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false) Parameters Type Name Description string path bool forExternalUse bool addressable | Edit this page View Source CreateVariableBankForAddressables() Declaration [MenuItem(\"Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)\", priority = 0)] public static void CreateVariableBankForAddressables() | Edit this page View Source CreateVariableBankForResources() Declaration [MenuItem(\"absencee_/absent-variablebanks/Create Variable Bank (Resources)\")] public static void CreateVariableBankForResources()"
   },
   "api/com.absence.variablebanks.editor.VariableBankDatabase.html": {
     "href": "api/com.absence.variablebanks.editor.VariableBankDatabase.html",
