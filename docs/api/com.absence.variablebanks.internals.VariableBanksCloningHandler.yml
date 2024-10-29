@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBanksCloningHandler
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: OnCloningCompleted
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: CloningCompleted
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: AddCloningCompleteCallbackOrInvoke
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Static/VariableBanksCloningHandler.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: VariableBankReference
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
@@ -26,9 +26,9 @@ items:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
   summary: >-
-    The class responsible for letting you reference a <xref href="com.absence.variablesystem.VariableBank" data-throw-if-not-resolved="false"></xref> both in editor and in runtime. You can use the
+    The class responsible for letting you reference a <xref href="com.absence.variablesystem.banksystembase.VariableBank" data-throw-if-not-resolved="false"></xref> both in editor and in runtime. You can use the
 
-    <xref href="com.absence.variablesystem.VariableBank" data-throw-if-not-resolved="false"></xref> class directly if the bank you are referencing is marked as <xref href="com.absence.variablesystem.VariableBank.ForExternalUse" data-throw-if-not-resolved="false"></xref>. 
+    <xref href="com.absence.variablesystem.banksystembase.VariableBank" data-throw-if-not-resolved="false"></xref> class directly if the bank you are referencing is marked as <xref href="com.absence.variablesystem.banksystembase.VariableBank.ForExternalUse" data-throw-if-not-resolved="false"></xref>. 
 
     For more information, read the docs.
   example: []
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: TargetGuid
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Bank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Main/VariableBankReference.cs
@@ -106,23 +106,23 @@ items:
     content: public VariableBank Bank { get; }
     parameters: []
     return:
-      type: com.absence.variablesystem.VariableBank
+      type: com.absence.variablesystem.banksystembase.VariableBank
     content.vb: Public ReadOnly Property Bank As VariableBank
   overload: com.absence.variablebanks.VariableBankReference.Bank*
 references:
-- uid: com.absence.variablesystem.VariableBank
-  commentId: T:com.absence.variablesystem.VariableBank
-  parent: com.absence.variablesystem
+- uid: com.absence.variablesystem.banksystembase.VariableBank
+  commentId: T:com.absence.variablesystem.banksystembase.VariableBank
+  parent: com.absence.variablesystem.banksystembase
   isExternal: true
   name: VariableBank
   nameWithType: VariableBank
-  fullName: com.absence.variablesystem.VariableBank
-- uid: com.absence.variablesystem.VariableBank.ForExternalUse
-  commentId: P:com.absence.variablesystem.VariableBank.ForExternalUse
+  fullName: com.absence.variablesystem.banksystembase.VariableBank
+- uid: com.absence.variablesystem.banksystembase.VariableBank.ForExternalUse
+  commentId: P:com.absence.variablesystem.banksystembase.VariableBank.ForExternalUse
   isExternal: true
   name: ForExternalUse
   nameWithType: VariableBank.ForExternalUse
-  fullName: com.absence.variablesystem.VariableBank.ForExternalUse
+  fullName: com.absence.variablesystem.banksystembase.VariableBank.ForExternalUse
 - uid: com.absence.variablebanks
   commentId: N:com.absence.variablebanks
   href: com.html
@@ -164,12 +164,12 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: com.absence.variablesystem
-  commentId: N:com.absence.variablesystem
+- uid: com.absence.variablesystem.banksystembase
+  commentId: N:com.absence.variablesystem.banksystembase
   isExternal: true
-  name: com.absence.variablesystem
-  nameWithType: com.absence.variablesystem
-  fullName: com.absence.variablesystem
+  name: com.absence.variablesystem.banksystembase
+  nameWithType: com.absence.variablesystem.banksystembase
+  fullName: com.absence.variablesystem.banksystembase
   spec.csharp:
   - uid: com
     name: com
@@ -182,6 +182,10 @@ references:
   - uid: com.absence.variablesystem
     name: variablesystem
     isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem.banksystembase
+    name: banksystembase
+    isExternal: true
   spec.vb:
   - uid: com
     name: com
@@ -193,6 +197,10 @@ references:
   - name: .
   - uid: com.absence.variablesystem
     name: variablesystem
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem.banksystembase
+    name: banksystembase
     isExternal: true
 - uid: System
   commentId: N:System

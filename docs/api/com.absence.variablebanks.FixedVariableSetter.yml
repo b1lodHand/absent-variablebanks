@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: FixedVariableSetter
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -41,15 +41,15 @@ items:
       Public NotInheritable Class FixedVariableSetter Inherits BaseVariableSetter
   inheritance:
   - System.Object
-  - com.absence.variablesystem.BaseVariableSetter
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter
   inheritedMembers:
-  - com.absence.variablesystem.BaseVariableSetter.Perform
-  - com.absence.variablesystem.BaseVariableSetter.TargetVariableName
-  - com.absence.variablesystem.BaseVariableSetter.TypeOfSet
-  - com.absence.variablesystem.BaseVariableSetter.IntValue
-  - com.absence.variablesystem.BaseVariableSetter.FloatValue
-  - com.absence.variablesystem.BaseVariableSetter.StringValue
-  - com.absence.variablesystem.BaseVariableSetter.BooleanValue
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.TargetVariableName
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.TypeOfSet
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.IntValue
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.FloatValue
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.StringValue
+  - com.absence.variablesystem.banksystembase.BaseVariableSetter.BooleanValue
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -68,11 +68,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: HasFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -83,7 +83,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Overrides ReadOnly Property HasFixedBank As Boolean
-  overridden: com.absence.variablesystem.BaseVariableSetter.HasFixedBank
+  overridden: com.absence.variablesystem.banksystembase.BaseVariableSetter.HasFixedBank
   overload: com.absence.variablebanks.FixedVariableSetter.HasFixedBank*
 - uid: com.absence.variablebanks.FixedVariableSetter.SetFixedBank(System.String)
   commentId: M:com.absence.variablebanks.FixedVariableSetter.SetFixedBank(System.String)
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: SetFixedBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -134,11 +134,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: GetRuntimeBank
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -146,9 +146,9 @@ items:
   syntax:
     content: protected override VariableBank GetRuntimeBank()
     return:
-      type: com.absence.variablesystem.VariableBank
+      type: com.absence.variablesystem.banksystembase.VariableBank
     content.vb: Protected Overrides Function GetRuntimeBank() As VariableBank
-  overridden: com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank
+  overridden: com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank
   overload: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank*
 - uid: com.absence.variablebanks.FixedVariableSetter.Clone(System.String)
   commentId: M:com.absence.variablebanks.FixedVariableSetter.Clone(System.String)
@@ -164,11 +164,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -202,11 +202,11 @@ items:
   source:
     remote:
       path: absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-      branch: main
+      branch: development
       repo: https://github.com/b1lodHand/absent-variablebanks.git
     id: Clone
     path: ../absent-variablebanks/Assets/Plugins/absencee_/absent-variablebanks/Runtime/Manipulators/FixedVariableSetter.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - Assembly-CSharp-firstpass
   namespace: com.absence.variablebanks
@@ -261,74 +261,74 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: com.absence.variablesystem.BaseVariableSetter
-  commentId: T:com.absence.variablesystem.BaseVariableSetter
-  parent: com.absence.variablesystem
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter
+  commentId: T:com.absence.variablesystem.banksystembase.BaseVariableSetter
+  parent: com.absence.variablesystem.banksystembase
   isExternal: true
   name: BaseVariableSetter
   nameWithType: BaseVariableSetter
-  fullName: com.absence.variablesystem.BaseVariableSetter
-- uid: com.absence.variablesystem.BaseVariableSetter.Perform
-  commentId: M:com.absence.variablesystem.BaseVariableSetter.Perform
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform
+  commentId: M:com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: Perform()
   nameWithType: BaseVariableSetter.Perform()
-  fullName: com.absence.variablesystem.BaseVariableSetter.Perform()
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform()
   spec.csharp:
-  - uid: com.absence.variablesystem.BaseVariableSetter.Perform
+  - uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform
     name: Perform
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: com.absence.variablesystem.BaseVariableSetter.Perform
+  - uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.Perform
     name: Perform
     isExternal: true
   - name: (
   - name: )
-- uid: com.absence.variablesystem.BaseVariableSetter.TargetVariableName
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.TargetVariableName
-  parent: com.absence.variablesystem.BaseVariableSetter
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.TargetVariableName
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.TargetVariableName
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: TargetVariableName
   nameWithType: BaseVariableSetter.TargetVariableName
-  fullName: com.absence.variablesystem.BaseVariableSetter.TargetVariableName
-- uid: com.absence.variablesystem.BaseVariableSetter.TypeOfSet
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.TypeOfSet
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.TargetVariableName
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.TypeOfSet
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.TypeOfSet
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: TypeOfSet
   nameWithType: BaseVariableSetter.TypeOfSet
-  fullName: com.absence.variablesystem.BaseVariableSetter.TypeOfSet
-- uid: com.absence.variablesystem.BaseVariableSetter.IntValue
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.IntValue
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.TypeOfSet
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.IntValue
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.IntValue
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: IntValue
   nameWithType: BaseVariableSetter.IntValue
-  fullName: com.absence.variablesystem.BaseVariableSetter.IntValue
-- uid: com.absence.variablesystem.BaseVariableSetter.FloatValue
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.FloatValue
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.IntValue
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.FloatValue
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.FloatValue
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: FloatValue
   nameWithType: BaseVariableSetter.FloatValue
-  fullName: com.absence.variablesystem.BaseVariableSetter.FloatValue
-- uid: com.absence.variablesystem.BaseVariableSetter.StringValue
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.StringValue
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.FloatValue
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.StringValue
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.StringValue
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: StringValue
   nameWithType: BaseVariableSetter.StringValue
-  fullName: com.absence.variablesystem.BaseVariableSetter.StringValue
-- uid: com.absence.variablesystem.BaseVariableSetter.BooleanValue
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.BooleanValue
-  parent: com.absence.variablesystem.BaseVariableSetter
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.StringValue
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.BooleanValue
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.BooleanValue
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: BooleanValue
   nameWithType: BaseVariableSetter.BooleanValue
-  fullName: com.absence.variablesystem.BaseVariableSetter.BooleanValue
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.BooleanValue
 - uid: System
   commentId: N:System
   isExternal: true
@@ -336,12 +336,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: com.absence.variablesystem
-  commentId: N:com.absence.variablesystem
+- uid: com.absence.variablesystem.banksystembase
+  commentId: N:com.absence.variablesystem.banksystembase
   isExternal: true
-  name: com.absence.variablesystem
-  nameWithType: com.absence.variablesystem
-  fullName: com.absence.variablesystem
+  name: com.absence.variablesystem.banksystembase
+  nameWithType: com.absence.variablesystem.banksystembase
+  fullName: com.absence.variablesystem.banksystembase
   spec.csharp:
   - uid: com
     name: com
@@ -353,6 +353,10 @@ references:
   - name: .
   - uid: com.absence.variablesystem
     name: variablesystem
+    isExternal: true
+  - name: .
+  - uid: com.absence.variablesystem.banksystembase
+    name: banksystembase
     isExternal: true
   spec.vb:
   - uid: com
@@ -366,13 +370,17 @@ references:
   - uid: com.absence.variablesystem
     name: variablesystem
     isExternal: true
-- uid: com.absence.variablesystem.BaseVariableSetter.HasFixedBank
-  commentId: P:com.absence.variablesystem.BaseVariableSetter.HasFixedBank
-  parent: com.absence.variablesystem.BaseVariableSetter
+  - name: .
+  - uid: com.absence.variablesystem.banksystembase
+    name: banksystembase
+    isExternal: true
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.HasFixedBank
+  commentId: P:com.absence.variablesystem.banksystembase.BaseVariableSetter.HasFixedBank
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: HasFixedBank
   nameWithType: BaseVariableSetter.HasFixedBank
-  fullName: com.absence.variablesystem.BaseVariableSetter.HasFixedBank
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.HasFixedBank
 - uid: com.absence.variablebanks.FixedVariableSetter.HasFixedBank*
   commentId: Overload:com.absence.variablebanks.FixedVariableSetter.HasFixedBank
   href: com.absence.variablebanks.FixedVariableSetter.html#com_absence_variablebanks_FixedVariableSetter_HasFixedBank
@@ -407,21 +415,21 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank
-  commentId: M:com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank
-  parent: com.absence.variablesystem.BaseVariableSetter
+- uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank
+  commentId: M:com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank
+  parent: com.absence.variablesystem.banksystembase.BaseVariableSetter
   isExternal: true
   name: GetRuntimeBank()
   nameWithType: BaseVariableSetter.GetRuntimeBank()
-  fullName: com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank()
+  fullName: com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank()
   spec.csharp:
-  - uid: com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank
+  - uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank
     name: GetRuntimeBank
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: com.absence.variablesystem.BaseVariableSetter.GetRuntimeBank
+  - uid: com.absence.variablesystem.banksystembase.BaseVariableSetter.GetRuntimeBank
     name: GetRuntimeBank
     isExternal: true
   - name: (
@@ -432,13 +440,13 @@ references:
   name: GetRuntimeBank
   nameWithType: FixedVariableSetter.GetRuntimeBank
   fullName: com.absence.variablebanks.FixedVariableSetter.GetRuntimeBank
-- uid: com.absence.variablesystem.VariableBank
-  commentId: T:com.absence.variablesystem.VariableBank
-  parent: com.absence.variablesystem
+- uid: com.absence.variablesystem.banksystembase.VariableBank
+  commentId: T:com.absence.variablesystem.banksystembase.VariableBank
+  parent: com.absence.variablesystem.banksystembase
   isExternal: true
   name: VariableBank
   nameWithType: VariableBank
-  fullName: com.absence.variablesystem.VariableBank
+  fullName: com.absence.variablesystem.banksystembase.VariableBank
 - uid: com.absence.variablebanks.FixedVariableSetter.Clone*
   commentId: Overload:com.absence.variablebanks.FixedVariableSetter.Clone
   href: com.absence.variablebanks.FixedVariableSetter.html#com_absence_variablebanks_FixedVariableSetter_Clone_System_String_

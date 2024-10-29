@@ -7,6 +7,9 @@ using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
 namespace com.absence.variablebanks.editor
 {
+    /// <summary>
+    /// The static class responsible for managing the scripting define symbols for this package (in Player Settings).
+    /// </summary>
     [InitializeOnLoad]
     public static class SymbolInitializer
     {
@@ -17,6 +20,9 @@ namespace com.absence.variablebanks.editor
             Refresh();
         }
 
+        /// <summary>
+        /// Use to check if any define symbols are missing or extra, rewrite and recompile if needed.
+        /// </summary>
         public static void Refresh()
         {
             List<PackageInfo> packages = PackageInfo.GetAllRegisteredPackages().ToList();
@@ -37,6 +43,9 @@ namespace com.absence.variablebanks.editor
             AddAddressablesLabelOnce();
         }
 
+        /// <summary>
+        /// Use to remove addressables define symbol from Player Settings.
+        /// </summary>
         public static void RemoveAddressablesLabelIfExists()
         {
             BuildTargetGroup targetGroup = EditorUserBuildSettings.selectedBuildTargetGroup;
@@ -52,6 +61,9 @@ namespace com.absence.variablebanks.editor
             PlayerSettings.SetScriptingDefineSymbolsForGroup(targetGroup, symbols.ToArray());
         }
 
+        /// <summary>
+        /// Use to add addressables define symbol to Player Settings.
+        /// </summary>
         public static void AddAddressablesLabelOnce()
         {
             BuildTargetGroup targetGroup = EditorUserBuildSettings.selectedBuildTargetGroup;

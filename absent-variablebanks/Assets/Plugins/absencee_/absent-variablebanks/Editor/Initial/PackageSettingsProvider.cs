@@ -3,10 +3,18 @@ using UnityEngine;
 
 namespace com.absence.variablebanks.editor
 {
+    /// <summary>
+    /// The class responsible for drawing a section for this package in Project settings.
+    /// </summary>
     public class PackageSettingsProvider : SettingsProvider
     {
         static readonly string[] s_assetPopupOptions = { "Resources", "Addressables" };
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="scope"></param>
         public PackageSettingsProvider(string path, SettingsScope scope) : base(path, scope)
         {
         }
