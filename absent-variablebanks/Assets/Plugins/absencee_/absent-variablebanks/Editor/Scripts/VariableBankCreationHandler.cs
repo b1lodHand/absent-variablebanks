@@ -6,6 +6,7 @@ using UnityEngine;
 using com.absence.variablesystem.banksystembase;
 using com.absence.variablesystem.banksystembase.editor;
 using System;
+using com.absence.variablebanks.editor.internals.assetmanagement;
 
 
 #if ABSENT_VB_ADDRESSABLES
@@ -21,56 +22,41 @@ namespace com.absence.variablebanks.editor
     public static class VariableBankCreationHandler
     {
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (For External Use)", priority = 0)]
-        static void CreateVariableBankForExternalUse()
+        static void CreateVariableBankForExternalUse_MenuItem()
         {
-            CreateVariableBank(true);
+            CreateVariableBankAtSelection(true, true);
         }
 
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true)]
-        static bool CreateVariableBankForAddressables_Validation()
+        public static void ValidateResourcesPath()
         {
-#if ABSENT_VB_ADDRESSABLES
-            return true;
-#else
-            return false;
-#endif
+            if (!AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Resources")) return;
+
+            if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+                AssetDatabase.CreateFolder("Assets", "Resources");
+
+            if (!AssetDatabase.IsValidFolder($"Assets/Resources/{Constants.K_RESOURCES_PATH}"))
+                AssetDatabase.CreateFolder("Assets/Resources", Constants.K_RESOURCES_PATH);
         }
 
-        [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
-        static bool CreateVariableBankForResources_Validation()
+        public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool nameEdit = true, Action<VariableBank, bool> onEndAction = null)
         {
-#if !ABSENT_VB_ADDRESSABLES
-            return true;
-#else
-            return false;
-#endif
-        }
+            if (!nameEdit)
+            {
+                VariableBank itemCreated = CreateBankAssetAt(path, forExternalUse);
+                if (!forExternalUse) ApplyProperties(itemCreated);
+                return;
+            }
 
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", priority = 0)]
-        public static void CreateVariableBankForAddressables()
-        {
-            CreateVariableBank(false, true);
-        }
+            var icon = EditorGUIUtility.IconContent("d_ScriptableObject Icon").image as Texture2D;
 
-        [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)")]
-        public static void CreateVariableBankForResources()
-        {
-            var path = Path.Combine("Assets/Resources", Constants.K_RESOURCES_PATH, "New VariableBank.asset");
-            CreateVariableBankAtPath(path, false, false, null);
-        }
-
-        public static void CreateVariableBankAtPath(string path, bool forExternalUse, bool addressable = false, Action<VariableBank, bool> onEndAction = null)
-        {
             CreateVariableBankEndNameEditAction create = ScriptableObject.CreateInstance<CreateVariableBankEndNameEditAction>();
             if (onEndAction != null) create.onEndAction = onEndAction;
             create.forExternalUse = forExternalUse;
-            create.setupForAddressables = addressable;
-            var icon = EditorGUIUtility.IconContent("d_ScriptableObject Icon").image as Texture2D;
 
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, create, path, icon, null);
         }
 
-        static void CreateVariableBank(bool forExternalUse, bool addressable = false)
+        public static void CreateVariableBankAtSelection(bool forExternalUse, bool nameEdit = true, Action<VariableBank, bool> onEndAction = null)
         {
             string selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
             if (selectedPath == string.Empty) return;
@@ -82,7 +68,7 @@ namespace com.absence.variablebanks.editor
 
             var path = Path.Combine(selectedPath, "New VariableBank.asset");
 
-            CreateVariableBankAtPath(path, forExternalUse, addressable, null);
+            CreateVariableBankAtPath(path, forExternalUse, nameEdit, onEndAction);
         }
 
         private static void TrimLastSlash(ref string path)
@@ -96,51 +82,58 @@ namespace com.absence.variablebanks.editor
             path = path.Remove(lastSlashIndex, (path.Length - lastSlashIndex));
         }
 
+        public static void ApplyProperties(VariableBank bank)
+        {
+            AssetManagementAPIDatabase.CurrentAPI.APIObject.ApplyCreationProperties(bank, typeof(VariableBank));
+        }
+
+        public static VariableBank CreateBankAssetAt(string pathName, bool forExternalUse)
+        {
+            VariableBank bank = ScriptableObject.CreateInstance<VariableBank>();
+
+            AssetDatabase.CreateAsset(bank, pathName);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            bank.ForExternalUse = forExternalUse;
+
+            return bank;
+        }
+
+        public static bool DestroyBankAssetAt(string pathName)
+        {
+            VariableBank bank = AssetDatabase.LoadAssetAtPath<VariableBank>(pathName);
+
+            if (bank == null) return false;
+
+            ScriptableObject.DestroyImmediate(bank);
+            VariableBankDatabase.Refresh();
+
+            return true;
+        }
+
+        public static bool DestroyBankAssetWithId(int instanceId)
+        {
+            VariableBank bank = EditorUtility.InstanceIDToObject(instanceId) as VariableBank;
+
+            if (bank == null) return false;
+
+            ScriptableObject.DestroyImmediate(bank);
+            VariableBankDatabase.Refresh();
+
+            return true;
+        }
+
         internal class CreateVariableBankEndNameEditAction : EndNameEditAction
         {
             public bool forExternalUse { get; set; }
-            public bool setupForAddressables { get; set; }
             public Action<VariableBank, bool> onEndAction { get; set; }
 
             public override void Action(int instanceId, string pathName, string resourceFile)
             {
-                var itemCreated = ScriptableObject.CreateInstance<VariableBank>();
+                VariableBank itemCreated = CreateBankAssetAt(pathName, forExternalUse);
 
-                AssetDatabase.CreateAsset(itemCreated, pathName);
-
-                itemCreated.ForExternalUse = forExternalUse;
-
-#if ABSENT_VB_ADDRESSABLES
-                if (setupForAddressables)
-                {
-                    AddressableAssetSettings addressableSettings = AddressableAssetSettingsDefaultObject.Settings;
-
-                    AddressableAssetGroup addressableGroup = addressableSettings.FindGroup(Constants.K_RESOURCES_PATH);
-                    if (addressableGroup == null || !addressableGroup.ReadOnly)
-                    {
-                        addressableGroup = addressableSettings.CreateGroup(Constants.K_RESOURCES_PATH, false, true, true, null);
-                    }
-
-                    AddressableAssetEntry addressableEntry = addressableSettings.CreateOrMoveEntry(AssetDatabase.AssetPathToGUID(pathName), 
-                        addressableGroup, true, true);
-
-                    addressableEntry.SetLabel(Constants.K_ADDRESSABLES_TAG, true);
-
-                    itemCreated.OnDestroyAction += () =>
-                    {
-                        addressableGroup.RemoveAssetEntry(addressableEntry);
-                    };
-                }
-#endif
-
-                itemCreated.OnDestroyAction += () =>
-                {
-                    VariableBankDatabase.Refresh();
-                };
-
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-                VariableBankDatabase.Refresh();
+                ApplyProperties(itemCreated);
 
                 Selection.activeObject = itemCreated;
 
@@ -149,10 +142,7 @@ namespace com.absence.variablebanks.editor
 
             public override void Cancelled(int instanceId, string pathName, string resourceFile)
             {
-                VariableBank item = EditorUtility.InstanceIDToObject(instanceId) as VariableBank;
-                ScriptableObject.DestroyImmediate(item);
-
-                VariableBankDatabase.Refresh();
+                DestroyBankAssetWithId(instanceId);
 
                 onEndAction?.Invoke(null, false);
             }

@@ -1,3 +1,5 @@
+using com.absence.variablebanks.editor.internals.assetmanagement;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,8 +10,6 @@ namespace com.absence.variablebanks.editor
     /// </summary>
     public class PackageSettingsProvider : SettingsProvider
     {
-        static readonly string[] s_assetPopupOptions = { "Resources", "Addressables" };
-
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -32,8 +32,10 @@ namespace com.absence.variablebanks.editor
 
             EditorGUILayout.LabelField("Used Asset Management API", GUILayout.Width(200));
 
+            string[] options = AssetManagementAPIDatabase.APIs.ConvertAll(api => api.DisplayName).ToArray();
+
             int assetApiIndex = settings.AssetManagementAPISelection;
-            int assetApiIndexNew = EditorGUILayout.Popup("", assetApiIndex, s_assetPopupOptions, GUILayout.ExpandWidth(false));
+            int assetApiIndexNew = EditorGUILayout.Popup("", assetApiIndex, options, GUILayout.ExpandWidth(false));
 
             EditorGUILayout.EndHorizontal();
 

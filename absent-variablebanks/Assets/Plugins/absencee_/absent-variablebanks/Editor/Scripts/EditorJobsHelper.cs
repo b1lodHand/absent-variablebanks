@@ -1,5 +1,7 @@
+using com.absence.variablebanks.editor.internals.assetmanagement;
 using com.absence.variablebanks.internals;
 using com.absence.variablesystem.banksystembase.editor;
+using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -48,6 +50,37 @@ namespace com.absence.variablebanks.editor
             });
 
             Debug.Log(sb.ToString());
+        }
+
+#if ABSENT_VB_ADDRESSABLES
+        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", priority = 0)]
+        static void CreateVariableBankForAddressables_MenuItem()
+        {
+            VariableBankCreationHandler.CreateVariableBankAtSelection(false, true);
+        }
+#endif
+
+        [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)")]
+        static void CreateVariableBankForResources_MenuItem()
+        {
+            VariableBankCreationHandler.ValidateResourcesPath();
+
+            var path = Path.Combine("Assets/Resources", Constants.K_RESOURCES_PATH, "New VariableBank.asset");
+            VariableBankCreationHandler.CreateVariableBankAtPath(path, false, true);
+        }
+
+#if ABSENT_VB_ADDRESSABLES
+        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true, priority = 0)]
+        static bool CreateVariableBankForAddressables_MenuItemValidation()
+        {
+            return AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Addressables");
+        }
+#endif
+
+        [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
+        static bool CreateVariableBankForResources_MenuItemValidation()
+        {
+            return AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Resources");
         }
     }
 }

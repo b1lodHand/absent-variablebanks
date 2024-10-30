@@ -2,7 +2,6 @@ using com.absence.variablebanks.internals;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
-using static com.absence.variablebanks.editor.PackageSettings;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
 namespace com.absence.variablebanks.editor
@@ -15,6 +14,20 @@ namespace com.absence.variablebanks.editor
     {
         const string k_adressables_package_name = "com.unity.addressables";
 
+        static bool s_addressables_exist;
+        public static bool AddressablesImported
+        {
+            get
+            {
+                return s_addressables_exist;
+            }
+
+            private set
+            {
+                s_addressables_exist = value;
+            }
+        }
+
         static SymbolInitializer()
         {
             Refresh();
@@ -26,15 +39,9 @@ namespace com.absence.variablebanks.editor
         public static void Refresh()
         {
             List<PackageInfo> packages = PackageInfo.GetAllRegisteredPackages().ToList();
-            bool addressablesExists = packages.Any(package => package.name.Equals(k_adressables_package_name));
+            s_addressables_exist = packages.Any(package => package.name.Equals(k_adressables_package_name));
 
-            if (!addressablesExists)
-            {
-                RemoveAddressablesLabelIfExists();
-                return;
-            }
-
-            if (PackageSettings.instance.AssetManagementAPISelection != AssetManagementConstants.K_ADDRESSABLES_INDEX)
+            if (!s_addressables_exist)
             {
                 RemoveAddressablesLabelIfExists();
                 return;

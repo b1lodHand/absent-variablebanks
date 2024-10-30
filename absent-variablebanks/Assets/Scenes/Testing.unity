@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0692c44536e79b4fb32ff31ace4d9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_targetGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
+  m_targetGuid: f07b4e6d-771c-4ac2-b7ed-0fbb12bacfcd
   m_bank: {fileID: 0}
 --- !u!114 &1473633977
 MonoBehaviour:
@@ -354,38 +354,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fixedBankReference:
     m_targetGuid: 
-  m_comparers:
-  - m_comparisonType: 2
-    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
-    m_targetVariableName: 'null: null'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 0
-  m_setters:
-  - m_setType: 0
-    m_targetBankGuid: 5108b4f8-1f61-45ab-9c21-5f3af01b8418
-    m_targetVariableName: 'null: null'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 0
-  m_fixedComparers:
-  - m_comparisonType: 2
-    m_targetBankGuid: 
-    m_targetVariableName: 'null: null'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 0
-  m_fixedSetters:
-  - m_setType: 0
-    m_targetBankGuid: 
-    m_targetVariableName: 'null: null'
-    m_intValue: 0
-    m_floatValue: 0
-    m_stringValue: 
-    m_boolValue: 0
+  m_comparers: []
+  m_setters: []
+  m_fixedComparers: []
+  m_fixedSetters: []
 --- !u!4 &1473633978
 Transform:
   m_ObjectHideFlags: 0
