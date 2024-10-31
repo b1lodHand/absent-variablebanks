@@ -29,5 +29,11 @@ namespace com.absence.variablebanks.internals
         /// If true, some internal information will get printed on console when specific events occur.
         /// </summary>
         public const bool K_DEBUG_MODE = true;
+
+        public const string K_DEFAULT_MODE_CHANGE_DIALOG_INT = "Current Asset Management API selected in the Project settings will" +
+                " try to mark this bank as 'Internal'. Will you proceed? \n\nYou can't undo this action. ";
+
+        public const string K_DEFAULT_MODE_CHANGE_DIALOG_EXT = "Current Asset Management API selected in the Project settings will" +
+               " try to mark this bank as 'External'. Will you proceed? \n\nYou can't undo this action. ";
     }
 }

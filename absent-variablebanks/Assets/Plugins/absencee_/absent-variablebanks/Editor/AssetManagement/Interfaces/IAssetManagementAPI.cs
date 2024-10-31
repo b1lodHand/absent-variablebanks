@@ -7,5 +7,7 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
     {
         bool ShowInSettings();
         void ApplyCreationProperties(VariableBank bank, Type type);
+        void ResetCreationProperties(VariableBank bank, Type type);
+        bool OverrideBankModeChangeDialogMessage(bool internalizing, out string message);
     }
 }

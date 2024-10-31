@@ -7,7 +7,8 @@ using com.absence.variablesystem.banksystembase;
 using com.absence.variablesystem.banksystembase.editor;
 using System;
 using com.absence.variablebanks.editor.internals.assetmanagement;
-
+using System.Linq;
+using System.Collections.Generic;
 
 #if ABSENT_VB_ADDRESSABLES
 using UnityEditor.AddressableAssets;
@@ -21,6 +22,9 @@ namespace com.absence.variablebanks.editor
     /// </summary>
     public static class VariableBankCreationHandler
     {
+        static bool m_transferringBank;
+        public static bool TransferringBank => m_transferringBank;
+
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (For External Use)", priority = 0)]
         static void CreateVariableBankForExternalUse_MenuItem()
         {
@@ -43,7 +47,11 @@ namespace com.absence.variablebanks.editor
             if (!nameEdit)
             {
                 VariableBank itemCreated = CreateBankAssetAt(path, forExternalUse);
-                if (!forExternalUse) ApplyProperties(itemCreated);
+
+                if (forExternalUse) MakeExternal(itemCreated);
+                else MakeInternal(itemCreated);
+
+                EditorGUIUtility.PingObject(itemCreated);
                 return;
             }
 
@@ -80,11 +88,6 @@ namespace com.absence.variablebanks.editor
             }
 
             path = path.Remove(lastSlashIndex, (path.Length - lastSlashIndex));
-        }
-
-        public static void ApplyProperties(VariableBank bank)
-        {
-            AssetManagementAPIDatabase.CurrentAPI.APIObject.ApplyCreationProperties(bank, typeof(VariableBank));
         }
 
         public static VariableBank CreateBankAssetAt(string pathName, bool forExternalUse)
@@ -124,6 +127,54 @@ namespace com.absence.variablebanks.editor
             return true;
         }
 
+        public static void MakeInternal(VariableBank bank)
+        {
+            m_transferringBank = true;
+
+            AssetManagementAPIDatabase.CurrentAPI.APIObject.ApplyCreationProperties(bank, typeof(VariableBank));
+
+            bank.ForExternalUse = false;
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            VariableBankDatabase.Refresh();
+
+            m_transferringBank = false;
+
+            Selection.activeObject = bank;
+        }
+
+        public static void MakeExternal(VariableBank bank)
+        {
+            m_transferringBank = true;
+
+            AssetManagementAPIDatabase.CurrentAPI.APIObject.ResetCreationProperties(bank, typeof(VariableBank));
+
+            bank.ForExternalUse = true;
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            VariableBankDatabase.Refresh();
+
+            m_transferringBank = false;
+
+            Selection.activeObject = bank;
+        }
+
+        internal static void MakeAllExternal()
+        {
+            List<VariableBank> allInternalBanks = AssetDatabase.FindAssets("t:VariableBank").ToList().
+                ConvertAll(guid => AssetDatabase.LoadAssetAtPath<VariableBank>(AssetDatabase.GUIDToAssetPath(guid))).
+                Where(bnk => !bnk.ForExternalUse).ToList();
+
+            allInternalBanks.ForEach(bank =>
+            {
+                MakeExternal(bank);
+            });
+
+            EditorGUIUtility.PingObject(allInternalBanks.LastOrDefault());
+        }
+
         internal class CreateVariableBankEndNameEditAction : EndNameEditAction
         {
             public bool forExternalUse { get; set; }
@@ -133,9 +184,8 @@ namespace com.absence.variablebanks.editor
             {
                 VariableBank itemCreated = CreateBankAssetAt(pathName, forExternalUse);
 
-                ApplyProperties(itemCreated);
-
-                Selection.activeObject = itemCreated;
+                if (forExternalUse) MakeExternal(itemCreated);
+                else MakeInternal(itemCreated);
 
                 onEndAction?.Invoke(itemCreated, true);
             }

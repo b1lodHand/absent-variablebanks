@@ -41,7 +41,18 @@ namespace com.absence.variablebanks.editor
 
             if (assetApiIndexNew != assetApiIndex)
             {
-                settings.AssetManagementAPISelection = assetApiIndexNew;
+                bool confirm = EditorUtility.DisplayDialog("Change API selection?",
+                    "You are changing the used API. All of the" +
+                    " internal banks will automatically get marked as 'External'." +
+                    " If you want to had internal banks, you should go and manually change" +
+                    " their mode.\n\nYou can't undo this action. ", 
+                    "Ok", "Cancel");
+
+                if (confirm)
+                {
+                    VariableBankCreationHandler.MakeAllExternal();
+                    settings.AssetManagementAPISelection = assetApiIndexNew;
+                }
             }
 
             EditorGUI.indentLevel--;
