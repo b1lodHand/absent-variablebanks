@@ -1,4 +1,4 @@
-namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
+namespace com.absence.variablebanks.internals.assetmanagement.builtin
 {
     [AssetManagementAPI("Resources")]
     public class ResourcesAPI : IAssetManagementAPI

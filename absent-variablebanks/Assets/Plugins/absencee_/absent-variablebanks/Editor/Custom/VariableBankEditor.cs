@@ -1,13 +1,12 @@
-using com.absence.variablebanks.editor;
-using com.absence.variablebanks.editor.internals.assetmanagement;
 using com.absence.variablebanks.internals;
+using com.absence.variablebanks.internals.assetmanagement;
 using com.absence.variablesystem.banksystembase;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace com.absence.variablebanks
+namespace com.absence.variablebanks.editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(VariableBank), true, isFallback = false)]

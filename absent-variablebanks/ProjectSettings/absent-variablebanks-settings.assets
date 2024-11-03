@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_disableModeSwitchPrompt: 1
   m_disableMultiModeSwitchPrompt: 1
-  m_assetApiSelection: 0
+  m_assetApiSelection: Resources

@@ -1,4 +1,6 @@
-using com.absence.variablebanks.editor.internals.assetmanagement;
+using com.absence.variablebanks.internals;
+using com.absence.variablebanks.internals.assetmanagement;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,14 +14,14 @@ namespace com.absence.variablebanks.editor
     {
         [SerializeField] private bool m_disableModeSwitchPrompt = false;
         [SerializeField] private bool m_disableMultiModeSwitchPrompt = false;
-        [SerializeField] private int m_assetApiSelection = 0;
+        [SerializeField] private string m_assetApiSelection = "Resources";
 
-        public APIRegistry CurrentAPI => AssetManagementAPIDatabase.APIs[AssetManagementAPISelection];
+        public APIRegistry CurrentAPI => AssetManagementAPIDatabase.APIs.FirstOrDefault(api => api.DisplayName.Equals(AssetManagementAPIName));
 
         /// <summary>
         /// Selection index of asset management API selection.
         /// </summary>
-        public int AssetManagementAPISelection
+        public string AssetManagementAPIName
         {
             get
             {
@@ -31,6 +33,8 @@ namespace com.absence.variablebanks.editor
                 m_assetApiSelection = value;
                 Save(true);
 
+                RuntimeSettings.instance.AssetManagementAPIName = value;
+                //RuntimeSettings.Save();
                 SymbolInitializer.Refresh();
             }
         }

@@ -1,10 +1,11 @@
 using com.absence.variablebanks.internals;
+using com.absence.variablebanks.internals.assetmanagement;
 using com.absence.variablesystem.banksystembase;
 using com.absence.variablesystem.banksystembase.editor;
 using System;
 using UnityEditor;
 using UnityEngine;
-using ResourcesAPI = com.absence.variablebanks.editor.internals.assetmanagement.builtin.ResourcesAPI;
+using ResourcesAPI = com.absence.variablebanks.internals.assetmanagement.builtin.ResourcesAPI;
 
 namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
@@ -22,38 +23,43 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
         }
 
 
-        public void ApplyCreationProperties(VariableBank bank, Type type)
+        public bool ApplyCreationProperties(VariableBank bank, Type type)
         {
             VariableBankCreationHandler.ValidateResourcesPath();
 
             string path = AssetDatabase.GetAssetPath(bank);
             string intendedPath = $"Assets/Resources/{Constants.K_RESOURCES_PATH}/{bank.name}.asset";
 
-            if (!path.Equals(intendedPath))
-            {
-                string error = AssetDatabase.MoveAsset(path, intendedPath);
-                if (!string.IsNullOrWhiteSpace(error)) Debug.Log(error);
-            }
-
             bank.OnDestroyAction += () =>
             {
                 VariableBankDatabase.Refresh();
             };
+
+            if (path.Equals(intendedPath)) return true;
+
+            string error = AssetDatabase.MoveAsset(path, intendedPath);
+
+            if (string.IsNullOrWhiteSpace(error)) return true;
+
+            Debug.LogWarning(error);
+            return false;
         }
 
-        public void ResetCreationProperties(VariableBank bank, Type type)
+        public bool ResetCreationProperties(VariableBank bank, Type type)
         {
             if (!AssetDatabase.IsValidFolder("Assets/Temp"))
                 AssetDatabase.CreateFolder("Assets", "Temp");
 
             string path = AssetDatabase.GetAssetPath(bank);
             string intendedPath = $"Assets/Temp/{bank.name}.asset";
+            if (path.Equals(intendedPath)) return true;
 
-            if (!path.Equals(intendedPath))
-            {
-                string error = AssetDatabase.MoveAsset(path, intendedPath);
-                if (!string.IsNullOrWhiteSpace(error)) Debug.Log(error);
-            }
+            string error = AssetDatabase.MoveAsset(path, intendedPath);
+
+            if (string.IsNullOrWhiteSpace(error)) return true;
+
+            Debug.LogWarning(error);
+            return false;
         }
 
         public bool OverrideBankModeChangeDialogMessage(bool internalizing, out string message)

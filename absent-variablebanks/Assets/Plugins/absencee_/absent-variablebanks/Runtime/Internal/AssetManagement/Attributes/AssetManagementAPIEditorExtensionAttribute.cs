@@ -1,8 +1,8 @@
 using System;
 
-namespace com.absence.variablebanks.editor.internals.assetmanagement
+namespace com.absence.variablebanks.internals.assetmanagement
 {
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class AssetManagementAPIEditorExtensionAttribute : Attribute
     {
         public Type targetApiType;

@@ -1,4 +1,4 @@
-namespace com.absence.variablebanks.editor.internals.assetmanagement
+namespace com.absence.variablebanks.internals.assetmanagement
 {
     [System.Serializable]
     public class APIRegistry

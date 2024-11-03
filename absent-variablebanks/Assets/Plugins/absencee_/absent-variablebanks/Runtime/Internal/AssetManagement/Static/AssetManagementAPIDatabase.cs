@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace com.absence.variablebanks.editor.internals.assetmanagement
+namespace com.absence.variablebanks.internals.assetmanagement
 {
     public class AssetManagementAPIDatabase
     {
@@ -12,6 +12,12 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
 
         private static List<APIRegistry> s_apis = new();
         public static List<APIRegistry> APIs => s_apis;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+        static void Bootstrap()
+        {
+            Refresh();
+        }
 
         public static void Refresh()
         {

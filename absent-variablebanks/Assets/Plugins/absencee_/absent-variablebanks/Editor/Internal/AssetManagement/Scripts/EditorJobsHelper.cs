@@ -1,3 +1,4 @@
+using com.absence.variablebanks.internals.assetmanagement;
 using UnityEditor;
 
 namespace com.absence.variablebanks.editor.internals.assetmanagement

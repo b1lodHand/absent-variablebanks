@@ -1,12 +1,13 @@
 #if ABSENT_VB_ADDRESSABLES
 
-using com.absence.variablebanks.editor.internals.assetmanagement.builtin;
 using com.absence.variablesystem.banksystembase;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets;
 using UnityEditor;
 using System;
 using com.absence.variablesystem.banksystembase.editor;
+using com.absence.variablebanks.internals.assetmanagement;
+using com.absence.variablebanks.internals.assetmanagement.builtin;
 
 namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
@@ -23,7 +24,7 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
             return true;
         }
 
-        public void ApplyCreationProperties(VariableBank bank, Type type)
+        public bool ApplyCreationProperties(VariableBank bank, Type type)
         {
             string pathName = AssetDatabase.GetAssetPath(bank);
 
@@ -46,9 +47,10 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
                 VariableBankDatabase.Refresh();
             };
 
+            return true;
         }
 
-        public void ResetCreationProperties(VariableBank bank, Type type)
+        public bool ResetCreationProperties(VariableBank bank, Type type)
         {
             string pathName = AssetDatabase.GetAssetPath(bank);
 
@@ -59,6 +61,8 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
                 addressableGroup.GetAssetEntry(AssetDatabase.AssetPathToGUID(pathName), true);
 
             if (addressableEntry != null) addressableGroup.RemoveAssetEntry(addressableEntry, true);
+
+            return true;
         }
 
         public bool OverrideBankModeChangeDialogMessage(bool internalizing, out string message)

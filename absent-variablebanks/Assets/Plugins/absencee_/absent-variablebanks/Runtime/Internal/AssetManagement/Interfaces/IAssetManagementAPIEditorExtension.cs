@@ -1,13 +1,13 @@
 using com.absence.variablesystem.banksystembase;
 using System;
 
-namespace com.absence.variablebanks.editor.internals.assetmanagement
+namespace com.absence.variablebanks.internals.assetmanagement
 {
     public interface IAssetManagementAPIEditorExtension
     {
         bool ShowInSettings();
-        void ApplyCreationProperties(VariableBank bank, Type type);
-        void ResetCreationProperties(VariableBank bank, Type type);
+        bool ApplyCreationProperties(VariableBank bank, Type type);
+        bool ResetCreationProperties(VariableBank bank, Type type);
         bool OverrideBankModeChangeDialogMessage(bool internalizing, out string message);
     }
 }

@@ -1,7 +1,4 @@
-using com.absence.variablesystem.banksystembase;
-using System;
-
-namespace com.absence.variablebanks.editor.internals.assetmanagement
+namespace com.absence.variablebanks.internals.assetmanagement
 {
     public interface IAssetManagementAPI
     {

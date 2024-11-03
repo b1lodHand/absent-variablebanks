@@ -1,4 +1,4 @@
-using com.absence.variablebanks.editor.internals.assetmanagement;
+using com.absence.variablebanks.internals.assetmanagement;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -32,14 +32,38 @@ namespace com.absence.variablebanks.editor
 
             EditorGUILayout.LabelField("Used Asset Management API", GUILayout.Width(200));
 
-            string[] options = AssetManagementAPIDatabase.APIs.ConvertAll(api => api.DisplayName).ToArray();
+            List<string> options = AssetManagementAPIDatabase.APIs.ConvertAll(api => api.DisplayName);
 
-            int assetApiIndex = settings.AssetManagementAPISelection;
-            int assetApiIndexNew = EditorGUILayout.Popup("", assetApiIndex, options, GUILayout.ExpandWidth(false));
+            string assetApiName = settings.AssetManagementAPIName;
+
+            bool unknownApi = !options.Contains(assetApiName);
+            if (unknownApi)
+            {
+                settings.AssetManagementAPIName = "Resources";
+                return;
+            }
+
+            int assetApiIndex = options.IndexOf(assetApiName);
+            int assetApiIndexNew = EditorGUILayout.Popup("", assetApiIndex, options.ToArray(), GUILayout.ExpandWidth(false));
+
+            string assetApiNameNew = options[assetApiIndexNew];
+
+            GUILayout.Space(10);
+
+            GUIContent refreshButtonContent = new()
+            {
+                image = EditorGUIUtility.IconContent("Refresh").image,
+                tooltip = "Refresh API database."
+            };
+
+            if (GUILayout.Button(refreshButtonContent, GUILayout.ExpandWidth(false)))
+            {
+                AssetManagementAPIDatabase.Refresh();
+            }
 
             EditorGUILayout.EndHorizontal();
 
-            if (assetApiIndexNew != assetApiIndex)
+            if (assetApiName != assetApiNameNew)
             {
                 bool confirm = EditorUtility.DisplayDialog("Change API selection?",
                     "You are changing the used API. All of the" +
@@ -51,7 +75,7 @@ namespace com.absence.variablebanks.editor
                 if (confirm)
                 {
                     VariableBankCreationHandler.MakeAllExternal();
-                    settings.AssetManagementAPISelection = assetApiIndexNew;
+                    settings.AssetManagementAPIName = assetApiNameNew;
                 }
             }
 
