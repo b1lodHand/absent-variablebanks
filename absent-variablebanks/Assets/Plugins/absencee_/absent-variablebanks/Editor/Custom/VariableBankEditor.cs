@@ -24,6 +24,11 @@ namespace com.absence.variablebanks.editor
                     if (op.ToExternal) VariableBankCreationHandler.MakeExternal(op.Targets);
                     else VariableBankCreationHandler.MakeInternal(op.Targets);
 
+                    op.Targets.ForEach(opTarget => EditorUtility.SetDirty(opTarget));
+
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+
                     EditorGUIUtility.PingObject(op.Targets.LastOrDefault());
                 });
 
@@ -37,6 +42,13 @@ namespace com.absence.variablebanks.editor
 
             List<VariableBank> banksSelected = 
                 targets.ToList().ConvertAll(target => (VariableBank)target).ToList();
+
+            List<SerializedObject> serializedObjects = banksSelected.
+                ConvertAll(bank => new SerializedObject(bank));
+            
+            SerializedObject serializedObject = serializedObjects.FirstOrDefault();
+
+            serializedObjects.ForEach(obj => obj.Update());
 
             bool multipleBanksSelected = targets.Length > 1;
             bool systemBusy = VariableBankCreationHandler.TransferringBank;

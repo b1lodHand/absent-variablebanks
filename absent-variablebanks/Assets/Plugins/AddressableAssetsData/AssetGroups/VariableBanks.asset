@@ -16,7 +16,13 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: c815049e378ff294da4ed0412d3a5a15
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 6419d4ba72af98a4d80b1df4a01dcf3a
+    m_Address: Assets/Temp/New VariableBank 1.asset
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - variable-banks
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: dec0e0dae3bf0464cbda82723f176259, type: 2}
   m_SchemaSet:
