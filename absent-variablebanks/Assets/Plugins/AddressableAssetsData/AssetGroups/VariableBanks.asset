@@ -17,8 +17,26 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c815049e378ff294da4ed0412d3a5a15
   m_SerializeEntries:
+  - m_GUID: 316bed3c36febb8478018680f344c9cd
+    m_Address: Assets/Scriptables/New VariableBank 1.asset
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - variable-banks
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71165762600eb364a80ef9f5fa3d03d5
     m_Address: Assets/Temp/New VariableBank.asset
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - variable-banks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2eab4d65c4bdaf4581092c30fe4bdaa
+    m_Address: Assets/Scriptables/New VariableBank.asset
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - variable-banks
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dba46398a2d69b84da1db51cc91cf1d3
+    m_Address: Assets/Scriptables/New VariableBank 2.asset
     m_ReadOnly: 1
     m_SerializedLabels:
     - variable-banks

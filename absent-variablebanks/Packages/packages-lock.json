@@ -12,7 +12,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c80ec7fd39cda98c8e994b6e833237e679b8b4ad"
+      "hash": "2f50676885109bb7cabb95349af833060820b9d6"
     },
     "com.absence.utilities": {
       "version": "https://github.com/b1lodHand/absent-utilities.git",
@@ -26,10 +26,10 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7a97332cc3a818d6cd91c746fffa77ea9d936614"
+      "hash": "6b67f5d047bf5f1e92a909191a87d8008acfee09"
     },
     "com.unity.addressables": {
-      "version": "1.22.2",
+      "version": "1.22.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -37,7 +37,7 @@
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.scriptablebuildpipeline": "1.21.24",
+        "com.unity.scriptablebuildpipeline": "1.21.25",
         "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -110,7 +110,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.24",
+      "version": "1.21.25",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7cbcdb15e0496d48b2c807d31adcee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_disableModeSwitchPrompt: 1
+  m_disableMultiModeSwitchPrompt: 1
   m_assetApiSelection: 0

@@ -4,21 +4,23 @@ using com.absence.variablesystem.banksystembase.editor;
 using System;
 using UnityEditor;
 using UnityEngine;
+using ResourcesAPI = com.absence.variablebanks.editor.internals.assetmanagement.builtin.ResourcesAPI;
 
-namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
+namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
-    [AssetManagementAPI("Resources")]
-    public class ResourcesAPI : IAssetManagementAPI
+    [AssetManagementAPIEditorExtension(typeof(ResourcesAPI))]
+    public class ResourcesAPIEditorExtensions : IAssetManagementAPIEditorExtension
     {
         [APIConstructor]
-        public ResourcesAPI()
-        {
+        public ResourcesAPIEditorExtensions() 
+        { 
         }
 
         public bool ShowInSettings()
         {
             return true;
         }
+
 
         public void ApplyCreationProperties(VariableBank bank, Type type)
         {

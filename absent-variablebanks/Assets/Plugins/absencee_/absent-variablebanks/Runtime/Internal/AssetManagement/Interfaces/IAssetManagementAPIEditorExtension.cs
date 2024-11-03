@@ -3,7 +3,7 @@ using System;
 
 namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
-    public interface IAssetManagementAPI
+    public interface IAssetManagementAPIEditorExtension
     {
         bool ShowInSettings();
         void ApplyCreationProperties(VariableBank bank, Type type);

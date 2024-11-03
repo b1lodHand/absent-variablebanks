@@ -73,14 +73,14 @@ namespace com.absence.variablebanks.editor
         [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (Addressables)", validate = true, priority = 0)]
         static bool CreateVariableBankForAddressables_MenuItemValidation()
         {
-            return AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Addressables");
+            return PackageSettings.instance.CurrentAPI.DisplayName.Equals("Addressables");
         }
 #endif
 
         [MenuItem("absencee_/absent-variablebanks/Create Variable Bank (Resources)", validate = true)]
         static bool CreateVariableBankForResources_MenuItemValidation()
         {
-            return AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Resources");
+            return PackageSettings.instance.CurrentAPI.DisplayName.Equals("Resources");
         }
     }
 }

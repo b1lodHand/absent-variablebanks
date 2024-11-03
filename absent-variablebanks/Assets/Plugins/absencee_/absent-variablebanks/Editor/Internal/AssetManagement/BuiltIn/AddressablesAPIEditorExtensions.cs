@@ -1,19 +1,20 @@
+#if ABSENT_VB_ADDRESSABLES
+
+using com.absence.variablebanks.editor.internals.assetmanagement.builtin;
 using com.absence.variablesystem.banksystembase;
-using com.absence.variablesystem.banksystembase.editor;
-using System;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets;
 using UnityEditor;
+using System;
+using com.absence.variablesystem.banksystembase.editor;
 
-#if ABSENT_VB_ADDRESSABLES
-
-namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
+namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
-    [AssetManagementAPI("Addressables")]
-    public class AddressablesAPI : IAssetManagementAPI
+    [AssetManagementAPIEditorExtension(typeof(AddressablesAPI))]
+    public class AddressablesAPIEditorExtensions : IAssetManagementAPIEditorExtension
     {
         [APIConstructor]
-        public AddressablesAPI()
+        public AddressablesAPIEditorExtensions()
         {
         }
 
@@ -44,6 +45,7 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
                 if (bankEntry != null) addressableGroup.RemoveAssetEntry(bankEntry, true);
                 VariableBankDatabase.Refresh();
             };
+
         }
 
         public void ResetCreationProperties(VariableBank bank, Type type)
@@ -53,10 +55,10 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
             AddressableAssetSettings addressableSettings = GetSettings();
             AddressableAssetGroup addressableGroup = GetGroup(addressableSettings);
 
-            AddressableAssetEntry addressableEntry = 
+            AddressableAssetEntry addressableEntry =
                 addressableGroup.GetAssetEntry(AssetDatabase.AssetPathToGUID(pathName), true);
 
-            addressableGroup.RemoveAssetEntry(addressableEntry, true);
+            if (addressableEntry != null) addressableGroup.RemoveAssetEntry(addressableEntry, true);
         }
 
         public bool OverrideBankModeChangeDialogMessage(bool internalizing, out string message)
@@ -81,8 +83,6 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement.builtin
 
             return addressableGroup;
         }
-
-
     }
 }
 

@@ -10,11 +10,6 @@ using com.absence.variablebanks.editor.internals.assetmanagement;
 using System.Linq;
 using System.Collections.Generic;
 
-#if ABSENT_VB_ADDRESSABLES
-using UnityEditor.AddressableAssets;
-using UnityEditor.AddressableAssets.Settings;
-#endif
-
 namespace com.absence.variablebanks.editor
 {
     /// <summary>
@@ -33,7 +28,7 @@ namespace com.absence.variablebanks.editor
 
         public static void ValidateResourcesPath()
         {
-            if (!AssetManagementAPIDatabase.CurrentAPI.DisplayName.Equals("Resources")) return;
+            if (!PackageSettings.instance.CurrentAPI.DisplayName.Equals("Resources")) return;
 
             if (!AssetDatabase.IsValidFolder("Assets/Resources"))
                 AssetDatabase.CreateFolder("Assets", "Resources");
@@ -131,7 +126,7 @@ namespace com.absence.variablebanks.editor
         {
             m_transferringBank = true;
 
-            AssetManagementAPIDatabase.CurrentAPI.APIObject.ApplyCreationProperties(bank, typeof(VariableBank));
+            PackageSettings.instance.CurrentAPI.EditorExtensions.ApplyCreationProperties(bank, typeof(VariableBank));
 
             bank.ForExternalUse = false;
 
@@ -148,7 +143,7 @@ namespace com.absence.variablebanks.editor
         {
             m_transferringBank = true;
 
-            AssetManagementAPIDatabase.CurrentAPI.APIObject.ResetCreationProperties(bank, typeof(VariableBank));
+            PackageSettings.instance.CurrentAPI.EditorExtensions.ResetCreationProperties(bank, typeof(VariableBank));
 
             bank.ForExternalUse = true;
 
@@ -159,6 +154,56 @@ namespace com.absence.variablebanks.editor
             m_transferringBank = false;
 
             Selection.activeObject = bank;
+        }
+
+        public static bool MakeInternal(List<VariableBank> banks)
+        {
+            if (m_transferringBank) return false;
+            if (banks.Count == 0) return false;
+
+            m_transferringBank = true;
+
+            foreach (var bank in banks)
+            {
+                PackageSettings.instance.CurrentAPI.EditorExtensions.ApplyCreationProperties(bank, typeof(VariableBank));
+
+                bank.ForExternalUse = false;
+
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                VariableBankDatabase.Refresh();
+            }
+
+            m_transferringBank = false;
+
+            Selection.objects = banks.ToArray();
+
+            return true;
+        }
+
+        public static bool MakeExternal(List<VariableBank> banks)
+        {
+            if (m_transferringBank) return false;
+            if (banks.Count == 0) return false;
+
+            m_transferringBank = true;
+
+            foreach (var bank in banks)
+            {
+                PackageSettings.instance.CurrentAPI.EditorExtensions.ResetCreationProperties(bank, typeof(VariableBank));
+
+                bank.ForExternalUse = true;
+
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                VariableBankDatabase.Refresh();
+            }
+
+            m_transferringBank = false;
+
+            Selection.objects = banks.ToArray();
+
+            return true;
         }
 
         internal static void MakeAllExternal()

@@ -5,5 +5,8 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
     {
         public string DisplayName;
         public IAssetManagementAPI APIObject;
+#if UNITY_EDITOR
+        public IAssetManagementAPIEditorExtension EditorExtensions;
+#endif
     }
 }

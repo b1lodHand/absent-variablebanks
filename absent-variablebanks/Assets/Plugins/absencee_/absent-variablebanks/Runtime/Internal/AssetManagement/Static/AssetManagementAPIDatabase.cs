@@ -2,12 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using UnityEditor;
 using UnityEngine;
 
 namespace com.absence.variablebanks.editor.internals.assetmanagement
 {
-    [InitializeOnLoad]
     public class AssetManagementAPIDatabase
     {
         const bool DEBUG_MODE = true;
@@ -15,17 +13,11 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
         private static List<APIRegistry> s_apis = new();
         public static List<APIRegistry> APIs => s_apis;
 
-        public static APIRegistry CurrentAPI => s_apis[PackageSettings.instance.AssetManagementAPISelection];
-
-        static AssetManagementAPIDatabase()
-        {
-            Refresh();
-        }
-
         public static void Refresh()
         {
             s_apis.Clear();
             List<Assembly> assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            Dictionary<Type, ConstructorInfo> extensionConstructorDict = new();
 
             assemblies.ForEach(assembly =>
             {
@@ -35,7 +27,33 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
                 {
                     if (type.IsAbstract) return;
 
-                    AssetManagementAPIAttribute attrRef = 
+                    AssetManagementAPIEditorExtensionAttribute extAttrRef =
+                        type.GetCustomAttribute<AssetManagementAPIEditorExtensionAttribute>();
+
+                    if (extAttrRef == null) return;
+
+                    Type extRef = type.GetInterface(nameof(IAssetManagementAPIEditorExtension), true);
+
+                    if (extRef == null) return;
+
+                    ConstructorInfo constructor =
+                    type.GetConstructors().ToList().FirstOrDefault(cons => cons.GetCustomAttribute<APIConstructor>() != null);
+
+                    if (constructor == null) return;
+
+                    extensionConstructorDict.Add(extAttrRef.targetApiType, constructor);
+                });
+            });
+
+            assemblies.ForEach(assembly =>
+            {
+                List<Type> types = assembly.GetTypes().ToList();
+
+                types.ForEach(type =>
+                {
+                    if (type.IsAbstract) return;
+
+                    AssetManagementAPIAttribute attrRef =
                         type.GetCustomAttribute<AssetManagementAPIAttribute>();
 
                     if (attrRef == null) return;
@@ -52,14 +70,19 @@ namespace com.absence.variablebanks.editor.internals.assetmanagement
                     APIRegistry reg = new()
                     {
                         APIObject = constructor.Invoke(null) as IAssetManagementAPI,
-                        DisplayName = attrRef.displayName
+                        DisplayName = attrRef.displayName,
                     };
+
+#if UNITY_EDITOR
+                    reg.EditorExtensions =
+                    extensionConstructorDict[reg.APIObject.GetType()].Invoke(null)
+                    as IAssetManagementAPIEditorExtension;
+#endif
 
                     s_apis.Add(reg);
                     if (DEBUG_MODE) Debug.Log(reg.DisplayName);
                 });
             });
-
         }
     }
 }
