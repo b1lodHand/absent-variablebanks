@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_guid: 987a3133-c057-433d-a165-145a6d75a61a
   m_forExternalUse: 0
-  m_ints: []
-  m_floats: []
-  m_strings: []
-  m_booleans: []
+  m_ints:
+    _serializedList: []
+  m_floats:
+    _serializedList: []
+  m_strings:
+    _serializedList: []
+  m_booleans:
+    _serializedList: []

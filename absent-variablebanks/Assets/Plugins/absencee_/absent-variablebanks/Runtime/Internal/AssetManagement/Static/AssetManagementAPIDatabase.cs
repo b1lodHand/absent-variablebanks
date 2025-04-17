@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using UnityEngine;
 
 namespace com.absence.variablebanks.internals.assetmanagement
 {
     public class AssetManagementAPIDatabase
     {
-        const bool DEBUG_MODE = true;
+        const bool DEBUG_MODE = false;
 
         private static List<APIRegistry> s_apis = new();
         public static List<APIRegistry> APIs => s_apis;
@@ -19,7 +20,7 @@ namespace com.absence.variablebanks.internals.assetmanagement
             Refresh();
         }
 
-        public static void Refresh()
+        public static void Refresh(bool debugMode = DEBUG_MODE)
         {
             s_apis.Clear();
             List<Assembly> assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
@@ -86,9 +87,29 @@ namespace com.absence.variablebanks.internals.assetmanagement
 #endif
 
                     s_apis.Add(reg);
-                    if (DEBUG_MODE) Debug.Log(reg.DisplayName);
                 });
             });
+
+            if (debugMode)
+                Print();
+        }
+
+        public static void Print()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<b>[VARIABLEBANKS] Asset management APIs found: </b>");
+
+            s_apis.ForEach(api =>
+            {
+                sb.Append("\n\t");
+
+                sb.Append("<color=white>");
+                sb.Append("-> ");
+                sb.Append(api.DisplayName);
+                sb.Append("</color>");
+            });
+
+            Debug.Log(sb.ToString());
         }
     }
 }

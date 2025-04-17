@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - variable-banks
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71165762600eb364a80ef9f5fa3d03d5
+    m_Address: Assets/Temp/New VariableBank.asset
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - variable-banks
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: dec0e0dae3bf0464cbda82723f176259, type: 2}
   m_SchemaSet:

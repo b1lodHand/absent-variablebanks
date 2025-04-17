@@ -5,14 +5,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "27b7fea75417521660f1488087fb8204e16b55cb"
+      "hash": "b0aefb011bd27f1e3a0c95cebc911461348decca"
     },
     "com.absence.savesystem": {
       "version": "https://github.com/b1lodHand/absent-saves.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2f50676885109bb7cabb95349af833060820b9d6"
+      "hash": "b20273c9ee29a3e5bce80e19362fe1725020125d"
     },
     "com.absence.utilities": {
       "version": "https://github.com/b1lodHand/absent-utilities.git",
@@ -26,7 +26,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "6b67f5d047bf5f1e92a909191a87d8008acfee09"
+      "hash": "ad3d46f5add9aaea052c66ff5ebfb89f56fecde5"
     },
     "com.unity.addressables": {
       "version": "1.22.3",

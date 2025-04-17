@@ -6,7 +6,7 @@ namespace com.absence.variablebanks
     /// Setter with a dynamic bank you select in the editor.
     /// </summary>
     [System.Serializable]
-    public sealed class VariableSetter : BaseVariableSetter
+    public sealed class VariableSetter : VariableSetterBase
     {
         public override bool HasFixedBank => false;
 
@@ -19,7 +19,7 @@ namespace com.absence.variablebanks
             m_targetBankGuid = newBankGuid;
         }
 
-        protected override VariableBank GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
+        protected override IPrimitiveVariableContainer GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
 
         /// <summary>
         /// Use to clone this setter.

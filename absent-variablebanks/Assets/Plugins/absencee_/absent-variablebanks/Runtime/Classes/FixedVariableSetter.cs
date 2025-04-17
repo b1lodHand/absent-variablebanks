@@ -7,7 +7,7 @@ namespace com.absence.variablebanks
     /// Setter with a fixed bank.
     /// </summary>
     [System.Serializable]
-    public sealed class FixedVariableSetter : BaseVariableSetter
+    public sealed class FixedVariableSetter : VariableSetterBase
     {
         public override bool HasFixedBank => true;
 
@@ -22,7 +22,7 @@ namespace com.absence.variablebanks
             m_targetBankGuid = fixedBankGuid;
         }
 
-        protected override VariableBank GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
+        protected override IPrimitiveVariableContainer GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
 
         /// <summary>
         /// Use to clone this setter.

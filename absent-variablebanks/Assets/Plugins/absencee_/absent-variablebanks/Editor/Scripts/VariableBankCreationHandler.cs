@@ -19,11 +19,11 @@ namespace com.absence.variablebanks.editor
         static bool m_transferringBank;
         public static bool TransferringBank => m_transferringBank;
 
-        [MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (For External Use)", priority = 0)]
-        static void CreateVariableBankForExternalUse_MenuItem()
-        {
-            CreateVariableBankAtSelection(true, true);
-        }
+        //[MenuItem("Assets/Create/absencee_/absent-variablebanks/Variable Bank (For External Use)", priority = 0)]
+        //static void CreateVariableBankForExternalUse_MenuItem()
+        //{
+        //    CreateVariableBankAtSelection(true, true);
+        //}
 
         public static void ValidateResourcesPath()
         {

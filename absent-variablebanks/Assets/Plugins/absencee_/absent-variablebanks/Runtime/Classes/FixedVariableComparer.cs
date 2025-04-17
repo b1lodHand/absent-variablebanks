@@ -6,7 +6,7 @@ namespace com.absence.variablebanks
     /// Comparer with a fixed bank.
     /// </summary>
     [System.Serializable]
-    public sealed class FixedVariableComparer : BaseVariableComparer
+    public sealed class FixedVariableComparer : VariableComparerBase
     {
         public override bool HasFixedBank => true;
 
@@ -21,7 +21,7 @@ namespace com.absence.variablebanks
             m_targetBankGuid = fixedBankGuid;
         }
 
-        protected override VariableBank GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
+        protected override IPrimitiveVariableContainer GetRuntimeBank() => VariableBankManager.GetInstance(m_targetBankGuid);
 
         /// <summary>
         /// Use to clone this comparer.
